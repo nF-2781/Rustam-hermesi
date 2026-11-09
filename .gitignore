@@ -1,23 +1,8 @@
-# Python virtual environments
+# Python virtual environments & bytecode
 **/.venv/
 **/venv/
 **/__pycache__/
 *.py[cod]
-
-# Caches and runtime
-cache/
-audio_cache/
-image_cache/
-logs/
-runtime/
-.update_check
-
-# Database and locks
-state.db*
-*.db
-*.db-shm
-*.db-wal
-*.lock
 
 # Node dependencies
 **/node_modules/
