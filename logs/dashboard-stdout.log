@@ -1,0 +1,3 @@
+→ Skipping web UI build (--skip-build); using dist at C:\Users\Asus\Desktop\Rustam-hermesi\hermes-agent\hermes_cli\web_dist
+HERMES_DASHBOARD_READY port=9119
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "setup.ready", "session_id": "", "payload": {"provider_configured": false, "inference_provider": "", "free_tier": false, "has_identity": false, "other_providers": false, "error": "", "finished_at": 1794491685.120145}}}

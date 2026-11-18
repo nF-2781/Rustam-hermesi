@@ -1,0 +1,15 @@
+[
+  {
+    "pid": 3224,
+    "create_time": 1795023970.114922,
+    "purpose": "mcp-helper",
+    "install": "dcb89951e0f0",
+    "spawner_pid": 2452,
+    "spawner_create": 1795023967.2467473,
+    "registered_at": 1795023970.1315837,
+    "argv": "C:/Users/Asus/Desktop/Rustam-hermesi/mcp/mars-lms/.venv/Scripts/python.exe C:/Users/Asus/Desktop/Rustam-hermesi/mcp/mars-lms/server.py",
+    "host": "",
+    "port": null,
+    "profile": ""
+  }
+]

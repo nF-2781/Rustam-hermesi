@@ -1,0 +1,4 @@
+[tui-parent] 2026-11-12T13:58:14.603Z [lifecycle] websocket silent drop detected (heartbeat ack timeout); forcing reconnect
+[tui-parent] 2026-11-12T13:59:39.763Z [startup] timed out waiting for gateway.ready (python=websocket, cwd=ws://127.0.0.1:9119/api/ws?***)
+[tui-parent] 2026-11-12T14:00:17.774Z graceful-exit received signal=SIGHUP → killing gateway
+[tui-parent] 2026-11-12T14:00:17.778Z [lifecycle] GatewayClient.kill reason=graceful-exit-cleanup pid=none killResult=none

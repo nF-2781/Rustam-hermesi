@@ -1,0 +1,7 @@
+mcp_servers:
+  mars-lms:
+    command: C:/Users/Asus/Desktop/Rustam-hermesi/mcp/mars-lms/.venv/Scripts/python.exe
+    args:
+    - C:/Users/Asus/Desktop/Rustam-hermesi/mcp/mars-lms/server.py
+    env:
+      MARS_API_URL: https://mars-backend-six.vercel.app

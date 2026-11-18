@@ -1,0 +1,16 @@
+2026-11-12 18:53:36,824 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-12 18:53:37,105 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-12 18:57:09,833 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:60405
+2026-11-12 18:57:09,908 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-12 18:57:14,520 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:50623
+2026-11-12 18:58:20,280 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60405 — frame left in flight
+2026-11-12 18:58:30,291 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:12,263 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-12 18:59:19,958 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60405 — frame left in flight
+2026-11-12 18:59:22,276 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:29,961 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:30,660 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-12 18:59:30,849 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-12 19:32:01,632 WARNING hermes_cli.web_server: event loop stalled 1296.2s (GIL pressure suspected)
+2026-11-17 19:19:10,371 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-17 19:19:10,500 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/

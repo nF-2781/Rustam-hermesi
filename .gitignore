@@ -7,6 +7,12 @@
 # Node dependencies
 **/node_modules/
 
+# Local runtime downloads and dashboard build
+/runtime/bootstrap/
+/runtime/python/
+/cache/uv/
+/hermes-agent/hermes_cli/web_dist/
+
 # OS metadata
 Thumbs.db
 .DS_Store
