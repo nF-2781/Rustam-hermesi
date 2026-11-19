@@ -1,0 +1,18 @@
+mcp_servers:
+  mars-lms:
+    command: ${PYTHONPATH}/../mcp/mars-lms/.venv/Scripts/python.exe
+    args:
+    - ${PYTHONPATH}/../mcp/mars-lms/agents_server.py
+    env:
+      MARS_API_URL: https://mars-backend-six.vercel.app
+    tools:
+      prompts: false
+      resources: false
+      include:
+      - login
+      - incoming_requests
+      - reception_triage
+platform_toolsets:
+  cli:
+  - skills
+  - mars-lms

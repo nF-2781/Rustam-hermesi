@@ -2,3 +2,8 @@
 [tui-parent] 2026-11-12T13:59:39.763Z [startup] timed out waiting for gateway.ready (python=websocket, cwd=ws://127.0.0.1:9119/api/ws?***)
 [tui-parent] 2026-11-12T14:00:17.774Z graceful-exit received signal=SIGHUP → killing gateway
 [tui-parent] 2026-11-12T14:00:17.778Z [lifecycle] GatewayClient.kill reason=graceful-exit-cleanup pid=none killResult=none
+[tui-parent] 2026-11-18T18:07:53.319Z [lifecycle] websocket silent drop detected (heartbeat ack timeout); forcing reconnect
+[tui-parent] 2026-11-18T18:08:27.920Z [lifecycle] transport exit code=1005 reason=gateway websocket closed (1005)
+[tui-parent] 2026-11-18T18:08:27.921Z [lifecycle] scheduling gateway reconnect in 1000ms (attempt 1)
+[tui-parent] 2026-11-18T18:31:00.311Z [lifecycle] transport exit code=1012 reason=gateway websocket closed (1012)
+[tui-parent] 2026-11-18T18:31:00.312Z [lifecycle] scheduling gateway reconnect in 1000ms (attempt 1)

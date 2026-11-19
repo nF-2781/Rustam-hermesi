@@ -43,22 +43,47 @@ MCP client dependencies; do not replace the host environment with this one.
 
 ## Hermes Configuration
 
-The selected launcher sets `HERMES_HOME` to `C:/Users/Asus/Desktop/Rustam-hermesi`.
-Merge only this entry into its `config.yaml`, preserving other settings:
+The root launchers (`hermes.bat` on Windows, `sh hermes.sh` on Linux/macOS)
+derive `HERMES_HOME` from their own location and set `MARS_MCP_PYTHON` to the
+platform's MCP virtual-environment interpreter. Hermes expands these variables
+when loading MCP configuration. Launch from any working directory through these
+wrappers; calling a different installation's bare `hermes` does not set them.
+Merge only this entry into the project's `config.yaml`, preserving other settings:
 
 ```yaml
 mcp_servers:
   mars-lms:
-    command: "C:/Users/Asus/Desktop/Rustam-hermesi/mcp/mars-lms/.venv/Scripts/python.exe"
+    command: "${MARS_MCP_PYTHON}"
     args:
-      - "C:/Users/Asus/Desktop/Rustam-hermesi/mcp/mars-lms/server.py"
+      - "${HERMES_HOME}/mcp/mars-lms/server.py"
     env:
       MARS_API_URL: "https://mars-backend-six.vercel.app"
 ```
 
-Use your own absolute paths on another computer. If the Hermes home is moved,
-rebuild the package environment and update these absolute paths. A ready snippet
-is in `hermes-config.yaml`.
+No configuration path edits are needed when the project root changes. Recreate
+the virtual environments after relocation or an OS change; virtual environments
+are not portable. A ready snippet is in `hermes-config.yaml`.
+
+For a Linux server, install Python 3.11-3.13 and the required Node.js/npm versions,
+then run from the project root:
+
+```bash
+python3 -m venv runtime/venv
+runtime/venv/bin/python -m pip install -e './hermes-agent[web,mcp]'
+python3 -m venv mcp/mars-lms/.venv
+mcp/mars-lms/.venv/bin/python -m pip install -r mcp/mars-lms/requirements.txt
+cd hermes-agent
+npm install --workspace web --workspace ui-tui
+npm run build --workspace web
+npm run build --workspace ui-tui
+cd ..
+sh hermes.sh mcp test mars-lms
+sh hermes.sh dashboard --skip-build --port 1920 --no-open
+```
+
+The dashboard binds to server loopback by default. For access from your computer,
+use an SSH tunnel (for example `ssh -L 1920:127.0.0.1:1920 user@server`) and open
+`http://127.0.0.1:1920` locally.
 
 From PowerShell in the Hermes home:
 

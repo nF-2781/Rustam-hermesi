@@ -1,0 +1,373 @@
+{
+  "mars-lms": {
+    "fingerprint": "8ce2d14da75c1479",
+    "tools": [
+      {
+        "name": "login",
+        "description": "POST /api/auth/login. Save the JWT in memory. Omit role for backend role detection.",
+        "inputSchema": {
+          "properties": {
+            "phone": {
+              "title": "Phone",
+              "type": "string"
+            },
+            "password": {
+              "title": "Password",
+              "type": "string"
+            },
+            "role": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Role"
+            }
+          },
+          "required": [
+            "phone",
+            "password"
+          ],
+          "type": "object",
+          "title": "loginArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "branch_me",
+        "description": "GET /api/branch/me using the current in-memory login token.",
+        "inputSchema": {
+          "properties": {},
+          "type": "object",
+          "title": "branch_meArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "groups",
+        "description": "GET /api/branch/groups. Optional backend query filters, such as page or search.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "type": "object",
+          "title": "groupsArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "students",
+        "description": "GET /api/branch/students using the current account's backend permissions.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "type": "object",
+          "title": "studentsArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "mentors",
+        "description": "GET /api/branch/mentors using the saved token.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "type": "object",
+          "title": "mentorsArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "payments",
+        "description": "GET /api/branch/payments with optional backend filters.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "type": "object",
+          "title": "paymentsArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "finance_overview",
+        "description": "GET /api/finance/overview. The backend enforces finance access permissions.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "type": "object",
+          "title": "finance_overviewArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "finance_salaries",
+        "description": "GET /api/finance/salaries. The backend enforces finance access permissions.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "type": "object",
+          "title": "finance_salariesArguments"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      }
+    ],
+    "utility_tools": [
+      {
+        "schema": {
+          "name": "mcp__mars_lms__list_resources",
+          "description": "List available resources from MCP server 'mars-lms'",
+          "parameters": {
+            "type": "object",
+            "properties": {}
+          }
+        },
+        "handler_key": "list_resources"
+      },
+      {
+        "schema": {
+          "name": "mcp__mars_lms__read_resource",
+          "description": "Read a resource by URI from MCP server 'mars-lms'",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "uri": {
+                "type": "string",
+                "description": "URI of the resource to read"
+              }
+            },
+            "required": [
+              "uri"
+            ]
+          }
+        },
+        "handler_key": "read_resource"
+      },
+      {
+        "schema": {
+          "name": "mcp__mars_lms__list_prompts",
+          "description": "List available prompts from MCP server 'mars-lms'",
+          "parameters": {
+            "type": "object",
+            "properties": {}
+          }
+        },
+        "handler_key": "list_prompts"
+      },
+      {
+        "schema": {
+          "name": "mcp__mars_lms__get_prompt",
+          "description": "Get a prompt by name from MCP server 'mars-lms'",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the prompt to retrieve"
+              },
+              "arguments": {
+                "type": "object",
+                "description": "Optional arguments to pass to the prompt",
+                "properties": {},
+                "additionalProperties": true
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "handler_key": "get_prompt"
+      }
+    ],
+    "ttl_ms": 0,
+    "written_at": 1795090506.9341824,
+    "cache_scope": "private"
+  }
+}

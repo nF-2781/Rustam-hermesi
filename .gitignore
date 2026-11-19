@@ -16,3 +16,9 @@
 # OS metadata
 Thumbs.db
 .DS_Store
+
+# Isolated Hermes profiles: retain config/SOUL/skills, exclude credentials and runtime state
+/profiles/*/logs/
+/profiles/*/cache/
+/profiles/*/audio_cache/
+/profiles/*/image_cache/

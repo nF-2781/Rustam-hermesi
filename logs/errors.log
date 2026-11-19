@@ -141,3 +141,43 @@
 2026-11-17 18:48:11,166 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
 2026-11-17 18:48:11,499 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
 2026-11-17 18:48:12,513 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-18 23:06:56,131 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:56,150 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-18 23:06:56,152 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:56,153 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-18 23:06:56,952 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:57,061 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-18 23:06:57,067 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:57.
+2026-11-18 23:06:57,073 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-18 23:07:26,588 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-18 23:07:59,974 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:54199 — frame left in flight
+2026-11-18 23:08:03,314 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-18 23:08:09,985 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60567 — frame left in flight
+2026-11-18 23:08:27,899 WARNING hermes_cli.web_server: event loop stalled 89.3s (GIL pressure suspected)
+2026-11-18 23:08:27,908 ERROR asyncio: Exception in callback BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55112))>) at C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py:840
+handle: <Handle BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55112))>) at C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py:840>
+Traceback (most recent call last):
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 855, in loop
+    self._make_socket_transport(
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 646, in _make_socket_transport
+    return _ProactorSocketTransport(self, sock, protocol, waiter,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 612, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 189, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 334, in __init__
+    super().__init__(*args, **kw)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 66, in __init__
+    self._server._attach()
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 295, in _attach
+    assert self._sockets is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+2026-11-18 23:08:27,930 WARNING tui_gateway.ws: ws send failed peer=127.0.0.1:54199 error_type=WebSocketDisconnect error=
+2026-11-18 23:08:27,937 WARNING tui_gateway.ws: ws send failed peer=127.0.0.1:60567 error_type=WebSocketDisconnect error=
+2026-11-18 23:08:27,940 WARNING tui_gateway.ws: ws response send failed peer=127.0.0.1:54199 id=r7 method=pet.info.meta
+2026-11-18 23:08:27,949 WARNING tui_gateway.ws: ws heartbeat reply send failed peer=127.0.0.1:60567 id=heartbeat-1
+2026-11-18 23:11:06,512 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
