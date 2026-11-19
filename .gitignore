@@ -10,3 +10,24 @@
 # OS metadata
 Thumbs.db
 .DS_Store
+
+# Maxfiy kalitlar (MCP server credentials)
+.env
+
+# Hermes runtime holati va sessiya tokenlari
+/auth.json
+/shared/
+/logs/
+/cache/
+/runtime/
+/state.db
+/state.db-shm
+/state.db-wal
+/spawn-ledger.json
+/provider_models_cache.json
+/ollama_cloud_models_cache.json
+/models_dev_cache.json
+/models_dev_cache.etag
+/.mcp-discovery.lock
+/skills/.curator_state
+/.update_check
