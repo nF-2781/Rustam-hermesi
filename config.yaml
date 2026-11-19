@@ -1,0 +1,22 @@
+model:
+  provider: nous
+  base_url: https://inference-api.nousresearch.com/v1
+  default: qwen/qwen4-max:free
+_config_version: 43
+mcp_servers:
+  mars_lms:
+    command: C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+      - C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/server.py
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
+    enabled: true
+    timeout: 180
+    connect_timeout: 60
+    tools:
+      resources: false
+      prompts: false
+onboarding:
+  seen:
+    openclaw_residue_cleanup: true
