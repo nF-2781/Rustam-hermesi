@@ -1,0 +1,15 @@
+[
+  {
+    "pid": 16076,
+    "create_time": 1795094218.6381783,
+    "purpose": "mcp-helper",
+    "install": "257eb64c2663",
+    "spawner_pid": 2092,
+    "spawner_create": 1795094214.5507102,
+    "registered_at": 1795094218.6832867,
+    "argv": "C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/server.py",
+    "host": "",
+    "port": null,
+    "profile": ""
+  }
+]
