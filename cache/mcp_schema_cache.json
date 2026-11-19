@@ -1,373 +1,547 @@
 {
-  "mars-lms": {
-    "fingerprint": "8ce2d14da75c1479",
+  "mars_lms": {
+    "fingerprint": "1aae44efb08aedad",
     "tools": [
       {
-        "name": "login",
-        "description": "POST /api/auth/login. Save the JWT in memory. Omit role for backend role detection.",
+        "name": "lms_login",
+        "description": "MARS LMS backend'ga login qiladi va sessiya tokenini xotirada saqlaydi.\n\n    Har qanday boshqa tool'dan oldin chaqiriladi. Parametrlar berilmasa\n    MARS_PHONE / MARS_PASSWORD / MARS_ROLE muhit o'zgaruvchilari ishlatiladi.\n    Token faqat xotirada turadi; jarayon qayta ishga tushsa qayta login kerak.\n\n    Args:\n        phone: Telefon raqami (masalan 998990000001). Bo'sh bo'lsa env ishlatiladi.\n        password: Parol. Bo'sh bo'lsa env ishlatiladi.\n        role: Akkaunt roli (admin, bm, owner, mentor...). Bo'sh bo'lsa env yoki admin.\n        force: True bo'lsa mavjud sessiyani tashlab, qaytadan login qiladi.\n\n    Returns:\n        envelope: details ichida authenticated, role, user, branch, branch_id, base_url.\n    ",
         "inputSchema": {
           "properties": {
             "phone": {
+              "default": "",
               "title": "Phone",
               "type": "string"
             },
             "password": {
+              "default": "",
               "title": "Password",
               "type": "string"
             },
             "role": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null,
-              "title": "Role"
+              "default": "",
+              "title": "Role",
+              "type": "string"
+            },
+            "force": {
+              "default": false,
+              "title": "Force",
+              "type": "boolean"
             }
           },
-          "required": [
-            "phone",
-            "password"
-          ],
-          "type": "object",
-          "title": "loginArguments"
+          "title": "lms_loginArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       },
       {
-        "name": "branch_me",
-        "description": "GET /api/branch/me using the current in-memory login token.",
+        "name": "lms_context",
+        "description": "Joriy sessiya holatini va filial bo'yicha umumiy ko'rsatkichlarni qaytaradi.\n\n    Agent ish boshlashdan oldin \"kim sifatida ishlayapman va filialda nima bor\"\n    savoliga javob oladi. Sessiya yo'q bo'lsa avtomatik login qilinadi.\n    ",
         "inputSchema": {
           "properties": {},
-          "type": "object",
-          "title": "branch_meArguments"
+          "title": "lms_contextArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       },
       {
-        "name": "groups",
-        "description": "GET /api/branch/groups. Optional backend query filters, such as page or search.",
+        "name": "list_groups",
+        "description": "Filial guruhlari ro'yxati (mentor, jadval, sig'im, o'quvchilar soni bilan).\n\n    Args:\n        search: Guruh nomi, yo'nalish yoki mentor bo'yicha matnli filtr.\n        limit: Bir javobda qaytariladigan guruhlar soni (1-100, standart 20).\n        offset: Sahifalash uchun boshlang'ich indeks.\n\n    Returns:\n        envelope: details.groups, details.pagination, details.schedule_hint.\n    ",
         "inputSchema": {
           "properties": {
-            "query": {
-              "anyOf": [
-                {
-                  "additionalProperties": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "integer"
-                      },
-                      {
-                        "type": "number"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  },
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null,
-              "title": "Query"
+            "search": {
+              "default": "",
+              "title": "Search",
+              "type": "string"
+            },
+            "limit": {
+              "default": 20,
+              "title": "Limit",
+              "type": "integer"
+            },
+            "offset": {
+              "default": 0,
+              "title": "Offset",
+              "type": "integer"
             }
           },
-          "type": "object",
-          "title": "groupsArguments"
+          "title": "list_groupsArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       },
       {
-        "name": "students",
-        "description": "GET /api/branch/students using the current account's backend permissions.",
+        "name": "list_students",
+        "description": "Filial o'quvchilari ro'yxati (guruh, qarz holati, nofaollik kunlari bilan).\n\n    Args:\n        search: Ism, telefon yoki guruh nomi bo'yicha filtr.\n        group_id: Faqat shu guruh o'quvchilari (ID `list_groups` dan olinadi).\n        only_debtors: True bo'lsa faqat joriy oy uchun qarzi bor o'quvchilar.\n        limit: Bir javobdagi yozuvlar soni (1-100).\n        offset: Sahifalash uchun boshlang'ich indeks.\n    ",
         "inputSchema": {
           "properties": {
-            "query": {
-              "anyOf": [
-                {
-                  "additionalProperties": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "integer"
-                      },
-                      {
-                        "type": "number"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  },
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null,
-              "title": "Query"
+            "search": {
+              "default": "",
+              "title": "Search",
+              "type": "string"
+            },
+            "group_id": {
+              "default": "",
+              "title": "Group Id",
+              "type": "string"
+            },
+            "only_debtors": {
+              "default": false,
+              "title": "Only Debtors",
+              "type": "boolean"
+            },
+            "limit": {
+              "default": 20,
+              "title": "Limit",
+              "type": "integer"
+            },
+            "offset": {
+              "default": 0,
+              "title": "Offset",
+              "type": "integer"
             }
           },
-          "type": "object",
-          "title": "studentsArguments"
+          "title": "list_studentsArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       },
       {
-        "name": "mentors",
-        "description": "GET /api/branch/mentors using the saved token.",
+        "name": "get_debts",
+        "description": "Joriy oy uchun qarzdorlar ro'yxati (summa, kechikish kunlari, guruh).\n\n    Args:\n        month: Oy `YYYY-MM`. Bo'sh bo'lsa joriy oy.\n        status: `overdue` (muddati o'tgan) yoki `unpaid` (muddati o'tmagan).\n        search: Ism, telefon yoki guruh bo'yicha filtr.\n        limit: Maksimal yozuvlar soni.\n    ",
         "inputSchema": {
           "properties": {
-            "query": {
-              "anyOf": [
-                {
-                  "additionalProperties": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "integer"
-                      },
-                      {
-                        "type": "number"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  },
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null,
-              "title": "Query"
+            "month": {
+              "default": "",
+              "title": "Month",
+              "type": "string"
+            },
+            "status": {
+              "default": "",
+              "title": "Status",
+              "type": "string"
+            },
+            "search": {
+              "default": "",
+              "title": "Search",
+              "type": "string"
+            },
+            "limit": {
+              "default": 50,
+              "title": "Limit",
+              "type": "integer"
             }
           },
-          "type": "object",
-          "title": "mentorsArguments"
+          "title": "get_debtsArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       },
       {
-        "name": "payments",
-        "description": "GET /api/branch/payments with optional backend filters.",
+        "name": "get_attendance",
+        "description": "Davomat yozuvlari: guruh, o'quvchi va sana oralig'i bo'yicha.\n\n    Args:\n        group_id: Guruh ID (ixtiyoriy).\n        student_id: O'quvchi ID (ixtiyoriy).\n        date_from: Boshlanish sanasi `YYYY-MM-DD`.\n        date_to: Tugash sanasi `YYYY-MM-DD`.\n        page: Sahifa raqami (1 dan boshlanadi).\n        limit: Bir sahifadagi dars yozuvlari soni (1-100).\n    ",
         "inputSchema": {
           "properties": {
-            "query": {
-              "anyOf": [
-                {
-                  "additionalProperties": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "integer"
-                      },
-                      {
-                        "type": "number"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  },
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null,
-              "title": "Query"
+            "group_id": {
+              "default": "",
+              "title": "Group Id",
+              "type": "string"
+            },
+            "student_id": {
+              "default": "",
+              "title": "Student Id",
+              "type": "string"
+            },
+            "date_from": {
+              "default": "",
+              "title": "Date From",
+              "type": "string"
+            },
+            "date_to": {
+              "default": "",
+              "title": "Date To",
+              "type": "string"
+            },
+            "page": {
+              "default": 1,
+              "title": "Page",
+              "type": "integer"
+            },
+            "limit": {
+              "default": 30,
+              "title": "Limit",
+              "type": "integer"
             }
           },
-          "type": "object",
-          "title": "paymentsArguments"
+          "title": "get_attendanceArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       },
       {
-        "name": "finance_overview",
-        "description": "GET /api/finance/overview. The backend enforces finance access permissions.",
+        "name": "get_homework",
+        "description": "Uy vazifalari: muddat, topshirganlar soni, tekshirilmagan ishlar.\n\n    Args:\n        group_id: Guruh ID (ixtiyoriy) — faqat shu guruh vazifalari.\n        limit: Maksimal vazifalar soni.\n    ",
         "inputSchema": {
           "properties": {
-            "query": {
-              "anyOf": [
-                {
-                  "additionalProperties": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "integer"
-                      },
-                      {
-                        "type": "number"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  },
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null,
-              "title": "Query"
+            "group_id": {
+              "default": "",
+              "title": "Group Id",
+              "type": "string"
+            },
+            "limit": {
+              "default": 30,
+              "title": "Limit",
+              "type": "integer"
             }
           },
-          "type": "object",
-          "title": "finance_overviewArguments"
+          "title": "get_homeworkArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       },
       {
-        "name": "finance_salaries",
-        "description": "GET /api/finance/salaries. The backend enforces finance access permissions.",
+        "name": "get_finance_report",
+        "description": "Filial moliyasi: tushum, xarajat, qoldiq, qarzdorlik va to'lov usullari.\n\n    Args:\n        month: Oy `YYYY-MM`. Bo'sh bo'lsa joriy oy.\n    ",
         "inputSchema": {
           "properties": {
-            "query": {
-              "anyOf": [
-                {
-                  "additionalProperties": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "integer"
-                      },
-                      {
-                        "type": "number"
-                      },
-                      {
-                        "type": "boolean"
-                      }
-                    ]
-                  },
-                  "type": "object"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "default": null,
-              "title": "Query"
+            "month": {
+              "default": "",
+              "title": "Month",
+              "type": "string"
             }
           },
-          "type": "object",
-          "title": "finance_salariesArguments"
+          "title": "get_finance_reportArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "get_payments",
+        "description": "Filial to'lovlari ro'yxati (o'quvchi, summa, usul, holat, sana).\n\n    Args:\n        page: Sahifa raqami.\n        limit: Sahifadagi yozuvlar soni (1-100).\n        month: Oy `YYYY-MM` (ixtiyoriy filtr).\n    ",
+        "inputSchema": {
+          "properties": {
+            "page": {
+              "default": 1,
+              "title": "Page",
+              "type": "integer"
+            },
+            "limit": {
+              "default": 20,
+              "title": "Limit",
+              "type": "integer"
+            },
+            "month": {
+              "default": "",
+              "title": "Month",
+              "type": "string"
+            }
+          },
+          "title": "get_paymentsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "get_pending_approvals",
+        "description": "Tasdiq kutayotgan so'rovlar: o'quvchi holati so'rovlari va kutish ro'yxati.\n\n    Filialda tasdiq kutayotgan barcha so'rovlarni bitta joyda beradi.\n    ",
+        "inputSchema": {
+          "properties": {},
+          "title": "get_pending_approvalsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "get_room_plan",
+        "description": "Xonalar, vaqt slotlari va mentor yuklamasi bo'yicha rejalashtirish ma'lumoti.\n\n    Args:\n        max_groups_per_mentor: Bitta mentorga tavsiya etilgan maksimal guruhlar soni.\n    ",
+        "inputSchema": {
+          "properties": {
+            "max_groups_per_mentor": {
+              "default": 3,
+              "title": "Max Groups Per Mentor",
+              "type": "integer"
+            }
+          },
+          "title": "get_room_planArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "get_student_progress",
+        "description": "Bitta o'quvchi bo'yicha davomat, uy vazifasi va to'lov ko'rsatkichlari.\n\n    Args:\n        student_id: O'quvchi ID (`list_students` dan).\n        days: Necha kunlik davomat tarixini hisoblash (1-180).\n    ",
+        "inputSchema": {
+          "properties": {
+            "student_id": {
+              "default": "",
+              "title": "Student Id",
+              "type": "string"
+            },
+            "days": {
+              "default": 60,
+              "title": "Days",
+              "type": "integer"
+            }
+          },
+          "title": "get_student_progressArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "debt_control_agent",
+        "description": "Qarzdorlik nazoratchisi: qarzdorlarni saralaydi va eslatma matnlarini tayyorlaydi.\n\n    Ish zanjiri: login -> `/api/branch/debtors` -> qarz miqdori va kechikish kuniga\n    qarab saralash -> filial administratori uchun hisobot va yuborishga tayyor\n    eslatma matnlari.\n\n    Args:\n        month: Oy `YYYY-MM`. Bo'sh bo'lsa joriy oy.\n        min_days_overdue: Faqat shu kundan ko'p kechikkanlar (0 = barchasi).\n        limit: Hisobotga kiradigan maksimal qarzdorlar soni.\n    ",
+        "inputSchema": {
+          "properties": {
+            "month": {
+              "default": "",
+              "title": "Month",
+              "type": "string"
+            },
+            "min_days_overdue": {
+              "default": 0,
+              "title": "Min Days Overdue",
+              "type": "integer"
+            },
+            "limit": {
+              "default": 50,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "title": "debt_control_agentArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "attendance_control_agent",
+        "description": "Davomat nazoratchisi: ketma-ket dars qoldirgan o'quvchilarni aniqlaydi.\n\n    Ish zanjiri: login -> guruhlar -> davomat tarixi -> ketma-ket qoldirilgan\n    darslar soni -> mentor va administrator uchun ogohlantirish matni.\n\n    Args:\n        consecutive_misses: Nechta ketma-ket qoldirilgan dars xavf hisoblanadi (standart 2).\n        group_id: Faqat shu guruh (ixtiyoriy).\n        lookback_days: Necha kunlik tarix tekshiriladi (1-180).\n    ",
+        "inputSchema": {
+          "properties": {
+            "consecutive_misses": {
+              "default": 2,
+              "title": "Consecutive Misses",
+              "type": "integer"
+            },
+            "group_id": {
+              "default": "",
+              "title": "Group Id",
+              "type": "string"
+            },
+            "lookback_days": {
+              "default": 30,
+              "title": "Lookback Days",
+              "type": "integer"
+            }
+          },
+          "title": "attendance_control_agentArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "homework_control_agent",
+        "description": "Uy vazifasi nazoratchisi: topshirilmagan vazifalarni va eslatmalarni tayyorlaydi.\n\n    Ish zanjiri: login -> guruhlar va uy vazifalari -> muddati o'tgan, ammo\n    topshirilmagan vazifalarni ajratish -> o'quvchi uchun eslatma va mentor uchun\n    umumiy ro'yxat.\n\n    Args:\n        group_id: Faqat shu guruh (ixtayoriy).\n        only_overdue: True bo'lsa faqat muddati o'tgan vazifalar.\n        limit: Hisobotdagi maksimal vazifa soni.\n    ",
+        "inputSchema": {
+          "properties": {
+            "group_id": {
+              "default": "",
+              "title": "Group Id",
+              "type": "string"
+            },
+            "only_overdue": {
+              "default": true,
+              "title": "Only Overdue",
+              "type": "boolean"
+            },
+            "limit": {
+              "default": 40,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "title": "homework_control_agentArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "daily_finance_report",
+        "description": "Moliya kundalik hisobotchisi: tushum, xarajat, qoldiq va to'lovlar holati.\n\n    Ish zanjiri: login -> filial overview + finance overview -> jamlash ->\n    rahbarga qisqa hisobot -> oldingi davr bilan farq.\n\n    Args:\n        month: Oy `YYYY-MM`. Bo'sh bo'lsa joriy oy.\n        compare: True bo'lsa oldingi oy bilan farqni hisoblaydi.\n    ",
+        "inputSchema": {
+          "properties": {
+            "month": {
+              "default": "",
+              "title": "Month",
+              "type": "string"
+            },
+            "compare": {
+              "default": true,
+              "title": "Compare",
+              "type": "boolean"
+            }
+          },
+          "title": "daily_finance_reportArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "new_student_followup",
+        "description": "Yangi o'quvchi kuzatuvchisi: ro'yxatdan o'tib, jarayoni tugallanmaganlar.\n\n    Ish zanjiri: login -> o'quvchilar, guruhlar va to'lovlar -> qaysi bosqich\n    tugallanmaganini aniqlash (guruhga biriktirilmagan / birinchi to'lov yo'q) ->\n    reception xodimi uchun follow-up ro'yxati va xabar loyihasi.\n\n    Args:\n        days: Oxirgi necha kunda ro'yxatdan o'tganlar tekshiriladi (1-180).\n        limit: Maksimal yozuvlar soni.\n    ",
+        "inputSchema": {
+          "properties": {
+            "days": {
+              "default": 14,
+              "title": "Days",
+              "type": "integer"
+            },
+            "limit": {
+              "default": 40,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "title": "new_student_followupArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "pending_approvals_digest",
+        "description": "Tasdiqlarni jamlovchi yordamchi: tasdiq kutayotgan so'rovlarni guruhlaydi.\n\n    Ish zanjiri: login -> tasdiq kutayotgan so'rovlar -> tur, kutish vaqti va\n    muhimlik bo'yicha guruhlash -> mas'ul rahbarga umumiy hisobot.\n\n    Args:\n        limit: Hisobotdagi maksimal so'rovlar soni.\n    ",
+        "inputSchema": {
+          "properties": {
+            "limit": {
+              "default": 50,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "title": "pending_approvals_digestArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "room_schedule_assistant",
+        "description": "Xona va jadval yordamchisi: bandlik, to'qnashuvlar va bo'sh vaqtlar.\n\n    Ish zanjiri: login -> guruhlar jadvali va rejalashtirish ma'lumoti -> bir\n    mentor yoki xona bir vaqtda bir nechta darsga qo'yilganini tekshirish ->\n    administratorga to'qnashuvlar va muqobil variantlar.\n\n    Args:\n        max_groups_per_mentor: Rejalashtirish uchun mentor sig'imi (ma'lumot uchun).\n    ",
+        "inputSchema": {
+          "properties": {
+            "max_groups_per_mentor": {
+              "default": 3,
+              "title": "Max Groups Per Mentor",
+              "type": "integer"
+            }
+          },
+          "title": "room_schedule_assistantArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "mentor_workload_analysis",
+        "description": "Mentor yuklamasi tahlilchisi: yuklamani solishtiradi va tavsiya beradi.\n\n    Ish zanjiri: login -> mentorlar va guruhlar -> guruhlar soni (va jadval\n    ma'lumoti) -> yuklamasi yuqori/past mentorlar -> o'quv bo'limi rahbariga\n    taqqoslash va tavsiya.\n\n    Args:\n        max_groups_per_mentor: Bitta mentorga me'yoriy guruhlar soni.\n    ",
+        "inputSchema": {
+          "properties": {
+            "max_groups_per_mentor": {
+              "default": 3,
+              "title": "Max Groups Per Mentor",
+              "type": "integer"
+            }
+          },
+          "title": "mentor_workload_analysisArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "student_progress_audit",
+        "description": "O'quvchi progress auditori: ortda qolayotganlarni aniqlaydi va reja beradi.\n\n    Ish zanjiri: login -> o'quvchilar, davomat va uy vazifasi -> mezonlar bilan\n    solishtirish (davomat %, topshirilmagan vazifalar, to'lov, nofaollik) ->\n    mentor uchun sabablar va tavsiya etilgan yordam rejasi.\n\n    Args:\n        group_id: Faqat shu guruh (ixtiyoriy).\n        limit: Hisobotdagi maksimal o'quvchilar soni.\n        days: Davomat tarixining chuqurligi (kunlarda).\n    ",
+        "inputSchema": {
+          "properties": {
+            "group_id": {
+              "default": "",
+              "title": "Group Id",
+              "type": "string"
+            },
+            "limit": {
+              "default": 30,
+              "title": "Limit",
+              "type": "integer"
+            },
+            "days": {
+              "default": 60,
+              "title": "Days",
+              "type": "integer"
+            }
+          },
+          "title": "student_progress_auditArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "reception_router",
+        "description": "Reception so'rovlarini yo'naltiruvchi: murojaatlarni toifalab, mas'ulga taqsimlaydi.\n\n    Ish zanjiri: login -> yangi murojaatlar (kutish ro'yxati va holat so'rovlari)\n    -> toifa (to'lov, jadval, ta'lim, texnik, boshqa) -> mas'ul xodim -> administrator\n    uchun yo'naltirish ro'yxati va javob loyihasi; tushunarsizlar alohida.\n\n    Args:\n        limit: Hisobotdagi maksimal murojaatlar soni.\n    ",
+        "inputSchema": {
+          "properties": {
+            "limit": {
+              "default": 50,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "title": "reception_routerArguments",
+          "type": "object"
         },
         "annotations": {
           "readOnlyHint": false
         }
       }
     ],
-    "utility_tools": [
-      {
-        "schema": {
-          "name": "mcp__mars_lms__list_resources",
-          "description": "List available resources from MCP server 'mars-lms'",
-          "parameters": {
-            "type": "object",
-            "properties": {}
-          }
-        },
-        "handler_key": "list_resources"
-      },
-      {
-        "schema": {
-          "name": "mcp__mars_lms__read_resource",
-          "description": "Read a resource by URI from MCP server 'mars-lms'",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "uri": {
-                "type": "string",
-                "description": "URI of the resource to read"
-              }
-            },
-            "required": [
-              "uri"
-            ]
-          }
-        },
-        "handler_key": "read_resource"
-      },
-      {
-        "schema": {
-          "name": "mcp__mars_lms__list_prompts",
-          "description": "List available prompts from MCP server 'mars-lms'",
-          "parameters": {
-            "type": "object",
-            "properties": {}
-          }
-        },
-        "handler_key": "list_prompts"
-      },
-      {
-        "schema": {
-          "name": "mcp__mars_lms__get_prompt",
-          "description": "Get a prompt by name from MCP server 'mars-lms'",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string",
-                "description": "Name of the prompt to retrieve"
-              },
-              "arguments": {
-                "type": "object",
-                "description": "Optional arguments to pass to the prompt",
-                "properties": {},
-                "additionalProperties": true
-              }
-            },
-            "required": [
-              "name"
-            ]
-          }
-        },
-        "handler_key": "get_prompt"
-      }
-    ],
-    "ttl_ms": 0,
-    "written_at": 1795090506.9341824,
-    "cache_scope": "private"
+    "utility_tools": []
   }
 }

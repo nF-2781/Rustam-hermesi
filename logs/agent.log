@@ -532,3 +532,146 @@ AssertionError
 2026-11-19 17:15:06,945 INFO tools.mcp_tool: MCP server 'mars-lms' (stdio): registered 12 tool(s): mcp__mars_lms__login, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__students, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__list_resources, mcp__mars_lms__read_resource, mcp__mars_lms__list_prompts, mcp__mars_lms__get_prompt
 2026-11-19 17:15:06,946 INFO tools.mcp_tool: MCP: registered 12 tool(s) from 1 server(s)
 2026-11-19 17:15:06,946 INFO tools.mcp_tool:   MCP: 12 tool(s) from 1 server(s)
+2026-11-12 18:51:05,435 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-12 18:51:05,447 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-12 18:51:05,458 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-12 18:51:05,778 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-12 18:51:05,784 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-12 18:51:05,792 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-12 18:51:05,798 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-12 18:51:05,805 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-12 18:51:05,813 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-12 18:51:05,821 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-12 18:51:05,821 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-12 18:51:05,832 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-12 18:51:05,854 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-12 18:51:05,861 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-12 18:51:05,869 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-12 18:51:05,892 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-12 18:51:05,905 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-12 18:51:05,938 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-12 18:51:05,963 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-12 18:51:05,976 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-12 18:51:05,988 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-12 18:51:05,997 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-12 18:51:06,009 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-12 18:51:06,019 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-12 18:51:06,030 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-12 18:51:06,141 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-12 18:51:06,428 INFO hermes_cli.active_sessions: Pruned 1 stale active session lease(s)
+2026-11-12 18:51:07,218 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,243 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,246 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,264 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,268 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,286 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,290 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,305 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,308 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,324 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,327 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,344 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,371 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,414 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,416 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,419 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,443 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,445 WARNING tools.registry: check_fn check_discord_tool_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,446 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,455 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,507 WARNING tools.registry: check_fn _check_yuanbao returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,507 WARNING tools.registry: check_fn _check_ha_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,513 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,890 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:07.
+2026-11-12 18:51:07,893 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:07.
+2026-11-12 18:51:07,914 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-12 18:51:07,915 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:07.
+2026-11-12 18:51:07,915 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-12 18:51:07,929 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:07.
+2026-11-12 18:51:07,938 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-12 18:51:07,938 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:07.
+2026-11-12 18:51:07,939 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-12 18:51:07,939 WARNING tools.registry: check_fn check_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,955 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-11-12 18:51:07,964 WARNING tools.registry: check_fn check_video_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,968 WARNING tools.registry: check_fn _check_xai_video_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:07,967 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-12 18:51:07,968 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:07.
+2026-11-12 18:51:07,971 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-12 18:51:07,992 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:07.
+2026-11-12 18:51:08,016 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-12 18:51:08,019 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:52:08.
+2026-11-12 18:51:08,021 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-12 18:51:08,024 WARNING tools.registry: check_fn check_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:08,081 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-11-12 18:51:08,099 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:51:08,202 INFO tools.tool_search: tool_search activated (tier 1): 21 core/visible tools kept, 5 deferred (~4444 tokens), listing full (budget ~4000 tokens)
+2026-11-19 18:16:56,817 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-19 18:16:56,826 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-19 18:16:56,834 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-19 18:16:57,069 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-19 18:16:57,074 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-19 18:16:57,079 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-19 18:16:57,086 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-19 18:16:57,090 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-19 18:16:57,094 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-19 18:16:57,099 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-19 18:16:57,099 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-19 18:16:57,106 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-19 18:16:57,122 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-19 18:16:57,126 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-19 18:16:57,132 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-19 18:16:57,159 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-19 18:16:57,165 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-19 18:16:57,171 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-19 18:16:57,186 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-19 18:16:57,193 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-19 18:16:57,199 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-19 18:16:57,205 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-19 18:16:57,211 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-19 18:16:57,218 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-19 18:16:57,231 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-19 18:16:57,346 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-19 18:16:58,206 INFO hermes_cli.active_sessions: Pruned 1 stale active session lease(s)
+2026-11-19 18:17:00,285 INFO tools.mcp_tool: MCP server 'mars_lms' (stdio): registered 22 tool(s): mcp__mars_lms__lms_login, mcp__mars_lms__lms_context, mcp__mars_lms__list_groups, mcp__mars_lms__list_students, mcp__mars_lms__get_debts, mcp__mars_lms__get_attendance, mcp__mars_lms__get_homework, mcp__mars_lms__get_finance_report, mcp__mars_lms__get_payments, mcp__mars_lms__get_pending_approvals, mcp__mars_lms__get_room_plan, mcp__mars_lms__get_student_progress, mcp__mars_lms__debt_control_agent, mcp__mars_lms__attendance_control_agent, mcp__mars_lms__homework_control_agent, mcp__mars_lms__daily_finance_report, mcp__mars_lms__new_student_followup, mcp__mars_lms__pending_approvals_digest, mcp__mars_lms__room_schedule_assistant, mcp__mars_lms__mentor_workload_analysis, mcp__mars_lms__student_progress_audit, mcp__mars_lms__reception_router
+2026-11-19 18:17:00,286 INFO tools.mcp_tool: MCP: registered 22 tool(s) from 1 server(s)
+2026-11-19 18:17:00,286 INFO tools.mcp_tool:   MCP: 22 tool(s) from 1 server(s)
+2026-11-19 18:17:00,312 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,326 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,336 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,347 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,356 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,377 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,387 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,398 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,407 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,417 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,434 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,456 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,457 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,459 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,469 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,857 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:18:00.
+2026-11-19 18:17:00,866 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-19 18:17:00,866 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:18:00.
+2026-11-19 18:17:00,866 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-19 18:17:00,869 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:18:00.
+2026-11-19 18:17:00,876 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-19 18:17:00,877 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:18:00.
+2026-11-19 18:17:00,877 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-19 18:17:00,878 WARNING tools.registry: check_fn check_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,969 INFO tools.tool_search: tool_search activated (tier 1): 21 core/visible tools kept, 27 deferred (~8093 tokens), listing full (budget ~4000 tokens)
+2026-11-19 18:17:00,970 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,978 WARNING tools.registry: check_fn check_discord_tool_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,979 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,986 WARNING tools.registry: check_fn _check_yuanbao returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,986 WARNING tools.registry: check_fn _check_ha_available returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,988 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:00,995 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-11-19 18:17:00,999 WARNING tools.registry: check_fn check_video_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:01,000 WARNING tools.registry: check_fn _check_xai_video_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:17:01,003 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-11-19 18:17:01,006 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 18:20:14,003 INFO run_agent: Loaded environment variables from C:\Users\user\Documents\Hermes-2\.env
+2026-11-19 18:20:22,389 INFO tools.lazy_deps: Lazy-installing google-auth==2.55.1 pyasn1==0.6.4 for feature 'provider.vertex'
+2026-11-19 18:20:27,674 INFO tools.lazy_deps: Lazy install complete for feature 'provider.vertex'

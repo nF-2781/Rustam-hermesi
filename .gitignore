@@ -22,3 +22,8 @@ Thumbs.db
 /profiles/*/cache/
 /profiles/*/audio_cache/
 /profiles/*/image_cache/
+
+# Hermes runtime holati va sessiya tokenlari
+/logs/
+/cache/
+
