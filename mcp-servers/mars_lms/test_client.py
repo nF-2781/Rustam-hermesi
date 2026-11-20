@@ -18,6 +18,9 @@ import sys
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
+# `.env` shu import orqali o'qiladi: backend manzili yagona joyda sozlanadi.
+from lms_client import DEFAULT_API_URL
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 PYTHON = sys.executable
 SERVER = os.path.join(HERE, "server.py")
@@ -64,7 +67,7 @@ async def main() -> int:
     live = "--no-live" not in sys.argv
     env = {
         **os.environ,
-        "MARS_API_URL": os.environ.get("MARS_API_URL", "https://mars-backend-six.vercel.app"),
+        "MARS_API_URL": os.environ.get("MARS_API_URL") or DEFAULT_API_URL,
         "MARS_PHONE": os.environ.get("MARS_PHONE", "998990000001"),
         "MARS_PASSWORD": os.environ.get("MARS_PASSWORD", "Admin123!"),
         "MARS_ROLE": os.environ.get("MARS_ROLE", "admin"),
