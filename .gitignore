@@ -11,8 +11,14 @@
 Thumbs.db
 .DS_Store
 
-# Maxfiy kalitlar (MCP server credentials)
+# Maxfiy kalitlar (MCP server credentials) — hech qachon commit qilinmasin
+# Tracked bo'lib qolgan bo'lsa: git rm --cached <fayl>
 .env
+**/.env
+!**/.env.example
+!**/.env.template
+auth.json
+shared/nous_auth.json
 
 # Hermes runtime holati va sessiya tokenlari
 /auth.json
