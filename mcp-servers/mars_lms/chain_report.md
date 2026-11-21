@@ -1,4 +1,4 @@
-## MARS LMS — kunlik holat (2026-11-20 15:04 UTC)
+## MARS LMS — kunlik holat (2026-11-20 15:14 UTC)
 
 - Backend: `http://localhost:7000` | Oy: `2026-11`
 - Guruhlar: 1 | Faol o'quvchilar: 2 | To'lamaganlar: 0
