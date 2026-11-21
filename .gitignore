@@ -20,6 +20,9 @@ Thumbs.db
 auth.json
 shared/nous_auth.json
 
+# Hermes profillari (agentlar state'i — `bash agents/install.sh` bilan qayta tiklanadi)
+/profiles/
+
 # Hermes runtime holati va sessiya tokenlari
 /auth.json
 /shared/
