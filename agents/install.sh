@@ -19,13 +19,14 @@ PY="$ROOT/hermes-agent/.venv/Scripts/python.exe"
 [ -x "$PY" ] || { echo "✗ Python venv topilmadi: $ROOT/hermes-agent/.venv"; exit 1; }
 HERMES=("$PY" -m hermes_cli.main)
 
-ROLES=(ceo coo cfo cto cmo hr)
+ROLES=(ceo coo cfo cto cmo cpo hr)
 declare -A DESC=(
   [ceo]="Rahbariyat boshlig'i: filial holatini yig'ib, C-level ga topshiriq beradi va yakuniy qaror tavsiya qiladi."
   [coo]="Operatsion direktor: davomat, uy vazifasi, jadval, xona va tasdiqlar oqimi."
   [cfo]="Moliya direktori: tushum, qarzdorlik, xarajat, qoldiq va to'lov dinamikasi."
   [cto]="Texnika direktori: mars_lms MCP, backend integratsiyasi, dashboard, agentlar infratuzilmasi."
   [cmo]="Marketing direktori: murojaatlar voronkasi, yangi o'quvchi konversiyasi, retention."
+  [cpo]="Mahsulot direktori: o'quvchi/ota-ona tajribasi, mahsulot sifati va takliflar oqimi."
   [hr]="HR direktori: mentor yuklamasi va sifati, onboarding, kadr ehtiyoji."
 )
 

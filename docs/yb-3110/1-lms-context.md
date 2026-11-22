@@ -1,34 +1,55 @@
 # YB-3110 — 1-topshiriq: Mars jamoasining LMS repo va konteksti
 
 **Jamoa:** Mars (LMS — o'quv markaz boshqaruv tizimi)
-**Teamleadlar:** @jamkaILZ, @rustam106
+**Team Lead:** Rustam — @rustam106 (CTO)
 **Topshiruvchi:** @bmt_430 | **Muddat:** bugun 21:30
 
 ---
 
 ## 1. Repolar
 
-| Repo | Nima qiladi | Manzil |
-|---|---|---|
-| `Rustam-hermesi` | Hermes AI-agent platformasi: `mars_lms` MCP serveri, skill'lar, dashboard runner, agentlar. Jamoa shu repo ustida ishlaydi. | https://github.com/nF-2781/Rustam-hermesi (branch `rustam`) |
-| `mars-mcp-server` | LMS uchun birinchi (soddaroq) MCP server: 11 tool, JWT login, filial/moliya o'qish. Hozir `mcp-servers/mars_lms` uning kengaytirilgan versiyasi. | lokal: `mars-mcp-server/` (repo linki teamlead tomonidan tasdiqlanadi) |
-| `mars-backend` | LMS backend'i (Node.js, JWT auth, filial/moliya/davomat/uy vazifasi API'lari). | Prod: https://mars-backend-six.vercel.app <br> Lokal: http://localhost:7000 (Docker) |
+### Backend va agentlar platformasi
 
-> **Frontend:** bu ish muhitida frontend repo/kodi yo'q — manzili teamlead tomonidan
-> to'ldirilishi kerak (quyidagi "Aniqlashtirish kerak" bo'limiga qarang).
+| Repo | Nima qiladi | GitHub |
+|---|---|---|
+| `Rustam-hermesi` | Hermes AI-agent platformasi: `mars_lms` MCP serveri, skill'lar, dashboard runner, agentlar. Jamoa shu repo ustida ishlaydi (branch `rustam`). | https://github.com/nF-2781/Rustam-hermesi |
+| `mars-backend` | LMS backend'i (Node.js, JWT auth, filial / moliya / davomat / uy vazifasi API'lari). | https://github.com/nF-2781/mars-backend |
+| `mars-mcp-server` | Birinchi (soddaroq) MCP server: 11 tool, JWT login, filial/moliya o'qish. Hozir `mcp-servers/mars_lms` uning kengaytirilgan versiyasi. | shu repo ichida: `mcp-servers/mars_lms/` |
+
+- Backend prod: https://mars-backend-six.vercel.app
+- Swagger: https://mars-backend-six.vercel.app/api-docs/
+- Backend lokal: http://localhost:7000 (Docker)
+
+### Frontend (har biri alohida repo va alohida deploy)
+
+| Repo | Kim uchun | Deploy |
+|---|---|---|
+| `mars-admin` | Admin panel (filial, guruh, o'quvchi, moliya) | https://mars-admin-beta.vercel.app |
+| `mars-branch-manager` | Filial menejeri | https://mars-branch-manager.vercel.app |
+| `mars-finance` | Moliya bo'limi | https://mars-finance-orpin.vercel.app |
+| `mars-intern` | Amaliyotchi (intern) | https://mars-intern.vercel.app |
+| `mars-mentor` | Mentor | https://mars-mentor.vercel.app |
+| `mars-parent` | Ota-ona | https://mars-parent.vercel.app |
+| `mars-student` | O'quvchi | https://mars-student.vercel.app |
+| `mars-tutor` | Tutor / repetitor | https://mars-tutor.vercel.app |
+
+> Frontend repolarining GitHub manzillari hali berilmagan — jadvaldagi nom va deploy
+> manzillari tasdiqlangan. Team Lead GitHub linklarini qo'shadi.
 
 ## 2. Arxitektura
 
 ```
-Foydalanuvchi / Hermes agent
-        │  (chat, dashboard)
-        ▼
-Hermes (Mars loyihasi, dashboard :9120)
-        │  stdio (MCP)
-        ▼
-mcp-servers/mars_lms/server.py  ──HTTPS/JWT──▶  mars-backend-six.vercel.app
-        │                                        (yoki lokal :7000)
-        └── 22 tool: 10 workflow-agent + 12 yordamchi
+Foydalanuvchi ──▶ Frontend (mars-admin, mars-student, ... Vercel)
+                        │ HTTPS/JWT
+                        ▼
+                  mars-backend (Vercel)  ◀── Swagger /api-docs
+                        ▲ HTTPS/JWT
+                        │
+Hermes agent ── stdio (MCP) ──▶ mcp-servers/mars_lms/server.py
+   (mars-ceo ... mars-cpo)            22 tool: 10 workflow + 12 yordamchi
+                        │
+                        ▼
+              dashboard :9120 (run_mars_dashboard.sh)
 ```
 
 - Hermes loyihasi: `hermes project list` → `* mars  Mars  [1 folder(s)]`
@@ -52,6 +73,7 @@ mcp-servers/mars_lms/server.py  ──HTTPS/JWT──▶  mars-backend-six.verce
 | Testlar | ✅ | 24 mock test + jonli stdio klient testi |
 | Hermes dashboard (:9120) | ✅ | `GET /` → 200, `/api/status` → v0.21.2 |
 | Skill'lar: `mars-lms-operations`, `hermes-mars-dashboard` | ✅ | `hermes skills list` → enabled |
+| 7 ta C-level agent profili | ⏳ | `bash agents/install.sh --check` (skeletlar to'ldirilmoqda) |
 
 ## 4. Hozir nima ishlamaydi / cheklangan
 
@@ -61,16 +83,15 @@ mcp-servers/mars_lms/server.py  ──HTTPS/JWT──▶  mars-backend-six.verce
 | Pul operatsiyalari (to'lov qabul qilish, refund, oylik to'lash) | ataylab yopilgan | faqat hisobot; amal — backend UI'da odam tomonidan |
 | Ba'zi endpoint yo'q: xona bo'shligi, jadval to'qnashuvi, mentor yuklamasi | lokal hisoblanadi (guruh `schedule` parse) → noaniqlik bo'lishi mumkin | backend'ga endpoint qo'shilsa, tool'lar soddalashadi |
 | Rollar: faqat `admin`/`owner` to'liq ishlaydi | `mentor`/`financeManager` da 403 | rol bo'yicha ruxsat matritsasi kerak |
-| Frontend repo/manzili hujjatlashtirilmagan | jamoa konteksti to'liq emas | teamlead to'ldiradi |
-| Credentials bir marta git tarixiga tushib qolgan | xavfsizlik | fayllar tracking'dan chiqarildi; parol/kalitlarni almashtirish qolgan |
+| Frontend repolarining GitHub linklari yo'q | repo tarixini ko'rish cheklangan | teamlead linkni qo'shadi |
+| Credentials bir marta git tarixiga tushib qolgan | xavfsizlik | fayllar tracking'dan chiqarildi; parol/kalit almashtirish qolgan |
 | Dashboard standart porti 9119 band (gateway ichki dashboardi) | `BACKEND_PORT_IN_USE` | `run_mars_dashboard.sh` 9120 ni tanlaydi |
 
-## 5. Aniqlashtirish kerak (teamlead to'ldiradi)
+## 5. Aniqlashtirish kerak
 
-1. Frontend repo linki va deploy manzili (Vercel/Netlify).
-2. `mars-backend` repo linki (hozir faqat prod URL ma'lum).
-3. Nechta filial/oy live ma'lumot bilan sinovdan o'tgan.
-4. Jamoa a'zolari ro'yxati (agentlarni bo'lish uchun — 2-topshiriq).
+1. Frontend repolarining GitHub manzillari (8 repo).
+2. Nechta filial/oy live ma'lumot bilan sinovdan o'tgan.
+3. Har bir a'zoning agent bo'yicha yakuniy tasdig'i (2-topshiriq: `2-agent-roster.md`).
 
 ## 6. Qanday tekshirish (takrorlanadigan)
 
@@ -80,4 +101,5 @@ export HERMES_HOME="$PWD" PYTHONPATH="$PWD/hermes-agent"
 python -m hermes_cli.main mcp test mars_lms  # ✓ 22 tools
 python mcp-servers/mars_lms/chain_demo.py    # 6-qadamli zanjir → chain_report.md
 bash skills/hermes_mars_dashboard/run_mars_dashboard.sh start   # dashboard :9120
+bash agents/install.sh --check               # 7 agent profili
 ```
