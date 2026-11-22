@@ -1,4 +1,4 @@
-<!-- SKELET — bu faylni agent egasi o'zi to'ldiradi: Muhammadali (@muhammadali850), CPO -->
+<!-- SKELET — bu faylni agent egasi o'zi to'ldiradi: Muhammadali "Chihuahua" (@muhammadali850), CPO -->
 # AGENTS — Mars CPO (`mars-cpo`)
 
 ## Rol

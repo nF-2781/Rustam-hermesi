@@ -1,4 +1,4 @@
-<!-- SKELET — bu faylni agent egasi o'zi to'ldiradi: Muhammadali (@muhammadali850), CPO -->
+<!-- SKELET — bu faylni agent egasi o'zi to'ldiradi: Muhammadali "Chihuahua" (@muhammadali850), CPO -->
 # SOUL — Mars CPO (`mars-cpo`)
 
 > **Hali yozilmagan.** Egasi quyidagi bo'limlarni to'ldiradi. Namuna: `agents/cto/soul.md`.

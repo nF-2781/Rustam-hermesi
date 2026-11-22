@@ -28,7 +28,7 @@ lekin har bir `agents.md` da ularning joyi allaqachon belgilangan.
 | 3 | Muhammadrizo | @rizo_x7k | https://github.com/rizo04684-sudo | `mars-cfo` | CFO | "Pul: tushum, qarzdorlik, xarajat, qoldiq" |
 | 4 | Rustam | @rustam106 | https://github.com/ahshdhdh | `mars-cto` | CTO | "Platforma (MCP, backend, dashboard, agentlar) sog'lommi?" |
 | 5 | Muhammadsolih | @muhammad_solih13 | https://github.com/muhammadsolihtolqinxojaev13-bot | `mars-cmo` | CMO | "O'sish: yangi o'quvchi, waitlist, murojaatlar" |
-| 6 | Muhammadali | — | https://github.com/muhammadali850 | `mars-cpo` | CPO | "Mahsulot: o'quvchi tajribasi, sifat, takliflar" |
+| 6 | Muhammadali "Chihuahua" | Chihuahua | https://github.com/muhammadali850 | `mars-cpo` | CPO | "Mahsulot: o'quvchi tajribasi, sifat, takliflar" |
 | 7 | Islom | @vxrnox | https://github.com/muxsimovislom98-sketch | `mars-hr` | HR | "Odamlar: mentor yuklamasi, sifat, onboarding" |
 
 ## 3. Har bir agentning fayllari

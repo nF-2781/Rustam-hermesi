@@ -24,7 +24,7 @@ CEO (mars-ceo) — Kamollidin
 ├── CMO (mars-cmo) — Muhammadsolih: o'sish
 │   ├── lead-nurturer
 │   └── growth-analyst
-├── CPO (mars-cpo) — Muhammadali: mahsulot
+├── CPO (mars-cpo) — Muhammadali "Chihuahua": mahsulot
 │   ├── product-analyst
 │   └── quality-coordinator
 └── HR (mars-hr) — Islom: odamlar
@@ -60,7 +60,7 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 | `cfo/` | CFO | skelet — Muhammadrizo to'ldiradi |
 | `cto/` | CTO | **to'liq yozilgan** (namuna) — Rustam |
 | `cmo/` | CMO | skelet — Muhammadsolih to'ldiradi |
-| `cpo/` | CPO | skelet — Muhammadali to'ldiradi |
+| `cpo/` | CPO | skelet — Muhammadali (Chihuahua) to'ldiradi |
 | `hr/` | HR | skelet — Islom to'ldiradi |
 
 ## Qoidalar (barcha agentlar uchun majburiy)
