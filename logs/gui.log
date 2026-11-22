@@ -39,3 +39,19 @@
 2026-11-18 23:31:00,309 INFO tui_gateway.ws: ws closed peer=127.0.0.1:64909 reason=client_disconnect(code=1012,reason=) messages=559 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
 2026-11-19 17:15:06,045 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
 2026-11-19 17:15:06,186 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-19 19:12:04,963 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-19 19:12:05,090 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-19 19:12:34,388 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:63511
+2026-11-19 19:12:34,456 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-19 19:12:35,040 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:35,089 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:36,477 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:36,566 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:38,402 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:56115
+2026-11-19 19:12:39,207 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-19 19:12:40,233 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,290 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:40,302 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,353 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:17:00,189 INFO tui_gateway.ws: ws closed peer=127.0.0.1:56115 reason=client_disconnect(code=1012,reason=) messages=526 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-11-19 19:17:00,214 INFO tui_gateway.ws: ws closed peer=127.0.0.1:63511 reason=client_disconnect(code=1012,reason=) messages=16 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0

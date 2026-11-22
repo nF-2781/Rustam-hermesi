@@ -258,3 +258,53 @@ AssertionError
 2026-11-19 18:17:00,999 WARNING tools.registry: check_fn check_video_generation_requirements returned False; dependent tools will be unavailable this turn
 2026-11-19 18:17:01,000 WARNING tools.registry: check_fn _check_xai_video_requirements returned False; dependent tools will be unavailable this turn
 2026-11-19 18:17:01,006 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:05,568 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:05,569 WARNING tools.mcp_tool: Failed to connect to MCP server 'mars_lms' (command=C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe): [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:05,583 WARNING __main__: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:35,040 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:35,081 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:35,089 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:36,477 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:36,550 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:36,566 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:36,568 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
+2026-11-19 19:12:40,233 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,274 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:40,290 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:40,302 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,345 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:40,353 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:48,932 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:48,933 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:49,560 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:49,564 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,181 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,184 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,784 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,787 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,400 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,403 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,479 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,479 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,130 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,135 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,840 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,855 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:53,457 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:53,465 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,130 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,133 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,833 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,839 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,334 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,338 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,373 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,374 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,386 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,388 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,391 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,393 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,397 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,400 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,417 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,418 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn

@@ -1,6 +1,6 @@
 {
 "https://inference-api.nousresearch.com/v1":{
-"at":1795094412.7320933,
+"at":1795097555.3237262,
 "models":{
 "google/gemini-4-neon":{
 "name":"Google: Gemini 4 Neon",
@@ -2483,21 +2483,21 @@
 "~deepseek/deepseek-v4-flash-latest":{
 "name":"DeepSeek: DeepSeek V4 Flash Latest",
 "context_length":1048576,
-"max_completion_tokens":943718,
+"max_completion_tokens":131072,
 "pricing":{
-"prompt":"0.0000000470",
-"completion":"0.0000003000",
-"cache_read":"0.0000000350"
+"prompt":"0.0000000466",
+"completion":"0.0000001399",
+"cache_read":"0.0000000015"
 }
 },
 "deepseek-v4-flash-latest":{
 "name":"DeepSeek: DeepSeek V4 Flash Latest",
 "context_length":1048576,
-"max_completion_tokens":943718,
+"max_completion_tokens":131072,
 "pricing":{
-"prompt":"0.0000000470",
-"completion":"0.0000003000",
-"cache_read":"0.0000000350"
+"prompt":"0.0000000466",
+"completion":"0.0000001399",
+"cache_read":"0.0000000015"
 }
 },
 "deepseek/deepseek-v4-flash-0731:batch":{
@@ -3115,7 +3115,7 @@
 "context_length":262144,
 "max_completion_tokens":235929,
 "pricing":{
-"prompt":"0.0000006600",
+"prompt":"0.0000006500",
 "completion":"0.0000035000",
 "cache_read":"0.0000001600"
 }
@@ -3125,7 +3125,7 @@
 "context_length":262144,
 "max_completion_tokens":235929,
 "pricing":{
-"prompt":"0.0000006600",
+"prompt":"0.0000006500",
 "completion":"0.0000035000",
 "cache_read":"0.0000001600"
 }
@@ -3777,7 +3777,7 @@
 "deepseek/deepseek-v4-flash":{
 "name":"DeepSeek: DeepSeek V4 Flash 0423",
 "context_length":1048576,
-"max_completion_tokens":131072,
+"max_completion_tokens":943718,
 "pricing":{
 "prompt":"0.0000000900",
 "completion":"0.0000001800",
@@ -3787,7 +3787,7 @@
 "deepseek-v4-flash":{
 "name":"DeepSeek: DeepSeek V4 Flash 0423",
 "context_length":1048576,
-"max_completion_tokens":131072,
+"max_completion_tokens":943718,
 "pricing":{
 "prompt":"0.0000000900",
 "completion":"0.0000001800",
