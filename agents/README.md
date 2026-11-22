@@ -42,8 +42,9 @@ hermes profile list           # mars-ceo ... mars-hr, mars-cpo ko'rinadi
 hermes -p mars-cfo chat       # agent bilan suhbat
 ```
 
-Barcha 7 agent yozilgan: har bir a'zo faqat `git pull` qilib, o'z agentini ochib ko'radi va
-kerak bo'lsa o'z `soul.md` / `agents.md` faylini tahrirlaydi (keyin yana `install.sh`).
+Repo'da 7 agentning fayli bor, lekin hammasi tasdiqlangan deb hisoblanmaydi:
+`ceo` (Rustam o'zi yozgan) va `cto` (namuna) ustoz tomonidan qabul qilingan; qolgan 5 rol
+fayli — skelet, a'zo o'zi yozib/tasdiqlagachgina tayyor (keyin yana `install.sh`).
 
 > **Mualliflik (ochiq):** `cto/` mazmuni — Rustam (@rustam106) yozgan namuna, hozirgi egasi
 > Saidabzal (@Saidabza1). Qolgan 6 rolning `soul.md` + `agents.md` skeleti Team Lead
@@ -63,13 +64,13 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 
 | Papka | Agent | Holat |
 |---|---|---|
-| `ceo/` | CEO | to'liq yozilgan — Rustam |
-| `coo/` | COO | to'liq yozilgan — Kamollidin (egasi ko'rib chiqadi) |
-| `cfo/` | CFO | to'liq yozilgan — Islom |
-| `cto/` | CTO | to'liq yozilgan (namuna muallifi — Rustam) — Saidabzal |
-| `cmo/` | CMO | to'liq yozilgan — Muhammadrizo |
-| `cpo/` | CPO | to'liq yozilgan — Muhammadsolih |
-| `hr/` | HR | to'liq yozilgan — Muhammadali (Chihuahua) |
+| `ceo/` | CEO | ✅ qabul — Rustam (o'zi yozgan) |
+| `coo/` | COO | skelet — Kamollidin o'zi yozadi/tasdiqlaydi |
+| `cfo/` | CFO | skelet — Islom o'zi yozadi/tasdiqlaydi |
+| `cto/` | CTO | ✅ mazmun qabul (namuna — Rustam) — Saidabzal tasdiqlaydi |
+| `cmo/` | CMO | skelet — Muhammadrizo o'zi yozadi/tasdiqlaydi |
+| `cpo/` | CPO | skelet — Muhammadsolih o'zi yozadi/tasdiqlaydi |
+| `hr/` | HR | skelet — Muhammadali o'zi yozadi/tasdiqlaydi |
 
 ## Qoidalar (barcha agentlar uchun majburiy)
 

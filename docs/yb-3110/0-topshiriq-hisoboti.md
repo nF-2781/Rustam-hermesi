@@ -4,7 +4,9 @@
 **Team Lead:** Rustam — @rustam106 (CEO agenti, `mars-ceo`, https://github.com/ahshdhdh)
 **Topshiruvchi:** @bmt_430
 **Muddat:** 24.11.2026, 18:40
-**Holat:** barcha bandlar yopilgan, hujjatlar va agent fayllari `origin/rustam` da
+**Holat:** 7 rol tayinlangan, hujjatlar `origin/rustam` da. `ceo` va `cto` fayllari ustoz
+tomonidan qabul qilingan; qolgan 5 rol faylini a'zoning o'zi yozmaguncha "bajarildi"
+hisoblanmaydi (§8).
 
 ---
 
@@ -19,6 +21,7 @@
 | 5 | Parol almashtirilganini yozish | ✅ yozildi, **parolning o'zi hech qayerda yo'q** | `1-lms-context.md` §4 |
 | 6 | CTO `soul.md` + `agents.md` fayl sifatida | ✅ ikkita alohida fayl, repoda commit qilingan | `agents/cto/soul.md`, `agents/cto/agents.md` |
 | 7 | Jonli suhbat namunasi (4-band) | ✅ `mars-cto` profili bilan o'tkazildi | shu fayl, §7 |
+| 8 | Yangi rol: Rustam — CEO, `agents/ceo/` | ✅ **qabul** (o'zi yozgan, vaqt hisobga olindi) | `agents/ceo/soul.md`, `agents/ceo/agents.md` |
 
 ## 2. Jamoa va agentlar (7 kishi — 7 agent)
 
@@ -101,11 +104,13 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 | Ro'yxat va kontekst (`1-lms-context.md`, `2-agent-roster.md`) | ✅ **qabul** | — |
 | `agents/cto/soul.md` | ✅ **qabul**, 1 izoh | `403` misoli olib tashlandi: endi agent rol almashtirmaydi — kerakli ruxsatni nomlab, tasdiqni odamdan oladi |
 | `agents/cto/agents.md` | ✅ **qabul**, 2 izoh | 1) pul va shaxsiy ma'lumot uchun **inson tasdig'i** qoidasi qo'shildi; 2) `6 agent` → `7 agent` (profil soni ham 7) |
-| Qolgan 6 agent | — | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi |
+| `agents/ceo/agents.md` — ish zanjiri | ⚠️ izoh | 4-qadamda CTO tushib qolgan edi → `COO/CFO/CTO/CMO/CPO/HR` ga qo'shildi |
+| Ro'yxatdagi “hammasi yozilgan” da'vosi | ⚠️ izoh | faqat `ceo` + `cto` (namuna) qabul qilingan. Roster, `agents/README.md` va shu hisobotda endi halol yozilgan: qolgan 5 rol fayli — skelet |
+| Qolgan 5 agent (COO/CFO/CMO/CPO/HR) | ⏳ kutilmoqda | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi, shundan keyingina “bajarildi” |
 
-**Mualliflik (ochiq yozilgan):** `cto/` mazmuni — Rustam namunasi; qolgan 6 rol skeleti Team Lead
-tomonidan yozib berilgan (`agents/README.md` da shunday yozilgan), har bir a'zo o'z faylini
-ko'rib chiqib, o'z nomidan tasdiqlaydi.
+**Mualliflik (ochiq yozilgan):** `ceo/` — Rustam o'zi yozgan (ustoz qabul qildi); `cto/` mazmuni —
+Rustam namunasi (qabul qilingan, egasi Saidabzal). Qolgan 5 rol skeleti Team Lead tomonidan
+yozib berilgan — a'zo o'z faylini o'zi yozib, o'z nomidan tasdiqlagachgina hisobga olinadi.
 
 **Rol taqsimoti (22.11, Team Lead qarori):** tartib yuqoridan pastga — 1 Rustam (CEO),
 2 Kamollidin (COO), 3 Islom (CFO), 4 Saidabzal (CTO), 5 Muhammadrizo (CMO),

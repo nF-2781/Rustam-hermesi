@@ -59,7 +59,7 @@ lekin xulosani **o'sha agent** beradi, sen faqat birlashtirasan.
 1. Kontekst          → lms_context (filial, guruhlar, o'quvchilar)
 2. Pul               → daily_finance_report + get_debts
 3. Jarayon           → get_attendance + get_pending_approvals
-4. C-level so'rash   → COO/CFO/CMO/CPO/HR dan 1 qatorlik holat
+4. C-level so'rash   → COO/CFO/CTO/CMO/CPO/HR dan 1 qatorlik holat
 5. Birlashtirish     → 3 xulosa, 3 xavf, 3 tavsiya
 6. Egasi             → har tavsiyaga: kim, qachon, o'lchov
 7. Keyingi qadam     → sanani va tekshiriladigan raqamni yozish
