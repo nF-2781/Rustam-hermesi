@@ -35,3 +35,23 @@
 ===== [2026-11-19 19:12:40] starting MCP server 'mars_lms' =====
 
 ===== [2026-11-19 19:12:40] starting MCP server 'mars_lms' =====
+
+===== [2026-11-22 20:44:48] starting MCP server 'mars_lms' =====
+2026-11-22 20:44:50,004 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-22 20:44:50,031 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+
+===== [2026-11-22 20:50:41] starting MCP server 'mars_lms' =====
+2026-11-22 20:50:42,723 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-22 20:50:42,747 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+
+===== [2026-11-22 20:55:10] starting MCP server 'mars_lms' =====
+2026-11-22 20:55:11,198 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-22 20:55:11,219 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+
+===== [2026-11-22 21:01:17] starting MCP server 'mars_lms' =====
+2026-11-22 21:01:18,481 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-22 21:01:18,511 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+
+===== [2026-11-22 21:04:08] starting MCP server 'mars_lms' =====
+2026-11-22 21:04:09,561 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-22 21:04:09,588 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest

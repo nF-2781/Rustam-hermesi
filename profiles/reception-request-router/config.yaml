@@ -4,9 +4,9 @@ model:
 _config_version: 43
 mcp_servers:
   mars-lms:
-    command: ${PYTHONPATH}/../mcp/mars-lms/.venv/Scripts/python.exe
+    command: ${PYTHONPATH}/../mcp-servers/mars_lms/.venv/Scripts/python.exe
     args:
-      - ${PYTHONPATH}/../mcp/mars-lms/agents_server.py
+      - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
     env:
       MARS_API_URL: https://mars-backend-six.vercel.app
     tools:

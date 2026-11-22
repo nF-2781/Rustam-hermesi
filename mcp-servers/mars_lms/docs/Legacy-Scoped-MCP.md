@@ -1,5 +1,11 @@
 # MARS LMS MCP for Hermes
 
+> Historical documentation from the former standalone SDK 2 adapter. The current
+> server is `mcp-servers/mars_lms/server.py` on MCP SDK 1.30.0. The old paths,
+> SDK 2 client commands and standalone tool table below describe the previous
+> implementation. Use `../README.md` and the project `agents/README.md` for current
+> commands. Retained to preserve migration history.
+
 Local Python stdio MCP for Hermes AI employees. The deployed LMS backend is
 `https://mars-backend-six.vercel.app`; the backend source repository is not
 required to run this package.
@@ -33,8 +39,8 @@ the package environment instead of copying a virtual environment from another
 location:
 
 ```powershell
-runtime/venv/Scripts/python.exe -m venv mcp/mars-lms/.venv
-mcp/mars-lms/.venv/Scripts/python.exe -m pip install -r mcp/mars-lms/requirements.txt
+runtime/venv/Scripts/python.exe -m venv mcp-servers/mars_lms/profile_adapter/.venv
+mcp-servers/mars_lms/profile_adapter/.venv/Scripts/python.exe -m pip install -r mcp-servers/mars_lms/profile_adapter/requirements.txt
 ```
 
 Alternatively use an installed Python 3.11+ to create `.venv`. The tested adapter
@@ -55,7 +61,7 @@ mcp_servers:
   mars-lms:
     command: "${MARS_MCP_PYTHON}"
     args:
-      - "${HERMES_HOME}/mcp/mars-lms/server.py"
+      - "${HERMES_HOME}/mcp-servers/mars_lms/profile_adapter/server.py"
     env:
       MARS_API_URL: "https://mars-backend-six.vercel.app"
 ```
@@ -70,8 +76,8 @@ then run from the project root:
 ```bash
 python3 -m venv runtime/venv
 runtime/venv/bin/python -m pip install -e './hermes-agent[web,mcp]'
-python3 -m venv mcp/mars-lms/.venv
-mcp/mars-lms/.venv/bin/python -m pip install -r mcp/mars-lms/requirements.txt
+python3 -m venv mcp-servers/mars_lms/profile_adapter/.venv
+mcp-servers/mars_lms/profile_adapter/.venv/bin/python -m pip install -r mcp-servers/mars_lms/profile_adapter/requirements.txt
 cd hermes-agent
 npm install --workspace web --workspace ui-tui
 npm run build --workspace web
@@ -97,7 +103,7 @@ the stdio process automatically; no separate background server or backend
 checkout is necessary. To launch manually:
 
 ```powershell
-mcp/mars-lms/.venv/Scripts/python.exe mcp/mars-lms/server.py
+mcp-servers/mars_lms/profile_adapter/.venv/Scripts/python.exe mcp-servers/mars_lms/profile_adapter/server.py
 ```
 
 A quiet terminal is normal: the process waits for MCP input, not ordinary chat
@@ -144,9 +150,9 @@ are returned unchanged. The optional `MARS_API_TIMEOUT_SECONDS` defaults to 20.
 From the Hermes home:
 
 ```powershell
-mcp/mars-lms/.venv/Scripts/python.exe -m unittest discover -s mcp/mars-lms/tests -v
-mcp/mars-lms/.venv/Scripts/python.exe mcp/mars-lms/smoke.py --fixture
-mcp/mars-lms/.venv/Scripts/python.exe mcp/mars-lms/smoke.py --fixture --mode legacy
+mcp-servers/mars_lms/profile_adapter/.venv/Scripts/python.exe -m unittest discover -s mcp-servers/mars_lms/profile_adapter/tests -v
+mcp-servers/mars_lms/profile_adapter/.venv/Scripts/python.exe mcp-servers/mars_lms/profile_adapter/smoke.py --fixture
+mcp-servers/mars_lms/profile_adapter/.venv/Scripts/python.exe mcp-servers/mars_lms/profile_adapter/smoke.py --fixture --mode legacy
 ```
 
 The fixture test starts the real stdio server and performs one login followed
@@ -154,14 +160,14 @@ by seven GET requests using that token. The suite also checks HTTP errors,
 timeout, token expiry and failed account switches.
 
 For a live demonstration, use environment variables or a private
-`mcp/mars-lms/.env.local` file with `MARS_PHONE`, `MARS_PASSWORD` and optional
+`mcp-servers/mars_lms/profile_adapter/.env.local` file with `MARS_PHONE`, `MARS_PASSWORD` and optional
 `MARS_ROLE`. Copy the empty `.env.example` if needed. Only the smoke script
 reads the credential file; the server receives credentials through its login
 tool. You can also select another existing file for a one-time test:
 
 ```powershell
-mcp/mars-lms/.venv/Scripts/python.exe mcp/mars-lms/smoke.py
-mcp/mars-lms/.venv/Scripts/python.exe mcp/mars-lms/smoke.py --env-file C:/path/to/private.env
+mcp-servers/mars_lms/profile_adapter/.venv/Scripts/python.exe mcp-servers/mars_lms/profile_adapter/smoke.py
+mcp-servers/mars_lms/profile_adapter/.venv/Scripts/python.exe mcp-servers/mars_lms/profile_adapter/smoke.py --env-file C:/path/to/private.env
 ```
 
 The smoke client reports statuses without dumping people/payment data or JWTs.

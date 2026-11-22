@@ -55,3 +55,11 @@
 2026-11-19 19:12:40,353 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
 2026-11-19 19:17:00,189 INFO tui_gateway.ws: ws closed peer=127.0.0.1:56115 reason=client_disconnect(code=1012,reason=) messages=526 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
 2026-11-19 19:17:00,214 INFO tui_gateway.ws: ws closed peer=127.0.0.1:63511 reason=client_disconnect(code=1012,reason=) messages=16 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
+2026-11-22 21:01:17,760 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-22 21:01:17,904 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-22 21:01:23,999 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:49959
+2026-11-22 21:01:24,080 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-22 21:01:28,919 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61378
+2026-11-22 21:01:29,225 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-22 21:03:01,089 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61378 reason=client_disconnect(code=1012,reason=) messages=191 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-11-22 21:03:01,117 INFO tui_gateway.ws: ws closed peer=127.0.0.1:49959 reason=client_disconnect(code=1012,reason=) messages=7 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0

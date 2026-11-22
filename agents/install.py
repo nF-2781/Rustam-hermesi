@@ -34,8 +34,8 @@ def install(name):
     # Root launchers set it to this checkout's hermes-agent directory.
     executable = 'Scripts/python.exe' if os.name == 'nt' else 'bin/python'
     config['mcp_servers'] = {'mars-lms': {
-        'command': '${PYTHONPATH}/../mcp/mars-lms/.venv/' + executable,
-        'args': ['${PYTHONPATH}/../mcp/mars-lms/agents_server.py'],
+        'command': '${PYTHONPATH}/../mcp-servers/mars_lms/.venv/' + executable,
+        'args': ['${PYTHONPATH}/../mcp-servers/mars_lms/server.py'],
         'env': {'MARS_API_URL': 'https://mars-backend-six.vercel.app'},
         'tools': {'include': tools, 'prompts': False, 'resources': False},
     }}

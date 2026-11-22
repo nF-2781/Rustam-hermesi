@@ -3,6 +3,6 @@ mcp_servers:
   mars-lms:
     command: "${MARS_MCP_PYTHON}"
     args:
-      - "${HERMES_HOME}/mcp/mars-lms/server.py"
+      - "${PYTHONPATH}/../mcp-servers/mars_lms/server.py"
     env:
       MARS_API_URL: "https://mars-backend-six.vercel.app"

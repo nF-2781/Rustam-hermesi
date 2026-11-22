@@ -3,18 +3,20 @@ from contextlib import contextmanager
 from datetime import date, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
+import os
 from pathlib import Path
 import sys
 import threading
 import unittest
 
 import httpx
-from mcp import Client, StdioServerParameters
+from mcp import StdioServerParameters
+from smoke import connected_client
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import agent_workflows as workflow
-from lms_client import LMSClient
+from scoped_client import LMSClient
 
 STUDENT = 'a' * 24
 GROUP = 'b' * 24
@@ -166,6 +168,18 @@ class AnalysisTests(unittest.TestCase):
         self.assertFalse(workflow.incoming_requests([{'id': '1', 'text': ''}])['success'])
 
 class ScopeTests(unittest.IsolatedAsyncioTestCase):
+    async def test_no_live_cli_discovers_all_tools_without_backend_requests(self):
+        with agent_backend() as (url, calls):
+            process = await asyncio.create_subprocess_exec(
+                sys.executable, str(ROOT / 'test_client.py'), '--no-live',
+                env={**os.environ, 'MARS_API_URL': url, 'MARS_PHONE': 'fixture',
+                     'MARS_PASSWORD': 'fixture'},
+                stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+            stdout, stderr = await asyncio.wait_for(process.communicate(), timeout=30)
+            self.assertEqual(process.returncode, 0, stderr.decode(errors='replace'))
+            self.assertIn(b'tools: 36', stdout)
+            self.assertEqual(calls, [])
+
     async def test_student_outside_roster_makes_no_group_requests(self):
         calls = []
         def respond(request):
@@ -188,34 +202,38 @@ class ScopeTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_real_stdio_login_roster_progress_curriculum_and_reception(self):
         with agent_backend() as (url, calls):
-            params = StdioServerParameters(command=sys.executable, args=[str(ROOT / 'agents_server.py')],
+            params = StdioServerParameters(command=sys.executable, args=[str(ROOT / 'server.py')],
                                            env={'MARS_API_URL': url})
-            async with Client(params) as client:
+            async with connected_client(params) as client:
                 tools = {tool.name for tool in (await client.list_tools()).tools}
+                self.assertEqual(len(tools), 36)
+                self.assertTrue({'branch_me', 'groups', 'mentors', 'payments',
+                                 'finance_overview', 'finance_salaries'} <= tools)
+                self.assertTrue({'lms_login', 'student_progress_audit', 'reception_router'} <= tools)
                 self.assertTrue({'login', 'students', 'student_progress', 'attendance', 'homework',
                                  'curriculum', 'incoming_requests', 'reception_triage'} <= tools)
                 denied = await client.call_tool('students', {})
-                self.assertTrue(denied.is_error)
+                self.assertTrue(denied.isError)
                 self.assertEqual(calls, [])
                 logged = await client.call_tool('login', {'phone': 'fixture', 'password': 'fixture'})
-                self.assertFalse(logged.is_error)
-                self.assertNotIn('token', logged.structured_content)
-                roster = (await client.call_tool('students', {})).structured_content
+                self.assertFalse(logged.isError)
+                self.assertNotIn('token', logged.structuredContent)
+                roster = (await client.call_tool('students', {})).structuredContent
                 self.assertNotIn('phone', json.dumps(roster))
                 progress = await client.call_tool('student_progress', {'student_id': STUDENT, 'period_start': START, 'period_end': END})
-                self.assertFalse(progress.is_error)
-                self.assertEqual(progress.structured_content['data']['homework']['average_percent'], 50)
+                self.assertFalse(progress.isError)
+                self.assertEqual(progress.structuredContent['data']['homework']['average_percent'], 50)
                 curriculum = await client.call_tool('curriculum', {})
-                self.assertFalse(curriculum.is_error)
+                self.assertFalse(curriculum.isError)
                 missing = await client.call_tool('incoming_requests', {})
-                self.assertTrue(missing.is_error)
-                self.assertEqual(missing.structured_content['status'], 501)
+                self.assertTrue(missing.isError)
+                self.assertEqual(missing.structuredContent['status'], 501)
                 manual = [{'id': 'r1', 'text': 'To‘lov bo‘yicha savol'}]
                 ingested = await client.call_tool('incoming_requests', {'requests': manual})
-                self.assertFalse(ingested.is_error)
+                self.assertFalse(ingested.isError)
                 routed = await client.call_tool('reception_triage', {'requests': manual})
-                self.assertFalse(routed.is_error)
-                self.assertFalse(routed.structured_content['data']['items'][0]['sent'])
+                self.assertFalse(routed.isError)
+                self.assertFalse(routed.structuredContent['data']['items'][0]['sent'])
             self.assertTrue(all(method == 'GET' or path == '/api/auth/login' for method, path in calls))
 
 if __name__ == '__main__':

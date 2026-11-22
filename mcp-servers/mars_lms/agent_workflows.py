@@ -4,7 +4,7 @@ import math
 import re
 import unicodedata
 
-from lms_client import LMSClient
+from scoped_client import LMSClient
 
 DEFAULT_CRITERIA = {
     'attendance_min_percent': 80,

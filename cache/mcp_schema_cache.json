@@ -1,6 +1,6 @@
 {
   "mars_lms": {
-    "fingerprint": "1aae44efb08aedad",
+    "fingerprint": "e2ca334b42eaad38",
     "tools": [
       {
         "name": "lms_login",
@@ -540,8 +540,477 @@
         "annotations": {
           "readOnlyHint": false
         }
+      },
+      {
+        "name": "branch_me",
+        "description": "GET /api/branch/me after explicit login; retained original read tool.",
+        "inputSchema": {
+          "properties": {},
+          "title": "branch_meArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "groups",
+        "description": "GET /api/branch/groups after explicit login, with optional backend filters.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "title": "groupsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "mentors",
+        "description": "GET /api/branch/mentors after explicit login, with optional backend filters.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "title": "mentorsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "payments",
+        "description": "GET /api/branch/payments after explicit login, with optional backend filters.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "title": "paymentsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "finance_overview",
+        "description": "GET /api/finance/overview; the backend enforces finance permissions.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "title": "finance_overviewArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "finance_salaries",
+        "description": "GET /api/finance/salaries; the backend enforces finance permissions.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Query"
+            }
+          },
+          "title": "finance_salariesArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "login",
+        "description": "Authenticate with explicit credentials or the authorized local .env account. Never returns credentials/token. Pass both phone and password, or neither.",
+        "inputSchema": {
+          "properties": {
+            "phone": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Phone"
+            },
+            "password": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Password"
+            },
+            "role": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Role"
+            }
+          },
+          "title": "loginArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "students",
+        "description": "List minimal authorized students from verified GET /students; omit phones and financial fields.",
+        "inputSchema": {
+          "properties": {},
+          "title": "studentsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "attendance",
+        "description": "GET /attendance/group/{group_id}. Backend enforces group scope; workflow fields only.",
+        "inputSchema": {
+          "properties": {
+            "group_id": {
+              "title": "Group Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "group_id"
+          ],
+          "title": "attendanceArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "homework",
+        "description": "GET /homework/group/{group_id}. Read existing assignments without generating homework.",
+        "inputSchema": {
+          "properties": {
+            "group_id": {
+              "title": "Group Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "group_id"
+          ],
+          "title": "homeworkArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "student_progress",
+        "description": "Audit authorized student's current-group attendance and homework for YYYY-MM-DD period. Missing data stays unknown; normalize grades by maxScore. Default thresholds are unconfirmed examples.",
+        "inputSchema": {
+          "properties": {
+            "student_id": {
+              "title": "Student Id",
+              "type": "string"
+            },
+            "period_start": {
+              "title": "Period Start",
+              "type": "string"
+            },
+            "period_end": {
+              "title": "Period End",
+              "type": "string"
+            },
+            "criteria": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Criteria"
+            },
+            "criteria_confirmed": {
+              "default": false,
+              "title": "Criteria Confirmed",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "student_id",
+            "period_start",
+            "period_end"
+          ],
+          "title": "student_progressArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "curriculum",
+        "description": "GET /api/branch/curriculum-topic-analytics (admin/bm). Branch topic aggregates, NOT individual student progress. Backend causal labels/resolved statuses are heuristics requiring mentor review.",
+        "inputSchema": {
+          "properties": {
+            "fail_threshold_percent": {
+              "default": 40,
+              "title": "Fail Threshold Percent",
+              "type": "integer"
+            },
+            "score_threshold": {
+              "default": 60,
+              "title": "Score Threshold",
+              "type": "integer"
+            },
+            "cross_group_threshold": {
+              "default": 2,
+              "title": "Cross Group Threshold",
+              "type": "integer"
+            }
+          },
+          "title": "curriculumArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "incoming_requests",
+        "description": "Without input return explicit 501: no verified generic backend inbox. With [{id,text}] ingest manual messages; never substitute frozen-status requests.",
+        "inputSchema": {
+          "properties": {
+            "requests": {
+              "anyOf": [
+                {
+                  "items": {
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Requests"
+            }
+          },
+          "title": "incoming_requestsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "reception_triage",
+        "description": "Suggest payment/schedule/education/technical/other categories, responsible roles and draft replies. Flag ambiguity. Never send or assign anything.",
+        "inputSchema": {
+          "properties": {
+            "requests": {
+              "items": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              "title": "Requests",
+              "type": "array"
+            },
+            "responsible_roles": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Responsible Roles"
+            }
+          },
+          "required": [
+            "requests"
+          ],
+          "title": "reception_triageArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
       }
     ],
-    "utility_tools": []
+    "utility_tools": [],
+    "ttl_ms": 0,
+    "written_at": 1795363278.518753,
+    "cache_scope": "private"
   }
 }

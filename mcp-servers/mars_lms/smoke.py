@@ -11,37 +11,29 @@ import sys
 import tempfile
 import threading
 
-from mcp import Client, StdioServerParameters
+from contextlib import asynccontextmanager
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
 
-from lms_client import DEFAULT_API_URL
+from scoped_client import DEFAULT_API_URL
+from scoped_settings import read_settings
 
 ROOT = Path(__file__).resolve().parent
 TOOL_PATHS = {
     "branch_me": "/api/branch/me", "groups": "/api/branch/groups",
-    "students": "/api/branch/students", "mentors": "/api/branch/mentors",
-    "payments": "/api/branch/payments", "finance_overview": "/api/finance/overview",
-    "finance_salaries": "/api/finance/salaries",
+    "students": "/students",
+    "mentors": "/api/branch/mentors", "payments": "/api/branch/payments",
+    "finance_overview": "/api/finance/overview", "finance_salaries": "/api/finance/salaries",
 }
 
 
-def read_settings(file: Path) -> dict[str, str]:
-    """Read only our four simple KEY=VALUE settings; never export backend secrets."""
-    values = {}
-    allowed = {"MARS_API_URL", "MARS_PHONE", "MARS_PASSWORD", "MARS_ROLE"}
-    if file.exists():
-        for line in file.read_text(encoding="utf-8-sig").splitlines():
-            if "=" not in line or line.lstrip().startswith("#"):
-                continue
-            key, value = line.split("=", 1)
-            key, value = key.strip(), value.strip()
-            if key in allowed:
-                if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
-                    value = value[1:-1]
-                values[key] = value
-    for key in allowed:
-        if key in os.environ:
-            values[key] = os.environ[key]
-    return values
+@asynccontextmanager
+async def connected_client(params):
+    async with stdio_client(params) as (reader, writer):
+        async with ClientSession(reader, writer) as client:
+            await client.initialize()
+            yield client
+
 
 
 @contextmanager
@@ -69,8 +61,9 @@ def fixture_backend():
             calls.append(("GET", self.path))
             if self.headers.get("Authorization") != "Bearer fixture-memory-token":
                 self.reply(401, {"success": False, "message": "Bearer token required"})
-            elif self.path.split("?", 1)[0] in TOOL_PATHS.values():
-                self.reply(200, {"success": True, "message": "Fixture backend OK", "path": self.path})
+            elif self.path in TOOL_PATHS.values():
+                self.reply(200, {"success": True, "message": "Fixture backend OK", "path": self.path,
+                                 "students": [], "analytics": {"topics": []}})
             else:
                 self.reply(404, {"success": False, "message": "Route not found"})
 
@@ -88,28 +81,28 @@ def fixture_backend():
         thread.join(timeout=5)
 
 
-async def exercise(base_url, phone, password, role=None, tools=None, mode="auto", show=True):
+async def exercise(base_url, phone, password, role=None, tools=None, show=True):
     params = StdioServerParameters(command=sys.executable, args=[str(ROOT / "server.py")],
                                    env={"MARS_API_URL": base_url}, cwd=tempfile.gettempdir())
     results = {}
-    async with Client(params, mode=mode, read_timeout_seconds=45) as client:
+    async with connected_client(params) as client:
         listed = await client.list_tools()
-        expected = {"login", *TOOL_PATHS}
-        assert {tool.name for tool in listed.tools} == expected, "Incorrect tool registration"
+        expected = {"login", "students", "student_progress", "attendance", "homework", "curriculum", "incoming_requests", "reception_triage"}
+        assert {tool.name for tool in listed.tools} >= expected, "Incorrect tool registration"
         if show:
-            print(f"Discovered {len(listed.tools)} tools ({mode} client)")
+            print(f"Discovered {len(listed.tools)} tools (SDK 1 stdio client)")
         args = {"phone": phone, "password": password}
         if role:
             args["role"] = role
         login = await client.call_tool("login", args)
-        results["login"] = login.structured_content
+        results["login"] = login.structuredContent
         if show:
             print(json.dumps({"tool": "login", **results["login"]}, ensure_ascii=False))
-        if login.is_error:
+        if login.isError:
             return results
-        for name in tools or ["branch_me"]:
+        for name in tools or ["students"]:
             reply = await client.call_tool(name, {})
-            payload = reply.structured_content
+            payload = reply.structuredContent
             results[name] = payload
             if show:
                 # Prove the call without dumping real people, payments or salaries.
@@ -121,13 +114,12 @@ async def exercise(base_url, phone, password, role=None, tools=None, mode="auto"
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fixture", action="store_true")
-    parser.add_argument("--env-file", type=Path, default=ROOT / ".env.local")
-    parser.add_argument("--tool", choices=list(TOOL_PATHS), default="branch_me")
-    parser.add_argument("--mode", choices=["auto", "legacy"], default="auto")
+    parser.add_argument("--env-file", type=Path, default=ROOT / ".env")
+    parser.add_argument("--tool", choices=list(TOOL_PATHS), default="students")
     args = parser.parse_args()
     if args.fixture:
         with fixture_backend() as (base_url, calls):
-            replies = asyncio.run(exercise(base_url, "fixture", "fixture", tools=list(TOOL_PATHS), mode=args.mode))
+            replies = asyncio.run(exercise(base_url, "fixture", "fixture", tools=list(TOOL_PATHS)))
             assert all(item["success"] for item in replies.values())
             assert calls == [("POST", "/api/auth/login"), *[("GET", url) for url in TOOL_PATHS.values()]]
             print("PASS: one POST login, seven authenticated GET calls through real stdio MCP (fixture data)")
@@ -137,7 +129,7 @@ def main():
             parser.error("Set MARS_PHONE and MARS_PASSWORD in the environment or --env-file")
         replies = asyncio.run(exercise(values.get("MARS_API_URL") or DEFAULT_API_URL,
                                         values["MARS_PHONE"], values["MARS_PASSWORD"],
-                                        values.get("MARS_ROLE"), [args.tool], mode=args.mode))
+                                        values.get("MARS_ROLE"), [args.tool]))
         if not all(item["success"] for item in replies.values()):
             raise SystemExit(1)
 

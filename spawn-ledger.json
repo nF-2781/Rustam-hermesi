@@ -1,15 +1,15 @@
 [
   {
-    "pid": 21336,
-    "create_time": 1795097518.2468963,
-    "purpose": "dashboard",
+    "pid": 2456,
+    "create_time": 1795363448.3635333,
+    "purpose": "mcp-helper",
     "install": "dcb89951e0f0",
-    "spawner_pid": null,
-    "spawner_create": null,
-    "registered_at": 1795097526.211274,
-    "argv": "C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\hermes_cli\\main.py dashboard --skip-build --port 1920",
-    "host": "127.0.0.1",
-    "port": 1920,
+    "spawner_pid": 2820,
+    "spawner_create": 1795363446.1674204,
+    "registered_at": 1795363448.3873496,
+    "argv": "C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\mcp-servers\\mars_lms\\.venv\\Scripts\\python.exe C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent/../mcp-servers/mars_lms/server.py",
+    "host": "",
+    "port": null,
     "profile": ""
   }
 ]

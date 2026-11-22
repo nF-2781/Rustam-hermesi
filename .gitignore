@@ -7,6 +7,10 @@
 # Node dependencies
 **/node_modules/
 
+# MCP credentials stay local after server consolidation
+/mcp-servers/**/.env
+/mcp-servers/**/.env.local
+
 # Local runtime downloads and dashboard build
 /runtime/bootstrap/
 /runtime/python/

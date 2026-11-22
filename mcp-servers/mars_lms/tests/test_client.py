@@ -5,9 +5,10 @@ import unittest
 import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from lms_client import LMSClient
+from scoped_client import LMSClient
 from smoke import TOOL_PATHS, exercise, fixture_backend
-from mcp import Client, StdioServerParameters
+from mcp import StdioServerParameters
+from smoke import connected_client
 
 
 class HTTPTests(unittest.IsolatedAsyncioTestCase):
@@ -79,32 +80,31 @@ class HTTPTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result["source"], "network")
         self.assertIn("timed out", result["message"])
 
-    async def test_stdio_all_tools_with_modern_and_legacy_clients(self):
-        for mode in ("auto", "legacy"):
-            with fixture_backend() as (url, calls):
-                replies = await exercise(url, "fixture", "fixture", tools=list(TOOL_PATHS), mode=mode, show=False)
-                self.assertTrue(all(reply["success"] for reply in replies.values()))
-                self.assertEqual(len(calls), 8)
-                self.assertEqual(calls[0], ("POST", "/api/auth/login"))
-                self.assertEqual(calls[1:], [("GET", path) for path in TOOL_PATHS.values()])
+    async def test_stdio_scoped_reads_on_unified_sdk(self):
+        with fixture_backend() as (url, calls):
+            replies = await exercise(url, "fixture", "fixture", tools=list(TOOL_PATHS), show=False)
+            self.assertTrue(all(reply["success"] for reply in replies.values()))
+            self.assertEqual(len(calls), 8)
+            self.assertEqual(calls[0], ("POST", "/api/auth/login"))
+            self.assertEqual(calls[1:], [("GET", path) for path in TOOL_PATHS.values()])
 
     async def test_stdio_errors_are_marked_and_failed_switch_drops_token(self):
         server = Path(__file__).resolve().parents[1] / "server.py"
         with fixture_backend() as (url, calls):
             params = StdioServerParameters(command=sys.executable, args=[str(server)], env={"MARS_API_URL": url})
-            async with Client(params) as client:
-                missing = await client.call_tool("branch_me", {})
-                self.assertTrue(missing.is_error)
-                self.assertEqual(missing.structured_content["status"], 401)
+            async with connected_client(params) as client:
+                missing = await client.call_tool("students", {})
+                self.assertTrue(missing.isError)
+                self.assertEqual(missing.structuredContent["status"], 401)
                 self.assertEqual(calls, [])
                 valid = await client.call_tool("login", {"phone": "fixture", "password": "fixture"})
-                self.assertFalse(valid.is_error)
+                self.assertFalse(valid.isError)
                 invalid = await client.call_tool("login", {"phone": "fixture", "password": "wrong"})
-                self.assertTrue(invalid.is_error)
-                self.assertEqual(invalid.structured_content["status"], 401)
-                denied = await client.call_tool("branch_me", {})
-                self.assertTrue(denied.is_error)
-                self.assertEqual(denied.structured_content["source"], "mcp")
+                self.assertTrue(invalid.isError)
+                self.assertEqual(invalid.structuredContent["status"], 401)
+                denied = await client.call_tool("students", {})
+                self.assertTrue(denied.isError)
+                self.assertEqual(denied.structuredContent["source"], "mcp")
                 self.assertEqual([method for method, _ in calls], ["POST", "POST"])
 
 

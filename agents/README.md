@@ -2,9 +2,11 @@
 
 Two isolated, project-local Hermes profiles use the existing MARS Python MCP
 package and the deployed backend `https://mars-backend-six.vercel.app`.
-The original `mcp/mars-lms/server.py` and default profile are preserved. The agent
-profiles use `mcp/mars-lms/agents_server.py`, which reuses the existing authenticated
-HTTP client and adds bounded workflow tools. Each process owns its login token.
+Default Hermes and both agent profiles use the same
+`mcp-servers/mars_lms/server.py`, one `.venv` and MCP SDK 1.30.0.
+The server registers 22 workflow/data tools plus eight scoped agent tools plus six retained read tools.
+Profiles keep their existing six/three tool filters. Scoped HTTP and analysis
+code are internal modules of the server. Each process owns its login state.
 
 ## Start
 
@@ -34,7 +36,7 @@ selected model. Run these interactive wizards before attempting LLM work:
 ```
 
 No model credentials were copied between profiles. MCP login is separate from LLM
-authentication: `login()` reads the authorized local `mcp/mars-lms/.env.local`
+authentication: `login()` reads the authorized local `mcp-servers/mars_lms/.env`
 without showing credentials to the agent. For production use role-appropriate
 accounts; the bundled local account is shared unless explicit credentials are
 provided to login. Do not put credentials in skills, SOUL or reports.
@@ -120,14 +122,14 @@ profiles are never overwritten automatically.
 ## Checks and Limits
 
 ```powershell
-.\mcp\mars-lms\.venv\Scripts\python.exe -m unittest discover -s mcp/mars-lms/tests -v
+.\mcp-servers\mars_lms\.venv\Scripts\python.exe -m unittest discover -s mcp-servers/mars_lms/tests -v
 .\hermes.bat -p student-progress-auditor mcp test mars-lms
 .\hermes.bat -p reception-request-router mcp test mars-lms
 .\hermes.bat -p student-progress-auditor skills list
 .\hermes.bat -p reception-request-router skills list
 ```
 
-`mcp test` reports the eight tools advertised by the companion server before
+`mcp test` reports all 36 tools advertised by the unified server before
 profile registration filters; native registry verification confirms the six/three
 tools actually registered for these profiles. Fixtures cover no-login, scoped
 student access, denied requests, normalization, missing evidence, ambiguous

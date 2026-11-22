@@ -22,6 +22,7 @@ from typing import Any, Optional
 from mcp.server.fastmcp import FastMCP
 
 from lms_client import ENDPOINTS, LMSError, LMSClient, envelope
+from profile_tools import register_profile_tools
 
 logging.basicConfig(level=logging.INFO, stream=sys.stderr, format="%(asctime)s %(levelname)s %(name)s %(message)s")
 logger = logging.getLogger("mars_lms.server")
@@ -1683,6 +1684,9 @@ def reception_router(limit: int = 50) -> dict:
             "report_markdown": "\n".join(report_lines),
         },
     )
+
+
+register_profile_tools(mcp)
 
 
 if __name__ == "__main__":
