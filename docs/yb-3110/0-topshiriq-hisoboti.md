@@ -1,7 +1,7 @@
 # YB-3110 — yakuniy hisobot
 
 **Jamoa:** Mars (LMS)
-**Team Lead:** Rustam — @rustam106 (CTO, https://github.com/ahshdhdh)
+**Team Lead:** Rustam — @rustam106 (COO agenti, `mars-coo`, https://github.com/ahshdhdh)
 **Topshiruvchi:** @bmt_430
 **Muddat:** 24.11.2026, 18:40
 **Holat:** barcha bandlar yopilgan, hujjatlar va agent fayllari `origin/rustam` da
@@ -25,16 +25,16 @@
 | # | Ism | Telegram | GitHub | Agent | Lavozim |
 |---|---|---|---|---|---|
 | 1 | Kamollidin | @k_mukhamedov | https://github.com/MukhamedovK | `mars-ceo` | CEO |
-| 2 | Saidabzal | @Saidabza1 | https://github.com/vmio75494-bot | `mars-coo` | COO |
-| 3 | Muhammadrizo | @rizo_x7k | https://github.com/rizo04684-sudo | `mars-cfo` | CFO |
-| 4 | Rustam | @rustam106 | https://github.com/ahshdhdh | `mars-cto` | CTO |
-| 5 | Muhammadsolih | @muhammad_solih13 | https://github.com/muhammadsolihtolqinxojaev13-bot | `mars-cmo` | CMO |
-| 6 | Muhammadali (Chihuahua) | Chihuahua | https://github.com/muhammadali850 | `mars-cpo` | CPO |
-| 7 | Islom | @vxrnox | https://github.com/muxsimovislom98-sketch | `mars-hr` | HR |
+| 2 | Rustam | @rustam106 | https://github.com/ahshdhdh | `mars-coo` | COO |
+| 3 | Islom | @vxrnox | https://github.com/muxsimovislom98-sketch | `mars-cfo` | CFO |
+| 4 | Saidabzal | @Saidabza1 | https://github.com/vmio75494-bot | `mars-cto` | CTO |
+| 5 | Muhammadrizo | @rizo_x7k | https://github.com/rizo04684-sudo | `mars-cmo` | CMO |
+| 6 | Muhammadsolih | @muhammad_solih13 | https://github.com/muhammadsolihtolqinxojaev13-bot | `mars-cpo` | CPO |
+| 7 | Muhammadali (Chihuahua) | Chihuahua | https://github.com/muhammadali850 | `mars-hr` | HR |
 
 Ierarxiya: **CEO → C-level → sub-agentlar** (sub-agentlar `agents.md` ichida belgilangan).
 
-## 3. CTO fayllari (Rustam)
+## 3. CTO fayllari (mazmun — Rustam namunasi, hozirgi egasi — Saidabzal)
 
 | Fayl | Mazmuni | Holat |
 |---|---|---|
@@ -103,9 +103,14 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 | `agents/cto/agents.md` | ✅ **qabul**, 2 izoh | 1) pul va shaxsiy ma'lumot uchun **inson tasdig'i** qoidasi qo'shildi; 2) `6 agent` → `7 agent` (profil soni ham 7) |
 | Qolgan 6 agent | — | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi |
 
-**Mualliflik (ochiq yozilgan):** `cto/` — Rustam namunasi; qolgan 6 rol skeleti Team Lead
+**Mualliflik (ochiq yozilgan):** `cto/` mazmuni — Rustam namunasi; qolgan 6 rol skeleti Team Lead
 tomonidan yozib berilgan (`agents/README.md` da shunday yozilgan), har bir a'zo o'z faylini
 ko'rib chiqib, o'z nomidan tasdiqlaydi.
+
+**Rol taqsimoti (22.11, Team Lead qarori):** tartib yuqoridan pastga — 1 Kamollidin (CEO),
+2 Rustam (COO), 3 Islom (CFO), 4 Saidabzal (CTO), 5 Muhammadrizo (CMO),
+6 Muhammadsolih (CPO), 7 Muhammadali (HR). Profil nomlari (`mars-<rol>`) va fayl tuzilishi
+o'zgarmadi — faqat har bir rolning egasi almashtirildi; `install.sh` qayta ishga tushirildi.
 
 ## 9. Jamoa uchun bir qatorli ko'rsatma
 

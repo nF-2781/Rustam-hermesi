@@ -11,23 +11,23 @@ Har bir agent ikki fayldan iborat:
 
 ```
 CEO (mars-ceo) — Kamollidin
-├── COO (mars-coo) — Saidabzal: operatsiya
+├── COO (mars-coo) — Rustam: operatsiya
 │   ├── attendance-controller
 │   ├── homework-controller
 │   └── schedule-planner
-├── CFO (mars-cfo) — Muhammadrizo: moliya
+├── CFO (mars-cfo) — Islom: moliya
 │   ├── debt-collector
 │   └── cashier-reporter
-├── CTO (mars-cto) — Rustam: platforma
+├── CTO (mars-cto) — Saidabzal: platforma
 │   ├── mcp-maintainer
 │   └── dashboard-operator
-├── CMO (mars-cmo) — Muhammadsolih: o'sish
+├── CMO (mars-cmo) — Muhammadrizo: o'sish
 │   ├── lead-nurturer
 │   └── growth-analyst
-├── CPO (mars-cpo) — Muhammadali "Chihuahua": mahsulot
+├── CPO (mars-cpo) — Muhammadsolih: mahsulot
 │   ├── product-analyst
 │   └── quality-coordinator
-└── HR (mars-hr) — Islom: odamlar
+└── HR (mars-hr) — Muhammadali "Chihuahua": odamlar
     ├── mentor-coach
     └── recruiter
 ```
@@ -45,9 +45,10 @@ hermes -p mars-cfo chat       # agent bilan suhbat
 Barcha 7 agent yozilgan: har bir a'zo faqat `git pull` qilib, o'z agentini ochib ko'radi va
 kerak bo'lsa o'z `soul.md` / `agents.md` faylini tahrirlaydi (keyin yana `install.sh`).
 
-> **Mualliflik (ochiq):** `cto/` — Rustam (@rustam106) namunasi. Qolgan 6 rolning
-> `soul.md` + `agents.md` skeleti Team Lead tomonidan yozib berilgan; har bir a'zo o'z
-> faylini o'qib, o'z ishiga moslashtiradi va o'z nomidan tasdiqlaydi.
+> **Mualliflik (ochiq):** `cto/` mazmuni — Rustam (@rustam106) yozgan namuna, hozirgi egasi
+> Saidabzal (@Saidabza1). Qolgan 6 rolning `soul.md` + `agents.md` skeleti Team Lead
+> tomonidan yozib berilgan; har bir a'zo o'z faylini o'qib, o'z ishiga moslashtiradi va
+> o'z nomidan tasdiqlaydi.
 
 `install.sh` har bir profil uchun:
 1. `hermes profile create mars-<role> --clone --description "<rol>"` — model/kalitlar
@@ -63,12 +64,12 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 | Papka | Agent | Holat |
 |---|---|---|
 | `ceo/` | CEO | to'liq yozilgan — Kamollidin (egasi ko'rib chiqadi) |
-| `coo/` | COO | to'liq yozilgan — Saidabzal |
-| `cfo/` | CFO | to'liq yozilgan — Muhammadrizo |
-| `cto/` | CTO | to'liq yozilgan (namuna) — Rustam |
-| `cmo/` | CMO | to'liq yozilgan — Muhammadsolih |
-| `cpo/` | CPO | to'liq yozilgan — Muhammadali (Chihuahua) |
-| `hr/` | HR | to'liq yozilgan — Islom |
+| `coo/` | COO | to'liq yozilgan — Rustam |
+| `cfo/` | CFO | to'liq yozilgan — Islom |
+| `cto/` | CTO | to'liq yozilgan (namuna muallifi — Rustam) — Saidabzal |
+| `cmo/` | CMO | to'liq yozilgan — Muhammadrizo |
+| `cpo/` | CPO | to'liq yozilgan — Muhammadsolih |
+| `hr/` | HR | to'liq yozilgan — Muhammadali (Chihuahua) |
 
 ## Qoidalar (barcha agentlar uchun majburiy)
 

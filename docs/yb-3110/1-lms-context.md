@@ -1,7 +1,7 @@
 # YB-3110 — 1-topshiriq: Mars jamoasining LMS repo va konteksti
 
 **Jamoa:** Mars (LMS — o'quv markaz boshqaruv tizimi)
-**Team Lead:** Rustam — @rustam106 (CTO)
+**Team Lead:** Rustam — @rustam106 (COO agenti, `mars-coo`)
 **Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40
 
 ---
