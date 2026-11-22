@@ -45,6 +45,10 @@ hermes -p mars-cfo chat       # agent bilan suhbat
 Barcha 7 agent yozilgan: har bir a'zo faqat `git pull` qilib, o'z agentini ochib ko'radi va
 kerak bo'lsa o'z `soul.md` / `agents.md` faylini tahrirlaydi (keyin yana `install.sh`).
 
+> **Mualliflik (ochiq):** `cto/` — Rustam (@rustam106) namunasi. Qolgan 6 rolning
+> `soul.md` + `agents.md` skeleti Team Lead tomonidan yozib berilgan; har bir a'zo o'z
+> faylini o'qib, o'z ishiga moslashtiradi va o'z nomidan tasdiqlaydi.
+
 `install.sh` har bir profil uchun:
 1. `hermes profile create mars-<role> --clone --description "<rol>"` — model/kalitlar
    nusxalanadi, sessiya va tarix **nusxalanmaydi**;

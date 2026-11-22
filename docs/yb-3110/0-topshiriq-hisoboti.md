@@ -94,7 +94,20 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 > `HTTP 429 — model temporarily at capacity` qaytardi (bizning kalit limiti emas).
 > Shu sababli dalil sifatida birinchi muvaffaqiyatli javob keltirildi.
 
-## 8. Jamoa uchun bir qatorli ko'rsatma
+## 8. Ustozning oxirgi tekshiruvi (22.11) → tuzatishlar
+
+| Tekshirilgan | Natija | Tuzatish |
+|---|---|---|
+| Ro'yxat va kontekst (`1-lms-context.md`, `2-agent-roster.md`) | ✅ **qabul** | — |
+| `agents/cto/soul.md` | ✅ **qabul**, 1 izoh | `403` misoli olib tashlandi: endi agent rol almashtirmaydi — kerakli ruxsatni nomlab, tasdiqni odamdan oladi |
+| `agents/cto/agents.md` | ✅ **qabul**, 2 izoh | 1) pul va shaxsiy ma'lumot uchun **inson tasdig'i** qoidasi qo'shildi; 2) `6 agent` → `7 agent` (profil soni ham 7) |
+| Qolgan 6 agent | — | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi |
+
+**Mualliflik (ochiq yozilgan):** `cto/` — Rustam namunasi; qolgan 6 rol skeleti Team Lead
+tomonidan yozib berilgan (`agents/README.md` da shunday yozilgan), har bir a'zo o'z faylini
+ko'rib chiqib, o'z nomidan tasdiqlaydi.
+
+## 9. Jamoa uchun bir qatorli ko'rsatma
 
 ```bash
 git pull && bash agents/install.sh && bash agents/install.sh --check && hermes -p mars-<rol> chat

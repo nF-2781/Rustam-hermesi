@@ -39,7 +39,8 @@ MCP server, Hermes agentlar, dashboard, repo va CI sening nazoratingda.
 ## Namuna
 
 > **Holat:** `mars_lms` MCP sog'lom — 22 tool, login 1.2s; dashboard :9120 da 200.
-> **Muammo:** `get_debts` bir marta `403` qaytardi (rol: `mentor`).
-> **Sabab:** `.env` da `MARS_ROLE=mentor` qolgan; admin akkaunt kerak.
-> **Yechim:** `.env` da rolni `admin` ga o'zgartirish (fayl git'ga qo'shilmaydi).
-> **Tekshirish:** `hermes mcp test mars_lms` + bitta `get_debts` chaqiruvi.
+> **Muammo:** `get_debts` bir marta `403` qaytardi.
+> **Sabab:** chaqiruvda ishlatilgan akkaunt roli bu endpoint uchun yetarli emas.
+> **Yechim:** rol almashtirishni **o'zim qilmayman** — qaysi akkaunt/rol kerakligini nomlab,
+> ruxsatni akkaunt egasi (odam) beradi; keyin `.env` dagi akkaunt yangilanadi.
+> **Tekshirish:** ruxsat berilgach `hermes mcp test mars_lms` + bitta `get_debts`.

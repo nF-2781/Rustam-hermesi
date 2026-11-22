@@ -2,7 +2,7 @@
 # Mars C-level agentlarini Hermes profiliga aylantiradi.
 #   soul.md + agents.md  ->  ~/.hermes/profiles/mars-<role>/SOUL.md
 #
-#   bash agents/install.sh            # 6 profilni yaratadi/yangilaydi
+#   bash agents/install.sh            # 7 profilni yaratadi/yangilaydi
 #   bash agents/install.sh --check    # faqat holatni ko'rsatadi
 set -euo pipefail
 
