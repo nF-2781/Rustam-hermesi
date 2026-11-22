@@ -14,7 +14,7 @@
 |---|---|---|
 | `Rustam-hermesi` | Hermes AI-agent platformasi: `mars_lms` MCP serveri, skill'lar, dashboard runner, agentlar. Jamoa shu repo ustida ishlaydi (branch `rustam`). | https://github.com/nF-2781/Rustam-hermesi |
 | `mars-backend` | LMS backend'i (Node.js, JWT auth, filial / moliya / davomat / uy vazifasi API'lari). | https://github.com/nF-2781/mars-backend.git |
-| `mars-mcp-server` | Birinchi (soddaroq) MCP server: 11 tool, JWT login, filial/moliya o'qish. Hozir `mcp-servers/mars_lms` uning kengaytirilgan versiyasi. | shu repo ichida: `mcp-servers/mars_lms/` |
+| `mars-lms-mcp` | MCP server reposi: JWT login va LMS tool'lari (birinchi versiya 11 tool; hozirgi `mcp-servers/mars_lms` — 22 tool). | https://github.com/nF-2781/mars-lms-mcp.git |
 
 - Backend prod: https://mars-backend-six.vercel.app
 - Swagger: https://mars-backend-six.vercel.app/api-docs/
@@ -62,7 +62,7 @@ Hermes agent ── stdio (MCP) ──▶ mcp-servers/mars_lms/server.py
 
 | Imkoniyat | Holat | Dalil |
 |---|---|---|
-| JWT login (`lms_login`) + 401 da avtomatik re-login | ✅ | jonli backend, admin akkaunt |
+| JWT login (`lms_login`) + 401 da avtomatik re-login | ✅ | jonli backend, owner akkaunt |
 | Filial kesimi: guruhlar, o'quvchilar, mentorlar (`lms_context`) | ✅ | 1 guruh, 2 faol o'quvchi |
 | Qarzdorlik (`get_debts`, `debt_control_agent`) | ✅ | summa + kechikish + eslatma loyihalari |
 | Davomat (`get_attendance`, `attendance_control_agent`) | ✅ | ketma-ket qoldirishlar aniqlanadi |
@@ -75,7 +75,7 @@ Hermes agent ── stdio (MCP) ──▶ mcp-servers/mars_lms/server.py
 | Testlar | ✅ | 24 mock test + jonli stdio klient testi |
 | Hermes dashboard (:9120) | ✅ | `GET /` → 200, `/api/status` → v0.21.2 |
 | Skill'lar: `mars-lms-operations`, `hermes-mars-dashboard` | ✅ | `hermes skills list` → enabled |
-| 7 ta C-level agent profili | ⏳ | `bash agents/install.sh --check` (skeletlar to'ldirilmoqda) |
+| 7 ta C-level agent (soul.md + agents.md) | ✅ | `bash agents/install.sh --check` → 7/7 tayyor |
 
 ## 4. Hozir nima ishlamaydi / cheklangan
 
@@ -98,6 +98,7 @@ Hermes agent ── stdio (MCP) ──▶ mcp-servers/mars_lms/server.py
 ```bash
 cd <repo>                                    # repo ildizi
 export HERMES_HOME="$PWD" PYTHONPATH="$PWD/hermes-agent"
+# login: owner test akkaunti (.env: MARS_PHONE / MARS_PASSWORD — repo'ga yozilmaydi)
 python -m hermes_cli.main mcp test mars_lms  # ✓ 22 tools
 python mcp-servers/mars_lms/chain_demo.py    # 6-qadamli zanjir → chain_report.md
 bash skills/hermes_mars_dashboard/run_mars_dashboard.sh start   # dashboard :9120

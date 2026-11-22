@@ -42,6 +42,9 @@ hermes profile list           # mars-ceo ... mars-hr, mars-cpo ko'rinadi
 hermes -p mars-cfo chat       # agent bilan suhbat
 ```
 
+Barcha 7 agent yozilgan: har bir a'zo faqat `git pull` qilib, o'z agentini ochib ko'radi va
+kerak bo'lsa o'z `soul.md` / `agents.md` faylini tahrirlaydi (keyin yana `install.sh`).
+
 `install.sh` har bir profil uchun:
 1. `hermes profile create mars-<role> --clone --description "<rol>"` — model/kalitlar
    nusxalanadi, sessiya va tarix **nusxalanmaydi**;
@@ -55,13 +58,13 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 
 | Papka | Agent | Holat |
 |---|---|---|
-| `ceo/` | CEO | skelet — Kamollidin to'ldiradi |
-| `coo/` | COO | skelet — Saidabzal to'ldiradi |
-| `cfo/` | CFO | skelet — Muhammadrizo to'ldiradi |
-| `cto/` | CTO | **to'liq yozilgan** (namuna) — Rustam |
-| `cmo/` | CMO | skelet — Muhammadsolih to'ldiradi |
-| `cpo/` | CPO | skelet — Muhammadali (Chihuahua) to'ldiradi |
-| `hr/` | HR | skelet — Islom to'ldiradi |
+| `ceo/` | CEO | to'liq yozilgan — Kamollidin (egasi ko'rib chiqadi) |
+| `coo/` | COO | to'liq yozilgan — Saidabzal |
+| `cfo/` | CFO | to'liq yozilgan — Muhammadrizo |
+| `cto/` | CTO | to'liq yozilgan (namuna) — Rustam |
+| `cmo/` | CMO | to'liq yozilgan — Muhammadsolih |
+| `cpo/` | CPO | to'liq yozilgan — Muhammadali (Chihuahua) |
+| `hr/` | HR | to'liq yozilgan — Islom |
 
 ## Qoidalar (barcha agentlar uchun majburiy)
 

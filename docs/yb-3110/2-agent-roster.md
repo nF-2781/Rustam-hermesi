@@ -36,13 +36,13 @@ lekin har bir `agents.md` da ularning joyi allaqachon belgilangan.
 ```
 agents/
   README.md          — ierarxiya, ishga tushirish qoidasi
-  ceo/soul.md  ceo/agents.md      ← skelet (Kamollidin to'ldiradi)
-  coo/soul.md  coo/agents.md      ← skelet (Saidabzal to'ldiradi)
-  cfo/soul.md  cfo/agents.md      ← skelet (Muhammadrizo to'ldiradi)
-  cto/soul.md  cto/agents.md      ← to'liq yozilgan (Rustam)
-  cmo/soul.md  cmo/agents.md      ← skelet (Muhammadsolih to'ldiradi)
-  cpo/soul.md  cpo/agents.md      ← skelet (Muhammadali to'ldiradi)
-  hr/soul.md   hr/agents.md       ← skelet (Islom to'ldiradi)
+  ceo/soul.md  ceo/agents.md      ← yozilgan (Kamollidin)
+  coo/soul.md  coo/agents.md      ← yozilgan (Saidabzal)
+  cfo/soul.md  cfo/agents.md      ← yozilgan (Muhammadrizo)
+  cto/soul.md  cto/agents.md      ← yozilgan (Rustam)
+  cmo/soul.md  cmo/agents.md      ← yozilgan (Muhammadsolih)
+  cpo/soul.md  cpo/agents.md      ← yozilgan (Muhammadali / Chihuahua)
+  hr/soul.md   hr/agents.md       ← yozilgan (Islom)
   install.sh         — soul.md + agents.md → Hermes profil SOUL.md
 ```
 
@@ -50,8 +50,9 @@ agents/
 - `agents.md` — agent **nima qiladi**: vazifalar, hisobot zanjiri, boshqaradigan
   sub-agentlar, ishlatadigan API/MCP tool'lar, ish zanjiri, **nima qilmaydi**.
 
-> **Vazifa taqsimoti:** har bir a'zo **o'z** agentining `soul.md` va `agents.md` faylini
-> o'zi yozadi. Namuna va to'ldirilgan holat — `agents/cto/` (CTO: Rustam).
+> **Holat:** 7 agentning hammasi yozilgan (Rustam — namuna sifatida). Har bir a'zo
+> `git pull` qiladi, o'z papkasini (`agents/<rol>/`) ochib ko'radi, kerak bo'lsa tahrirlaydi
+> va `bash agents/install.sh` bilan profilini yangilaydi.
 
 ## 4. Hisobot zanjiri (rasmiy)
 
