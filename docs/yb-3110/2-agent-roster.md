@@ -1,7 +1,8 @@
 # YB-3110 — 2-topshiriq: Agentlar taqsimoti (kim — qaysi agent)
 
-**Jamoa:** Mars | **Topshiruvchi:** @bmt_430 | **Muddat:** bugun 21:30
+**Jamoa:** Mars | **Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40
 **Team Lead:** Rustam (@rustam106) — CTO
+**Holat:** 2-topshiriq tayyor — 7 a'zo, 7 agent; barcha `soul.md` + `agents.md` yozilgan va repo'da
 
 Har bir a'zoga bitta agent: jamoa **7 kishi**, agent ham **7 ta**.
 Ierarxiya: **CEO → C-level → sub-agentlar**. Sub-agentlar keyingi darsda to'ldiriladi,
@@ -30,6 +31,12 @@ lekin har bir `agents.md` da ularning joyi allaqachon belgilangan.
 | 5 | Muhammadsolih | @muhammad_solih13 | https://github.com/muhammadsolihtolqinxojaev13-bot | `mars-cmo` | CMO | "O'sish: yangi o'quvchi, waitlist, murojaatlar" |
 | 6 | Muhammadali "Chihuahua" | Chihuahua | https://github.com/muhammadali850 | `mars-cpo` | CPO | "Mahsulot: o'quvchi tajribasi, sifat, takliflar" |
 | 7 | Islom | @vxrnox | https://github.com/muxsimovislom98-sketch | `mars-hr` | HR | "Odamlar: mentor yuklamasi, sifat, onboarding" |
+
+> **CEO — o'z jamoamizdan:** Kamollidin (@k_mukhamedov, https://github.com/MukhamedovK).
+> Boshqa jamoadan olingan `@jamkaILZ` bu hujjatdan butunlay olib tashlandi.
+> **Ismlar + Telegram + GitHub** — yuqoridagi jadvalning 2–4-ustunlari.
+> **Frontend manzillari** — `1-lms-context.md` §1 (8 repo + 8 deploy havolasi).
+> **Parol holati** — almashtirildi; yangi qiymat repo'ga, hujjatga va chatga yozilmagan (`1-lms-context.md` §4).
 
 ## 3. Har bir agentning fayllari
 

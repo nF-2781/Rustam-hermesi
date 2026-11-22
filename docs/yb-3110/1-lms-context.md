@@ -2,7 +2,7 @@
 
 **Jamoa:** Mars (LMS — o'quv markaz boshqaruv tizimi)
 **Team Lead:** Rustam — @rustam106 (CTO)
-**Topshiruvchi:** @bmt_430 | **Muddat:** bugun 21:30
+**Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40
 
 ---
 
@@ -85,7 +85,7 @@ Hermes agent ── stdio (MCP) ──▶ mcp-servers/mars_lms/server.py
 | Pul operatsiyalari (to'lov qabul qilish, refund, oylik to'lash) | ataylab yopilgan | faqat hisobot; amal — backend UI'da odam tomonidan |
 | Ba'zi endpoint yo'q: xona bo'shligi, jadval to'qnashuvi, mentor yuklamasi | lokal hisoblanadi (guruh `schedule` parse) → noaniqlik bo'lishi mumkin | backend'ga endpoint qo'shilsa, tool'lar soddalashadi |
 | Rollar: faqat `admin`/`owner` to'liq ishlaydi | `mentor`/`financeManager` da 403 | rol bo'yicha ruxsat matritsasi kerak |
-| Credentials bir marta git tarixiga tushib qolgan | xavfsizlik | fayllar tracking'dan chiqarildi; parol/kalit almashtirish qolgan |
+| Credentials bir marta git tarixiga tushib qolgan | xavfsizlik | fayllar tracking'dan chiqarildi va **parol almashtirildi** ✅ — yangi qiymat faqat lokal `.env` da (`MARS_PHONE` / `MARS_PASSWORD`), repo'ga, hujjatga yoki chatga yozilmagan |
 | Dashboard standart porti 9119 band (gateway ichki dashboardi) | `BACKEND_PORT_IN_USE` | `run_mars_dashboard.sh` 9120 ni tanlaydi |
 
 ## 5. Aniqlashtirish kerak
