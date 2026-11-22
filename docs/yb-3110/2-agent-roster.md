@@ -1,7 +1,7 @@
 # YB-3110 — 2-topshiriq: Agentlar taqsimoti (kim — qaysi agent)
 
 **Jamoa:** Mars | **Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40
-**Team Lead:** Rustam (@rustam106) — COO agenti (`mars-coo`)
+**Team Lead:** Rustam (@rustam106) — CEO agenti (`mars-ceo`)
 **Holat:** 2-topshiriq tayyor — 7 a'zo, 7 agent; barcha `soul.md` + `agents.md` yozilgan va repo'da
 
 Har bir a'zoga bitta agent: jamoa **7 kishi**, agent ham **7 ta**.
@@ -13,7 +13,7 @@ lekin har bir `agents.md` da ularning joyi allaqachon belgilangan.
 ```
                      ┌────────────────────────────┐
                      │ CEO — `mars-ceo`           │
-                     │ Kamollidin (@k_mukhamedov) │
+                     │ Rustam (@rustam106)        │
                      └─────────────┬──────────────┘
    ┌──────────┬──────────┬─────────┼─────────┬──────────┬──────────┐
    ▼          ▼          ▼         ▼         ▼          ▼
@@ -26,15 +26,15 @@ lekin har bir `agents.md` da ularning joyi allaqachon belgilangan.
 
 | # | A'zo | Telegram | GitHub | Agent (profil) | Lavozim | Asosiy savol |
 |---|---|---|---|---|---|---|
-| 1 | Kamollidin | @k_mukhamedov | https://github.com/MukhamedovK | `mars-ceo` | **CEO** | "Filial bugun qanday ishlayapti va nima qilish kerak?" |
-| 2 | Rustam | @rustam106 | https://github.com/ahshdhdh | `mars-coo` | COO | "Operatsiya: davomat, uy vazifasi, jadval, tasdiqlar" |
+| 1 | Rustam | @rustam106 | https://github.com/ahshdhdh | `mars-ceo` | **CEO** | "Filial bugun qanday ishlayapti va nima qilish kerak?" |
+| 2 | Kamollidin | @k_mukhamedov | https://github.com/MukhamedovK | `mars-coo` | COO | "Operatsiya: davomat, uy vazifasi, jadval, tasdiqlar" |
 | 3 | Islom | @vxrnox | https://github.com/muxsimovislom98-sketch | `mars-cfo` | CFO | "Pul: tushum, qarzdorlik, xarajat, qoldiq" |
 | 4 | Saidabzal | @Saidabza1 | https://github.com/vmio75494-bot | `mars-cto` | CTO | "Platforma (MCP, backend, dashboard, agentlar) sog'lommi?" |
 | 5 | Muhammadrizo | @rizo_x7k | https://github.com/rizo04684-sudo | `mars-cmo` | CMO | "O'sish: yangi o'quvchi, waitlist, murojaatlar" |
 | 6 | Muhammadsolih | @muhammad_solih13 | https://github.com/muhammadsolihtolqinxojaev13-bot | `mars-cpo` | CPO | "Mahsulot: o'quvchi tajribasi, sifat, takliflar" |
 | 7 | Muhammadali "Chihuahua" | Chihuahua | https://github.com/muhammadali850 | `mars-hr` | HR | "Odamlar: mentor yuklamasi, sifat, onboarding" |
 
-> **CEO — o'z jamoamizdan:** Kamollidin (@k_mukhamedov, https://github.com/MukhamedovK).
+> **CEO — o'z jamoamizdan:** Rustam (@rustam106, https://github.com/ahshdhdh) — Team Lead.
 > Boshqa jamoadan olingan `@jamkaILZ` bu hujjatdan butunlay olib tashlandi.
 > **Ismlar + Telegram + GitHub** — yuqoridagi jadvalning 2–4-ustunlari.
 > **Frontend manzillari** — `1-lms-context.md` §1 (8 repo + 8 deploy havolasi).
@@ -45,8 +45,8 @@ lekin har bir `agents.md` da ularning joyi allaqachon belgilangan.
 ```
 agents/
   README.md          — ierarxiya, ishga tushirish qoidasi
-  ceo/soul.md  ceo/agents.md      ← yozilgan (Kamollidin)
-  coo/soul.md  coo/agents.md      ← yozilgan (Rustam)
+  ceo/soul.md  ceo/agents.md      ← yozilgan (Rustam)
+  coo/soul.md  coo/agents.md      ← yozilgan (Kamollidin)
   cfo/soul.md  cfo/agents.md      ← yozilgan (Islom)
   cto/soul.md  cto/agents.md      ← yozilgan (Saidabzal; mazmun — Rustam namunasi)
   cmo/soul.md  cmo/agents.md      ← yozilgan (Muhammadrizo)
@@ -66,7 +66,7 @@ agents/
 ## 4. Hisobot zanjiri (rasmiy)
 
 ```
-sub-agent  →  C-level  →  CEO (Kamollidin)  →  odam (teamlead)
+sub-agent  →  C-level  →  CEO (Rustam)  →  odam (topshiruvchi)
                           ↘  CTO (Saidabzal, texnik tasdiq: platforma o'zgarishlari)
 Har qanday moliyaviy yoki tashqi ta'sirli amal → inson tasdig'i (CEO emas, ODAM)
 ```

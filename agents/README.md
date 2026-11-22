@@ -10,8 +10,8 @@ Har bir agent ikki fayldan iborat:
 ## Ierarxiya
 
 ```
-CEO (mars-ceo) — Kamollidin
-├── COO (mars-coo) — Rustam: operatsiya
+CEO (mars-ceo) — Rustam
+├── COO (mars-coo) — Kamollidin: operatsiya
 │   ├── attendance-controller
 │   ├── homework-controller
 │   └── schedule-planner
@@ -63,8 +63,8 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 
 | Papka | Agent | Holat |
 |---|---|---|
-| `ceo/` | CEO | to'liq yozilgan — Kamollidin (egasi ko'rib chiqadi) |
-| `coo/` | COO | to'liq yozilgan — Rustam |
+| `ceo/` | CEO | to'liq yozilgan — Rustam |
+| `coo/` | COO | to'liq yozilgan — Kamollidin (egasi ko'rib chiqadi) |
 | `cfo/` | CFO | to'liq yozilgan — Islom |
 | `cto/` | CTO | to'liq yozilgan (namuna muallifi — Rustam) — Saidabzal |
 | `cmo/` | CMO | to'liq yozilgan — Muhammadrizo |

@@ -1,7 +1,7 @@
 # YB-3110 — yakuniy hisobot
 
 **Jamoa:** Mars (LMS)
-**Team Lead:** Rustam — @rustam106 (COO agenti, `mars-coo`, https://github.com/ahshdhdh)
+**Team Lead:** Rustam — @rustam106 (CEO agenti, `mars-ceo`, https://github.com/ahshdhdh)
 **Topshiruvchi:** @bmt_430
 **Muddat:** 24.11.2026, 18:40
 **Holat:** barcha bandlar yopilgan, hujjatlar va agent fayllari `origin/rustam` da
@@ -13,7 +13,7 @@
 | # | Izoh | Holat | Qayerda |
 |---|---|---|---|
 | 1 | Ro'yxatda ismlar | ✅ 7 a'zo: ism + Telegram + GitHub | `2-agent-roster.md` §2 |
-| 2 | CEO o'z jamoangdan | ✅ Kamollidin (@k_mukhamedov) — tashqi `@jamkaILZ` butunlay olib tashlandi | `2-agent-roster.md` §1–§2 |
+| 2 | CEO o'z jamoangdan | ✅ Rustam (@rustam106) — tashqi `@jamkaILZ` butunlay olib tashlandi | `2-agent-roster.md` §1–§2 |
 | 3 | GitHub linklar | ✅ har bir a'zo uchun + barcha repolar `nF-2781` | `2-agent-roster.md` §2, `1-lms-context.md` §1 |
 | 4 | Frontend manzili | ✅ 8 frontend repo + 8 deploy havolasi | `1-lms-context.md` §1 |
 | 5 | Parol almashtirilganini yozish | ✅ yozildi, **parolning o'zi hech qayerda yo'q** | `1-lms-context.md` §4 |
@@ -24,8 +24,8 @@
 
 | # | Ism | Telegram | GitHub | Agent | Lavozim |
 |---|---|---|---|---|---|
-| 1 | Kamollidin | @k_mukhamedov | https://github.com/MukhamedovK | `mars-ceo` | CEO |
-| 2 | Rustam | @rustam106 | https://github.com/ahshdhdh | `mars-coo` | COO |
+| 1 | Rustam | @rustam106 | https://github.com/ahshdhdh | `mars-ceo` | CEO |
+| 2 | Kamollidin | @k_mukhamedov | https://github.com/MukhamedovK | `mars-coo` | COO |
 | 3 | Islom | @vxrnox | https://github.com/muxsimovislom98-sketch | `mars-cfo` | CFO |
 | 4 | Saidabzal | @Saidabza1 | https://github.com/vmio75494-bot | `mars-cto` | CTO |
 | 5 | Muhammadrizo | @rizo_x7k | https://github.com/rizo04684-sudo | `mars-cmo` | CMO |
@@ -107,8 +107,8 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 tomonidan yozib berilgan (`agents/README.md` da shunday yozilgan), har bir a'zo o'z faylini
 ko'rib chiqib, o'z nomidan tasdiqlaydi.
 
-**Rol taqsimoti (22.11, Team Lead qarori):** tartib yuqoridan pastga — 1 Kamollidin (CEO),
-2 Rustam (COO), 3 Islom (CFO), 4 Saidabzal (CTO), 5 Muhammadrizo (CMO),
+**Rol taqsimoti (22.11, Team Lead qarori):** tartib yuqoridan pastga — 1 Rustam (CEO),
+2 Kamollidin (COO), 3 Islom (CFO), 4 Saidabzal (CTO), 5 Muhammadrizo (CMO),
 6 Muhammadsolih (CPO), 7 Muhammadali (HR). Profil nomlari (`mars-<rol>`) va fayl tuzilishi
 o'zgarmadi — faqat har bir rolning egasi almashtirildi; `install.sh` qayta ishga tushirildi.
 
