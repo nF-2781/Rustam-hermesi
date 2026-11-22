@@ -86,4 +86,4 @@ o'z `SOUL.md`, `config.yaml`, `.env`, sessiyalari bo'ladi — boshqa agentlarnik
 1. shu fayl (2-topshiriq) — kim qaysi agent;
 2. `agents/*/soul.md` va `agents/*/agents.md` (7 ta agent);
 3. `bash agents/install.sh --check` chiqishi (7/7 tayyor);
-4. bitta agent bilan qilingan jonli suhvat namunasi (`mars-cto chat` → platforma holati).
+4. bitta agent bilan qilingan jonli suhbat namunasi (`hermes -p mars-cto chat` → agent o'zini va chegaralarini tanishtirdi) — to'liq matn `0-topshiriq-hisoboti.md` §7 da.

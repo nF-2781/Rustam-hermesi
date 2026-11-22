@@ -18,6 +18,7 @@
 | 4 | Frontend manzili | ✅ 8 frontend repo + 8 deploy havolasi | `1-lms-context.md` §1 |
 | 5 | Parol almashtirilganini yozish | ✅ yozildi, **parolning o'zi hech qayerda yo'q** | `1-lms-context.md` §4 |
 | 6 | CTO `soul.md` + `agents.md` fayl sifatida | ✅ ikkita alohida fayl, repoda commit qilingan | `agents/cto/soul.md`, `agents/cto/agents.md` |
+| 7 | Jonli suhbat namunasi (4-band) | ✅ `mars-cto` profili bilan o'tkazildi | shu fayl, §7 |
 
 ## 2. Jamoa va agentlar (7 kishi — 7 agent)
 
@@ -72,7 +73,28 @@ hermes mcp test mars_lms              # → 22 tool
 hermes -p mars-cto chat               # CTO agenti bilan suhbat
 ```
 
-## 7. Jamoa uchun bir qatorli ko'rsatma
+## 7. Jonli suhbat namunasi (topshiriqning 4-bandi)
+
+Profil: `mars-cto` · sessiya: `20261122_171216_c2b076` · sana: 22.11.2026
+
+```bash
+$ hermes -p mars-cto chat -Q -q "Qisqa javob: sen kim va nima qilasiz?"
+
+Men — Mars CTO, Mars LMS platformasining texnik direktori agentiman.
+Backend, mars_lms MCP server, dashboard va agentlar infratuzilmasi sog'ligini
+kuzataman, nosozliklarni ildizi bilan topaman.
+Diagnostika, test va lokal tuzatishlarni o'zim qilaman; prod deploy faqat
+odam tasdig'i bilan.
+```
+
+Namuna `soul.md` dagi shaxsiyat va chegaralar (`prod deploy — faqat odam tasdig'i bilan`)
+SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
+
+> Eslatma: bir xil so'rovni platforma holati bo'yicha qayta yuborishda provayder
+> `HTTP 429 — model temporarily at capacity` qaytardi (bizning kalit limiti emas).
+> Shu sababli dalil sifatida birinchi muvaffaqiyatli javob keltirildi.
+
+## 8. Jamoa uchun bir qatorli ko'rsatma
 
 ```bash
 git pull && bash agents/install.sh && bash agents/install.sh --check && hermes -p mars-<rol> chat
