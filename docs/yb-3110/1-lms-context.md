@@ -13,7 +13,7 @@
 | Repo | Nima qiladi | GitHub |
 |---|---|---|
 | `Rustam-hermesi` | Hermes AI-agent platformasi: `mars_lms` MCP serveri, skill'lar, dashboard runner, agentlar. Jamoa shu repo ustida ishlaydi (branch `rustam`). | https://github.com/nF-2781/Rustam-hermesi |
-| `mars-backend` | LMS backend'i (Node.js, JWT auth, filial / moliya / davomat / uy vazifasi API'lari). | https://github.com/nF-2781/mars-backend |
+| `mars-backend` | LMS backend'i (Node.js, JWT auth, filial / moliya / davomat / uy vazifasi API'lari). | https://github.com/nF-2781/mars-backend.git |
 | `mars-mcp-server` | Birinchi (soddaroq) MCP server: 11 tool, JWT login, filial/moliya o'qish. Hozir `mcp-servers/mars_lms` uning kengaytirilgan versiyasi. | shu repo ichida: `mcp-servers/mars_lms/` |
 
 - Backend prod: https://mars-backend-six.vercel.app
@@ -22,19 +22,21 @@
 
 ### Frontend (har biri alohida repo va alohida deploy)
 
-| Repo | Kim uchun | Deploy |
-|---|---|---|
-| `mars-admin` | Admin panel (filial, guruh, o'quvchi, moliya) | https://mars-admin-beta.vercel.app |
-| `mars-branch-manager` | Filial menejeri | https://mars-branch-manager.vercel.app |
-| `mars-finance` | Moliya bo'limi | https://mars-finance-orpin.vercel.app |
-| `mars-intern` | Amaliyotchi (intern) | https://mars-intern.vercel.app |
-| `mars-mentor` | Mentor | https://mars-mentor.vercel.app |
-| `mars-parent` | Ota-ona | https://mars-parent.vercel.app |
-| `mars-student` | O'quvchi | https://mars-student.vercel.app |
-| `mars-tutor` | Tutor / repetitor | https://mars-tutor.vercel.app |
+| Repo | Kim uchun | GitHub | Deploy |
+|---|---|---|---|
+| `mars-admin` | Admin panel (filial, guruh, o'quvchi, moliya) | https://github.com/nF-2781/mars-admin.git | https://mars-admin-beta.vercel.app |
+| `mars-branch-manager` | Filial menejeri | https://github.com/nF-2781/mars-branch-manager.git | https://mars-branch-manager.vercel.app |
+| `mars-finance` | Moliya bo'limi | https://github.com/nF-2781/mars-finance.git | https://mars-finance-orpin.vercel.app |
+| `mars-intern` | Amaliyotchi (intern) | https://github.com/nF-2781/mars-intern.git | https://mars-intern.vercel.app |
+| `mars-mentor` | Mentor | https://github.com/nF-2781/mars-mentor.git | https://mars-mentor.vercel.app |
+| `mars-parent` | Ota-ona | https://github.com/nF-2781/mars-parent.git | https://mars-parent.vercel.app |
+| `mars-student` | O'quvchi | https://github.com/nF-2781/mars-student.git | https://mars-student.vercel.app |
+| `mars-tutor` | Tutor / repetitor | https://github.com/nF-2781/mars-tutor.git | https://mars-tutor.vercel.app |
 
-> Frontend repolarining GitHub manzillari hali berilmagan — jadvaldagi nom va deploy
-> manzillari tasdiqlangan. Team Lead GitHub linklarini qo'shadi.
+Barcha repolar bitta GitHub tashkilotda: https://github.com/nF-2781 (backend va agentlar
+platformasi ham shu yerda).
+
+- Lokal monorepo: `C:\Users\user\Desktop\Mars`
 
 ## 2. Arxitektura
 
@@ -83,15 +85,13 @@ Hermes agent ── stdio (MCP) ──▶ mcp-servers/mars_lms/server.py
 | Pul operatsiyalari (to'lov qabul qilish, refund, oylik to'lash) | ataylab yopilgan | faqat hisobot; amal — backend UI'da odam tomonidan |
 | Ba'zi endpoint yo'q: xona bo'shligi, jadval to'qnashuvi, mentor yuklamasi | lokal hisoblanadi (guruh `schedule` parse) → noaniqlik bo'lishi mumkin | backend'ga endpoint qo'shilsa, tool'lar soddalashadi |
 | Rollar: faqat `admin`/`owner` to'liq ishlaydi | `mentor`/`financeManager` da 403 | rol bo'yicha ruxsat matritsasi kerak |
-| Frontend repolarining GitHub linklari yo'q | repo tarixini ko'rish cheklangan | teamlead linkni qo'shadi |
 | Credentials bir marta git tarixiga tushib qolgan | xavfsizlik | fayllar tracking'dan chiqarildi; parol/kalit almashtirish qolgan |
 | Dashboard standart porti 9119 band (gateway ichki dashboardi) | `BACKEND_PORT_IN_USE` | `run_mars_dashboard.sh` 9120 ni tanlaydi |
 
 ## 5. Aniqlashtirish kerak
 
-1. Frontend repolarining GitHub manzillari (8 repo).
-2. Nechta filial/oy live ma'lumot bilan sinovdan o'tgan.
-3. Har bir a'zoning agent bo'yicha yakuniy tasdig'i (2-topshiriq: `2-agent-roster.md`).
+1. Nechta filial/oy live ma'lumot bilan sinovdan o'tgan.
+2. Har bir a'zoning agent bo'yicha yakuniy tasdig'i (2-topshiriq: `2-agent-roster.md`).
 
 ## 6. Qanday tekshirish (takrorlanadigan)
 
