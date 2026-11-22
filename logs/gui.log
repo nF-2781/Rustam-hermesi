@@ -63,3 +63,5 @@
 2026-11-22 21:01:29,225 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
 2026-11-22 21:03:01,089 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61378 reason=client_disconnect(code=1012,reason=) messages=191 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
 2026-11-22 21:03:01,117 INFO tui_gateway.ws: ws closed peer=127.0.0.1:49959 reason=client_disconnect(code=1012,reason=) messages=7 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
+2026-11-22 22:41:14,054 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-22 22:41:14,202 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/

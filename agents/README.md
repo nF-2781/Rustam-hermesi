@@ -4,7 +4,7 @@ Two isolated, project-local Hermes profiles use the existing MARS Python MCP
 package and the deployed backend `https://mars-backend-six.vercel.app`.
 Default Hermes and both agent profiles use the same
 `mcp-servers/mars_lms/server.py`, one `.venv` and MCP SDK 1.30.0.
-The server registers 22 workflow/data tools plus eight scoped agent tools plus six retained read tools.
+The server registers 22 workflow/data tools, eight scoped agent tools, six retained read tools and five COO tools.
 Profiles keep their existing six/three tool filters. Scoped HTTP and analysis
 code are internal modules of the server. Each process owns its login state.
 
@@ -129,7 +129,7 @@ profiles are never overwritten automatically.
 .\hermes.bat -p reception-request-router skills list
 ```
 
-`mcp test` reports all 36 tools advertised by the unified server before
+`mcp test` reports all 41 tools advertised by the unified server before
 profile registration filters; native registry verification confirms the six/three
 tools actually registered for these profiles. Fixtures cover no-login, scoped
 student access, denied requests, normalization, missing evidence, ambiguous
@@ -138,3 +138,9 @@ persist student records. No LLM-generated report, Linux deployment, scheduled ru
 or messaging delivery has been tested. No cron, gateway, Telegram/email sender or
 backend writes were installed. Stop using a profile to disable it; any later
 profile deletion must preserve the user's data and credentials.
+
+## COO Hierarchy
+
+The additional `mars-coo` profile coordinates three native delegated specialists.
+See [COO setup and contracts](c-level/02-coo/README.md). Its six-tool whitelist is
+separate from the older auditor/reception profiles. All use the same MCP server.

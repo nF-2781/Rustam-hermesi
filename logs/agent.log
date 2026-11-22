@@ -842,3 +842,34 @@ AssertionError
 2026-11-22 21:02:17,972 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
 2026-11-22 21:03:01,089 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61378 reason=client_disconnect(code=1012,reason=) messages=191 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
 2026-11-22 21:03:01,117 INFO tui_gateway.ws: ws closed peer=127.0.0.1:49959 reason=client_disconnect(code=1012,reason=) messages=7 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
+2026-11-22 22:41:12,371 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-22 22:41:12,376 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-22 22:41:12,380 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-22 22:41:12,636 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-22 22:41:12,639 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-22 22:41:12,643 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-22 22:41:12,646 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-22 22:41:12,649 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-22 22:41:12,652 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-22 22:41:12,655 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-22 22:41:12,655 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-22 22:41:12,660 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-22 22:41:12,690 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-22 22:41:12,693 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-22 22:41:12,696 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-22 22:41:12,704 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-22 22:41:12,709 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-22 22:41:12,713 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-22 22:41:12,725 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-22 22:41:12,730 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-22 22:41:12,737 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-22 22:41:12,741 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-22 22:41:12,746 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-22 22:41:12,750 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-22 22:41:12,756 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-22 22:41:12,868 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-22 22:41:14,054 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-22 22:41:14,202 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-22 22:41:14,885 INFO tools.mcp_tool: MCP server 'mars_lms' (stdio): registered 41 tool(s): mcp__mars_lms__lms_login, mcp__mars_lms__lms_context, mcp__mars_lms__list_groups, mcp__mars_lms__list_students, mcp__mars_lms__get_debts, mcp__mars_lms__get_attendance, mcp__mars_lms__get_homework, mcp__mars_lms__get_finance_report, mcp__mars_lms__get_payments, mcp__mars_lms__get_pending_approvals, mcp__mars_lms__get_room_plan, mcp__mars_lms__get_student_progress, mcp__mars_lms__debt_control_agent, mcp__mars_lms__attendance_control_agent, mcp__mars_lms__homework_control_agent, mcp__mars_lms__daily_finance_report, mcp__mars_lms__new_student_followup, mcp__mars_lms__pending_approvals_digest, mcp__mars_lms__room_schedule_assistant, mcp__mars_lms__mentor_workload_analysis, mcp__mars_lms__student_progress_audit, mcp__mars_lms__reception_router, mcp__mars_lms__coo_branch_context, mcp__mars_lms__coo_attendance_audit, mcp__mars_lms__coo_schedule_audit, mcp__mars_lms__coo_status_request_sla, mcp__mars_lms__coo_delegation_plan, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__login, mcp__mars_lms__students, mcp__mars_lms__attendance, mcp__mars_lms__homework, mcp__mars_lms__student_progress, mcp__mars_lms__curriculum, mcp__mars_lms__incoming_requests, mcp__mars_lms__reception_triage
+2026-11-22 22:41:14,887 INFO tools.mcp_tool: MCP: registered 41 tool(s) from 1 server(s)
+2026-11-22 22:41:14,887 INFO tools.mcp_tool:   MCP: 41 tool(s) from 1 server(s)

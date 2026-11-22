@@ -22,6 +22,14 @@ Thumbs.db
 .DS_Store
 
 # Isolated Hermes profiles: retain config/SOUL/skills, exclude credentials and runtime state
+/profiles/*/.env
+/profiles/*/auth.json
+/profiles/*/.anthropic_oauth.json
+/profiles/*/credentials/
+/profiles/*/sessions/
+/profiles/*/state.db*
+/profiles/*/shared-state.db*
+/profiles/*/spawn-ledger.json
 /profiles/*/logs/
 /profiles/*/cache/
 /profiles/*/audio_cache/

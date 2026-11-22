@@ -55,3 +55,7 @@
 ===== [2026-11-22 21:04:08] starting MCP server 'mars_lms' =====
 2026-11-22 21:04:09,561 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
 2026-11-22 21:04:09,588 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+
+===== [2026-11-22 22:41:13] starting MCP server 'mars_lms' =====
+2026-11-22 22:41:14,833 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-22 22:41:14,861 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest

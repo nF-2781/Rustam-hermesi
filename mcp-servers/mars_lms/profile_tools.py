@@ -7,6 +7,7 @@ from mcp.types import CallToolResult, TextContent
 from scoped_client import DEFAULT_API_URL, LMSClient
 from scoped_settings import read_settings
 import agent_workflows as workflow
+from coo_tools import register_coo_tools
 
 
 def result(payload):
@@ -17,6 +18,7 @@ def result(payload):
 def register_profile_tools(mcp):
     api = LMSClient(os.environ.get('MARS_API_URL', DEFAULT_API_URL),
                     timeout=float(os.environ.get('MARS_API_TIMEOUT_SECONDS', '20')))
+    register_coo_tools(mcp, api, result)
 
     @mcp.tool()
     async def branch_me():

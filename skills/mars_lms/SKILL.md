@@ -94,7 +94,7 @@ cd mcp-servers/mars_lms
 ```
 
 Skript MCP stdio orqali aynan shu 6 qadamni bajaradi va `chain_report.md` faylini
-yozadi. Agar `tools: 22` va `chain OK` chiqsa, zanjir ishlayapti.
+yozadi. Agar `tools: 41` va `chain OK` chiqsa, zanjir ishlayapti.
 
 ## Moslashtirish
 

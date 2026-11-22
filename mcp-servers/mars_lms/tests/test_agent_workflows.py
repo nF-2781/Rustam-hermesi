@@ -177,7 +177,7 @@ class ScopeTests(unittest.IsolatedAsyncioTestCase):
                 stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
             stdout, stderr = await asyncio.wait_for(process.communicate(), timeout=30)
             self.assertEqual(process.returncode, 0, stderr.decode(errors='replace'))
-            self.assertIn(b'tools: 36', stdout)
+            self.assertIn(b'tools: 41', stdout)
             self.assertEqual(calls, [])
 
     async def test_student_outside_roster_makes_no_group_requests(self):
@@ -206,7 +206,7 @@ class ScopeTests(unittest.IsolatedAsyncioTestCase):
                                            env={'MARS_API_URL': url})
             async with connected_client(params) as client:
                 tools = {tool.name for tool in (await client.list_tools()).tools}
-                self.assertEqual(len(tools), 36)
+                self.assertEqual(len(tools), 41)
                 self.assertTrue({'branch_me', 'groups', 'mentors', 'payments',
                                  'finance_overview', 'finance_salaries'} <= tools)
                 self.assertTrue({'lms_login', 'student_progress_audit', 'reception_router'} <= tools)

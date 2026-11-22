@@ -542,6 +542,207 @@
         }
       },
       {
+        "name": "coo_branch_context",
+        "description": "Read GET /api/branch/me after login; return minimal branch identity and reject mismatched branch scope.",
+        "inputSchema": {
+          "properties": {
+            "branch_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Branch Id"
+            }
+          },
+          "title": "coo_branch_contextArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "coo_attendance_audit",
+        "description": "Read paginated branch attendance for explicit dates. Confirmed attendance only; unknown confirmations never become absences. Actual class start unavailable. Threshold provisional unless confirmed.",
+        "inputSchema": {
+          "properties": {
+            "period_start": {
+              "title": "Period Start",
+              "type": "string"
+            },
+            "period_end": {
+              "title": "Period End",
+              "type": "string"
+            },
+            "consecutive_absences": {
+              "default": 2,
+              "title": "Consecutive Absences",
+              "type": "integer"
+            },
+            "policy_confirmed": {
+              "default": false,
+              "title": "Policy Confirmed",
+              "type": "boolean"
+            },
+            "branch_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Branch Id"
+            },
+            "max_pages": {
+              "default": 10,
+              "title": "Max Pages",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period_start",
+            "period_end"
+          ],
+          "title": "coo_attendance_auditArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "coo_schedule_audit",
+        "description": "Read branch group roster/details; detect overlapping room/mentor intervals (not only equal start times). Missing schedule ends/resources stay unknown. No changes applied.",
+        "inputSchema": {
+          "properties": {
+            "branch_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Branch Id"
+            },
+            "group_limit": {
+              "default": 100,
+              "title": "Group Limit",
+              "type": "integer"
+            }
+          },
+          "title": "coo_schedule_auditArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "coo_status_request_sla",
+        "description": "Read all bounded pending /api/branch/status-requests pages and compare elapsed UTC age with explicit SLA hours. Frozen-status applications only; missing timestamps unknown. No approvals/messages.",
+        "inputSchema": {
+          "properties": {
+            "sla_hours": {
+              "title": "Sla Hours",
+              "type": "number"
+            },
+            "policy_confirmed": {
+              "default": false,
+              "title": "Policy Confirmed",
+              "type": "boolean"
+            },
+            "branch_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Branch Id"
+            },
+            "max_pages": {
+              "default": 10,
+              "title": "Max Pages",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "sla_hours"
+          ],
+          "title": "coo_status_request_slaArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "coo_delegation_plan",
+        "description": "Build native delegate_task arguments with actual agent.md/soul.md content for three COO children and explicit scope. Preparation only; COO must call delegate_task to execute them.",
+        "inputSchema": {
+          "properties": {
+            "period_start": {
+              "title": "Period Start",
+              "type": "string"
+            },
+            "period_end": {
+              "title": "Period End",
+              "type": "string"
+            },
+            "sla_hours": {
+              "title": "Sla Hours",
+              "type": "number"
+            },
+            "consecutive_absences": {
+              "default": 2,
+              "title": "Consecutive Absences",
+              "type": "integer"
+            },
+            "policy_confirmed": {
+              "default": false,
+              "title": "Policy Confirmed",
+              "type": "boolean"
+            },
+            "branch_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Branch Id"
+            }
+          },
+          "required": [
+            "period_start",
+            "period_end",
+            "sla_hours"
+          ],
+          "title": "coo_delegation_planArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
         "name": "branch_me",
         "description": "GET /api/branch/me after explicit login; retained original read tool.",
         "inputSchema": {
@@ -1010,7 +1211,7 @@
     ],
     "utility_tools": [],
     "ttl_ms": 0,
-    "written_at": 1795363278.518753,
+    "written_at": 1795369274.8698208,
     "cache_scope": "private"
   }
 }

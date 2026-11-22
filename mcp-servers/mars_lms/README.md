@@ -2,8 +2,8 @@
 
 ## Consolidated Layout
 
-`server.py` is the single entry point for default Hermes and both agent profiles.
-It registers 36 tools on one FastMCP instance using **MCP SDK 1.30.0**, one
+`server.py` is the single entry point for default Hermes and all three agent profiles.
+It registers 41 tools on one FastMCP instance using **MCP SDK 1.30.0**, one
 `requirements.txt` and one `.venv`. There is no standalone profile adapter server.
 
 The original 22 workflow/data tools remain available. `profile_tools.py` registers
@@ -11,7 +11,9 @@ eight scoped tools: `login`, `students`, `attendance`, `homework`,
 `student_progress`, `curriculum`, `incoming_requests`, and `reception_triage`.
 It also retains `branch_me`, `groups`, `mentors`, `payments`, `finance_overview`,
 and `finance_salaries` from the original read interface, using explicit `login`.
-Profiles retain their existing six/three tool filters and names.
+The original profiles retain their existing six/three tool filters and names.
+The new mars-coo profile exposes login plus five coo_* tools. See
+../../agents/c-level/02-coo/README.md for hierarchy and API contracts.
 
 `lms_client.py` preserves the workflow tools' synchronous auto-login contract;
 `scoped_client.py` preserves explicit async login and scoped error responses.
@@ -45,7 +47,7 @@ Hermes (agent) ──stdio──> server.py ──HTTPS──> https://mars-back
 
 | Fayl | Vazifa |
 |---|---|
-| `server.py` | Single FastMCP server: 36 tools (22 workflow/data + 8 scoped + 6 retained reads) |
+| `server.py` | Single FastMCP server: 41 tools (22 workflow/data + 8 scoped + 6 retained reads + 5 COO) |
 | `profile_tools.py` | Scoped tool registration on the same server |
 | `agent_workflows.py`, `scoped_client.py` | Scoped analysis and explicit-login HTTP client |
 | `tests/` | Scoped HTTP, analysis and real stdio fixture tests |
