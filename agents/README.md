@@ -12,9 +12,9 @@ Har bir agent ikki fayldan iborat:
 ```
 CEO (mars-ceo) — Rustam
 ├── COO (mars-coo) — Kamollidin: operatsiya
-│   ├── attendance-controller
-│   ├── homework-controller
-│   └── schedule-planner
+│   ├── attendance-sentinel
+│   ├── room-schedule-optimizer
+│   └── sla-request-monitor
 ├── CFO (mars-cfo) — Islom: moliya
 │   ├── debt-collector
 │   └── cashier-reporter
@@ -43,8 +43,9 @@ hermes -p mars-cfo chat       # agent bilan suhbat
 ```
 
 Repo'da 7 agentning fayli bor, lekin hammasi tasdiqlangan deb hisoblanmaydi:
-`ceo` (Rustam o'zi yozgan) va `cto` (namuna) ustoz tomonidan qabul qilingan; qolgan 5 rol
-fayli — skelet, a'zo o'zi yozib/tasdiqlagachgina tayyor (keyin yana `install.sh`).
+`ceo` (Rustam o'zi yozgan) va `cto` (namuna) ustoz tomonidan qabul qilingan; `coo` —
+Kamollidin branchidagi ishi asosida birlashtirilgan (5 read-only `coo_*` tool + 3 sub-agent);
+qolgan 4 rol fayli — skelet, a'zo o'zi yozib/tasdiqlagachgina tayyor (keyin yana `install.sh`).
 
 > **Mualliflik (ochiq):** `cto/` mazmuni — Rustam (@rustam106) yozgan namuna, hozirgi egasi
 > Saidabzal (@Saidabza1). Qolgan 6 rolning `soul.md` + `agents.md` skeleti Team Lead
@@ -65,9 +66,9 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 | Papka | Agent | Holat |
 |---|---|---|
 | `ceo/` | CEO | ✅ qabul — Rustam (o'zi yozgan) |
-| `coo/` | COO | skelet — Kamollidin o'zi yozadi/tasdiqlaydi |
+| `coo/` | COO | ✅ birlashtirildi — Kamollidin ishi + Team Lead moslashi (ustoz ko'rigi kutilmoqda) |
 | `cfo/` | CFO | skelet — Islom o'zi yozadi/tasdiqlaydi |
-| `cto/` | CTO | ✅ mazmun qabul (namuna — Rustam) — Saidabzal tasdiqlaydi |
+| `cto/` | CTO | ✅ mazmun qabul (namuna — Rustam) + Saidabzal charteri |
 | `cmo/` | CMO | skelet — Muhammadrizo o'zi yozadi/tasdiqlaydi |
 | `cpo/` | CPO | skelet — Muhammadsolih o'zi yozadi/tasdiqlaydi |
 | `hr/` | HR | skelet — Muhammadali o'zi yozadi/tasdiqlaydi |

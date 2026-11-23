@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "parent": {"id": "ceo", "kind": "reporting_parent", "profile": "mars-ceo", "installed": true},
+  "agent": {"id": "mars-coo", "level": "c-level", "profile": "mars-coo", "agent_file": "agents.md", "soul_file": "soul.md"},
+  "sub_agents": [
+    {"id": "attendance-sentinel", "path": "sub-agents/01-attendance-sentinel", "tool": "coo_attendance_audit"},
+    {"id": "room-schedule-optimizer", "path": "sub-agents/02-room-schedule-optimizer", "tool": "coo_schedule_audit"},
+    {"id": "sla-request-monitor", "path": "sub-agents/03-sla-request-monitor", "tool": "coo_status_request_sla"}
+  ],
+  "delegation": {"mechanism": "native_delegate_task_with_explicit_role_context", "planner_tool": "coo_delegation_plan", "max_spawn_depth": 1, "shared_read_only_whitelist": true}
+}

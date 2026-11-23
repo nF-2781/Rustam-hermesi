@@ -21,6 +21,7 @@ from typing import Any, Optional
 
 from mcp.server.fastmcp import FastMCP
 
+from coo_register import register_coo
 from lms_client import ENDPOINTS, LMSError, LMSClient, envelope
 
 logging.basicConfig(level=logging.INFO, stream=sys.stderr, format="%(asctime)s %(levelname)s %(name)s %(message)s")
@@ -1683,6 +1684,9 @@ def reception_router(limit: int = 50) -> dict:
             "report_markdown": "\n".join(report_lines),
         },
     )
+
+
+register_coo(mcp)
 
 
 if __name__ == "__main__":

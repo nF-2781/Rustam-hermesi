@@ -3,7 +3,8 @@
 **Jamoa:** Mars | **Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40
 **Team Lead:** Rustam (@rustam106) — CEO agenti (`mars-ceo`)
 **Holat:** 7 a'zo, 7 agent — barcha fayl repo'da. Ustoz `ceo` va `cto` fayllarini qabul qilgan;
-qolgan 5 rol fayli a'zo **o'zi yozib/tasdiqlagach** hisobga olinadi (quyida belgilangan)
+`coo` Kamollidin branchidagi ishi asosida strukturaga birlashtirildi (5 ta read-only tool +
+3 sub-agent); qolgan 4 rol fayli a'zo **o'zi yozib/tasdiqlagach** hisobga olinadi (quyida belgilangan)
 
 Har bir a'zoga bitta agent: jamoa **7 kishi**, agent ham **7 ta**.
 Ierarxiya: **CEO → C-level → sub-agentlar**. Sub-agentlar keyingi darsda to'ldiriladi,
@@ -47,9 +48,11 @@ lekin har bir `agents.md` da ularning joyi allaqachon belgilangan.
 agents/
   README.md          — ierarxiya, ishga tushirish qoidasi
   ceo/soul.md  ceo/agents.md      ← ✅ qabul (Rustam o'zi yozgan)
-  coo/soul.md  coo/agents.md      ← skelet: Kamollidin o'zi yozadi/tasdiqlaydi
+  coo/soul.md  coo/agents.md      ← ✅ birlashtirildi: Kamollidin ishi (5 tool, 3 sub-agent) + CEO/CTO bilan moslangan
+  coo/api-contracts.md  coo/hierarchy.json  coo/sub-agents/…  ← COO dalil/ierarxiya fayllari
   cfo/soul.md  cfo/agents.md      ← skelet: Islom o'zi yozadi/tasdiqlaydi
   cto/soul.md  cto/agents.md      ← ✅ mazmun qabul (namuna — Rustam; egasi Saidabzal tasdiqlaydi)
+  cto/charter.md                  ← Saidabzalning batafsil CTO charteri (repo yo'li va ierarxiyasi tuzatilgan)
   cmo/soul.md  cmo/agents.md      ← skelet: Muhammadrizo o'zi yozadi/tasdiqlaydi
   cpo/soul.md  cpo/agents.md      ← skelet: Muhammadsolih o'zi yozadi/tasdiqlaydi
   hr/soul.md   hr/agents.md       ← skelet: Muhammadali o'zi yozadi/tasdiqlaydi
@@ -60,9 +63,10 @@ agents/
 - `agents.md` — agent **nima qiladi**: vazifalar, hisobot zanjiri, boshqaradigan
   sub-agentlar, ishlatadigan API/MCP tool'lar, ish zanjiri, **nima qilmaydi**.
 
-> **Holat (halol):** repo'da 7 agentning fayli bor, lekin **faqat `ceo` va `cto` ustoz
-> tomonidan qabul qilingan**. Qolgan 5 rol fayli Team Lead yozgan **skelet** — a'zo
-> o'zi o'qib, o'z ishiga moslab qayta yozmaguncha "bajarildi" hisoblanmaydi.
+> **Holat (halol):** repo'da 7 agentning fayli bor. `ceo` va `cto` ustoz tomonidan qabul
+> qilingan; `coo` — Kamollidin branchidagi ish asosida Team Lead birlashtirgan versiya
+> (ustoz hali ko'rmagan). Qolgan 4 rol fayli Team Lead yozgan **skelet** — a'zo o'zi o'qib,
+> o'z ishiga moslab qayta yozmaguncha "bajarildi" hisoblanmaydi.
 > Tartib: `git pull` → `agents/<rol>/` ni ochish → o'z nomidan yozish/tasdiqlash →
 > `bash agents/install.sh` → `0-topshiriq-hisobrati.md` ga o'z qatorini yopish.
 

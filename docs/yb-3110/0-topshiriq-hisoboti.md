@@ -5,8 +5,8 @@
 **Topshiruvchi:** @bmt_430
 **Muddat:** 24.11.2026, 18:40
 **Holat:** 7 rol tayinlangan, hujjatlar `origin/rustam` da. `ceo` va `cto` fayllari ustoz
-tomonidan qabul qilingan; qolgan 5 rol faylini a'zoning o'zi yozmaguncha "bajarildi"
-hisoblanmaydi (§8).
+tomonidan qabul qilingan; `coo` Kamollidin branchidagi ishi asosida birlashtirildi (§8);
+qolgan 4 rol faylini a'zoning o'zi yozmaguncha "bajarildi" hisoblanmaydi (§8).
 
 ---
 
@@ -43,6 +43,7 @@ Ierarxiya: **CEO → C-level → sub-agentlar** (sub-agentlar `agents.md` ichida
 |---|---|---|
 | `agents/cto/soul.md` | agent **kim**: xarakter, ovoz ohangi, javob beradigan savollar, chegaralar, namuna | ✅ yozilgan |
 | `agents/cto/agents.md` | agent **nima qiladi**: rol, hisobot zanjiri, sub-agentlar (`mcp-maintainer`, `dashboard-operator`), 7 vazifa, tool'lar, nosozlik zanjiri, nima qilmaydi, chiqish shakli | ✅ yozilgan |
+| `agents/cto/charter.md` | Saidabzalning batafsil CTO charteri (17 bo'lim): kontraktlar, RBAC, risk registri, hisobot formati | ✅ birlashtirildi — lokal yo'l va ierarxiya gapi repo rosterga moslandi |
 
 Namuna sifatida yozilgan bu ikki fayl qolgan 6 rol uchun andoza bo'ldi — hammasi bir xil formatda.
 
@@ -72,7 +73,7 @@ Backend: https://mars-backend-six.vercel.app · Swagger: `/api-docs/`
 ```bash
 cd <repo>
 bash agents/install.sh --check        # → 7/7 tayyor
-hermes mcp test mars_lms              # → 22 tool
+hermes mcp test mars_lms              # → 28 tool (22 asosiy + 6 COO: coo_login + 5 audit)
 hermes -p mars-cto chat               # CTO agenti bilan suhbat
 ```
 
@@ -107,6 +108,8 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 | `agents/ceo/agents.md` — ish zanjiri | ⚠️ izoh | 4-qadamda CTO tushib qolgan edi → `COO/CFO/CTO/CMO/CPO/HR` ga qo'shildi |
 | Ro'yxatdagi “hammasi yozilgan” da'vosi | ⚠️ izoh | faqat `ceo` + `cto` (namuna) qabul qilingan. Roster, `agents/README.md` va shu hisobotda endi halol yozilgan: qolgan 5 rol fayli — skelet |
 | Qolgan 5 agent (COO/CFO/CMO/CPO/HR) | ⏳ kutilmoqda | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi, shundan keyingina “bajarildi” |
+| COO — Kamollidin (`origin/kamoliddin`) | ✅ **birlashtirildi** (23.11) | `agents/c-level/02-coo/` → `agents/coo/` strukturasiga moslandi: 5 read-only tool (`coo_login`, `coo_branch_context`, `coo_attendance_audit`, `coo_schedule_audit`, `coo_status_request_sla`, `coo_delegation_plan`), 3 sub-agent, `api-contracts.md`, `hierarchy.json`; eskirgan “CEO agent yo'q” gapi va `.env` commit'i ko'chirilmadi |
+| CTO — Saidabzal (`origin/said`) | ✅ **birlashtirildi** (23.11) | repo ildizidagi `agent.md` → `agents/cto/charter.md`; lokal `C:/Users/User/OneDrive/...` yo'li va “LMS repo'da CEO/CTO yo'q” gapi rosterga moslandi |
 
 **Mualliflik (ochiq yozilgan):** `ceo/` — Rustam o'zi yozgan (ustoz qabul qildi); `cto/` mazmuni —
 Rustam namunasi (qabul qilingan, egasi Saidabzal). Qolgan 5 rol skeleti Team Lead tomonidan
