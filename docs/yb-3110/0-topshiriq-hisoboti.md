@@ -5,8 +5,9 @@
 **Topshiruvchi:** @bmt_430
 **Muddat:** 24.11.2026, 18:40
 **Holat:** 7 rol tayinlangan, hujjatlar `origin/rustam` da. `ceo` va `cto` fayllari ustoz
-tomonidan qabul qilingan; `coo` Kamollidin branchidagi ishi asosida birlashtirildi (§8);
-qolgan 4 rol faylini a'zoning o'zi yozmaguncha "bajarildi" hisoblanmaydi (§8).
+tomonidan qabul qilingan; `coo` Kamollidin branchidagi ishi asosida birlashtirildi va Team Lead
+o'z qabulidan o'tkazdi (§8, §10); qolgan 4 rol faylini a'zoning o'zi yozmaguncha "bajarildi"
+hisoblanmaydi (§8).
 
 ---
 
@@ -64,8 +65,9 @@ Backend: https://mars-backend-six.vercel.app · Swagger: `/api-docs/`
 
 ## 5. Parol holati
 
-- LMS owner akkauntining paroli **almashtirildi**.
-- Yangi qiymat **faqat lokal `.env`** faylida (`MARS_PHONE` / `MARS_PASSWORD`).
+- LMS owner akkauntining paroli **almashtirildi** va **23.11 holatiga o'zgarmadi** — jamoa shu
+  parolda ishlashda davom etadi (qayta almashtirish talab qilinmadi).
+- Qiymat **faqat lokal `.env`** faylida (`MARS_PHONE` / `MARS_PASSWORD`); `.env` `.gitignore` da.
 - Parol repo'ga, hujjatga, commitga va chatga **yozilmagan** — `.env` git'ga qo'shilmaydi.
 
 ## 6. Tekshirish (takrorlanadigan)
@@ -110,6 +112,7 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 | Qolgan 5 agent (COO/CFO/CMO/CPO/HR) | ⏳ kutilmoqda | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi, shundan keyingina “bajarildi” |
 | COO — Kamollidin (`origin/kamoliddin`) | ✅ **birlashtirildi** (23.11) | `agents/c-level/02-coo/` → `agents/coo/` strukturasiga moslandi: 5 read-only tool (`coo_login`, `coo_branch_context`, `coo_attendance_audit`, `coo_schedule_audit`, `coo_status_request_sla`, `coo_delegation_plan`), 3 sub-agent, `api-contracts.md`, `hierarchy.json`; eskirgan “CEO agent yo'q” gapi va `.env` commit'i ko'chirilmadi |
 | CTO — Saidabzal (`origin/said`) | ✅ **birlashtirildi** (23.11) | repo ildizidagi `agent.md` → `agents/cto/charter.md`; lokal `C:/Users/User/OneDrive/...` yo'li va “LMS repo'da CEO/CTO yo'q” gapi rosterga moslandi |
+| COO qabuli | ✅ **Team Lead qabuli** (23.11) | ustoz ko'rigi kutilmasdan, o'z qabulimizdan o'tkazildi: `install.sh --check` 7/7, 16 test, 28 MCP tool, jonli audit 6/6 (§10) |
 
 **Mualliflik (ochiq yozilgan):** `ceo/` — Rustam o'zi yozgan (ustoz qabul qildi); `cto/` mazmuni —
 Rustam namunasi (qabul qilingan, egasi Saidabzal). Qolgan 5 rol skeleti Team Lead tomonidan
@@ -127,3 +130,24 @@ git pull && bash agents/install.sh && bash agents/install.sh --check && hermes -
 ```
 
 Har bir a'zo o'z papkasini (`agents/<rol>/`) ochib ko'radi; o'zgartirsa — qayta `install.sh`.
+
+## 10. COO jonli audit (23.11.2026)
+
+`mars_lms` MCP serveri stdio orqali ishga tushirildi, `coo_login` lokal `.env`
+akkaunti bilan kirdi (parol o'zgartirilmadi), so'ng 5 audit tool haqiqiy backend'da
+chaqirildi. Davr: `2026-11-01 … 2026-11-23`, `sla_hours=24`, `consecutive_absences=2`.
+Shaxsiy ma'lumot (ism, telefon, token) chiqarilmadi.
+
+| Tool | Lokal backend (`localhost:7000`) | Production (`mars-backend-six.vercel.app`) |
+|---|---|---|
+| `coo_login` | ✅ 200 | ✅ 200 |
+| `coo_branch_context` | ✅ `Test Branch` (filial ID olindi) | ✅ `Test Branch` |
+| `coo_attendance_audit` | ✅ 200 — 0 yozuv, qoplama to'liq | ✅ 200 — 0 yozuv, qoplama to'liq |
+| `coo_schedule_audit` | ✅ 200 — 1 guruh, 0 to'qnashuv, 1 noma'lum jadval → `partial` | ✅ 200 — 2 guruh, 0 to'qnashuv, 2 noma'lum → `partial` |
+| `coo_status_request_sla` | ✅ 200 — 0 `pending` so'rov | ✅ 200 — 0 `pending` so'rov |
+| `coo_delegation_plan` | ✅ 200 — 3 ta `delegate_task` paketi, `dispatched=false` | ✅ 200 — 3 ta paket |
+
+Xulosa: **6/6 tool xatosiz javob berdi**, filial chegarasi va o'qish-only rejim
+saqlandi. Ma'lumot bo'shligi (davomat/status yozuvi yo'q, jadval o'qilmadi) — bu
+"muammo yo'q" degani emas; hisobotda `partial`/`unavailable` deb qaytdi. Bu test
+filialida tekshirish uchun ma'lumot yo'q, shuning uchun raqamli xulosa berilmadi.

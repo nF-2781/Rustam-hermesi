@@ -44,8 +44,9 @@ hermes -p mars-cfo chat       # agent bilan suhbat
 
 Repo'da 7 agentning fayli bor, lekin hammasi tasdiqlangan deb hisoblanmaydi:
 `ceo` (Rustam o'zi yozgan) va `cto` (namuna) ustoz tomonidan qabul qilingan; `coo` —
-Kamollidin branchidagi ishi asosida birlashtirilgan (5 read-only `coo_*` tool + 3 sub-agent);
-qolgan 4 rol fayli — skelet, a'zo o'zi yozib/tasdiqlagachgina tayyor (keyin yana `install.sh`).
+Kamollidin branchidagi ishi asosida birlashtirilgan va Team Lead tomonidan qabul qilingan
+(5 read-only `coo_*` tool + 3 sub-agent, jonli audit bilan tekshirilgan); qolgan 4 rol fayli —
+skelet, a'zo o'zi yozib/tasdiqlagachgina tayyor (keyin yana `install.sh`).
 
 > **Mualliflik (ochiq):** `cto/` mazmuni — Rustam (@rustam106) yozgan namuna, hozirgi egasi
 > Saidabzal (@Saidabza1). Qolgan 6 rolning `soul.md` + `agents.md` skeleti Team Lead
@@ -66,7 +67,7 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 | Papka | Agent | Holat |
 |---|---|---|
 | `ceo/` | CEO | ✅ qabul — Rustam (o'zi yozgan) |
-| `coo/` | COO | ✅ birlashtirildi — Kamollidin ishi + Team Lead moslashi (ustoz ko'rigi kutilmoqda) |
+| `coo/` | COO | ✅ qabul — Kamollidin ishi birlashtirildi va Team Lead o'z qabulidan o'tkazdi (23.11) |
 | `cfo/` | CFO | skelet — Islom o'zi yozadi/tasdiqlaydi |
 | `cto/` | CTO | ✅ mazmun qabul (namuna — Rustam) + Saidabzal charteri |
 | `cmo/` | CMO | skelet — Muhammadrizo o'zi yozadi/tasdiqlaydi |
