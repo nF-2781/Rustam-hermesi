@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "parent": {
+    "id": "ceo",
+    "kind": "reporting_parent",
+    "profile": "mars-ceo",
+    "installed": true
+  },
+  "agent": {
+    "id": "mars-hr",
+    "level": "c-level",
+    "profile": "mars-hr",
+    "agent_file": "agents.md",
+    "soul_file": "soul.md",
+    "owner": "Muhammadali",
+    "telegram": "Chihuahua",
+    "github": "https://github.com/muhammadali850"
+  },
+  "sub_agents": [
+    {
+      "id": "hr-recruiter",
+      "path": "sub-agents/01-hr-recruiter",
+      "tool": "mentor_workload_analysis",
+      "description": "Bo'sh ish o'rinlari bo'yicha nomzodlarni qidirish, rezyumelarni saralash va dastlabki suhbatlar"
+    },
+    {
+      "id": "hr-onboarding",
+      "path": "sub-agents/02-hr-onboarding",
+      "tool": "list_groups",
+      "description": "Yangi mentorlarni jamoaga qabul qilish, ish o'rnini tayyorlash va sinov muddatidagi adaptatsiya"
+    },
+    {
+      "id": "hr-attendance",
+      "path": "sub-agents/03-hr-attendance",
+      "tool": "get_attendance",
+      "description": "Mentorlar va xodimlarning darsga kelishi, intizomi, kasallik varaqalari va ta'tillar hisobi"
+    },
+    {
+      "id": "hr-records",
+      "path": "sub-agents/04-hr-records",
+      "tool": "lms_context",
+      "description": "Jamoa a'zolarining anketalari, shartnomalari, buyruqlari va eNPS so'rovnomalari hisobi"
+    }
+  ],
+  "delegation": {
+    "mechanism": "native_delegate_task_with_explicit_role_context",
+    "max_spawn_depth": 1,
+    "shared_read_only_whitelist": true
+  }
+}

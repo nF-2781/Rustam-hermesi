@@ -56,8 +56,9 @@ agents/
   cto/charter.md                  ← Saidabzalning batafsil CTO charteri (repo yo'li va ierarxiyasi tuzatilgan)
   cmo/soul.md  cmo/agents.md      ← skelet: Muhammadrizo o'zi yozadi/tasdiqlaydi
   cpo/soul.md  cpo/agents.md      ← skelet: Muhammadsolih o'zi yozadi/tasdiqlaydi
-  hr/soul.md   hr/agents.md       ← skelet: Muhammadali o'zi yozadi/tasdiqlaydi
-  install.sh         — soul.md + agents.md → Hermes profil SOUL.md
+  hr/soul.md   hr/agents.md       ← ✅ qabul: Muhammadali o'zi to'liq yozdi va tasdiqladi
+  hr/api-contracts.md  hr/hierarchy.json  hr/sub-agents/…  ← HR dalil/ierarxiya va 4 ta sub-agent
+  install.sh / install.py         — soul.md + agents.md → Hermes profil SOUL.md (11 profil)
 ```
 
 - `soul.md` — agent **kim**: xarakter, til, ohang, nimaga javob beradi, chegaralari.

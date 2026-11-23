@@ -109,10 +109,12 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 | `agents/cto/agents.md` | ✅ **qabul**, 2 izoh | 1) pul va shaxsiy ma'lumot uchun **inson tasdig'i** qoidasi qo'shildi; 2) `6 agent` → `7 agent` (profil soni ham 7) |
 | `agents/ceo/agents.md` — ish zanjiri | ⚠️ izoh | 4-qadamda CTO tushib qolgan edi → `COO/CFO/CTO/CMO/CPO/HR` ga qo'shildi |
 | Ro'yxatdagi “hammasi yozilgan” da'vosi | ⚠️ izoh | faqat `ceo` + `cto` (namuna) qabul qilingan. Roster, `agents/README.md` va shu hisobotda endi halol yozilgan: qolgan 5 rol fayli — skelet |
-| Qolgan 5 agent (COO/CFO/CMO/CPO/HR) | ⏳ kutilmoqda | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi, shundan keyingina “bajarildi” |
+| Qolgan 4 agent (CFO/CMO/CPO) | ⏳ kutilmoqda | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi, shundan keyingina “bajarildi” |
+| HR — Muhammadali (`origin/muhammadali`) | ✅ **to'liq yozildi va tasdiqlandi** (24.11) | `agents/hr/soul.md`, `agents/hr/agents.md`, `api-contracts.md`, `hierarchy.json`, 4 ta sub-agent (`hr-recruiter`, `hr-onboarding`, `hr-attendance`, `hr-records`), `skills/mars-hr-agent/` hamda `profiles/mars-hr` to'liq yaratildi va tekshirildi (§11) |
 | COO — Kamollidin (`origin/kamoliddin`) | ✅ **birlashtirildi** (23.11) | `agents/c-level/02-coo/` → `agents/coo/` strukturasiga moslandi: 5 read-only tool (`coo_login`, `coo_branch_context`, `coo_attendance_audit`, `coo_schedule_audit`, `coo_status_request_sla`, `coo_delegation_plan`), 3 sub-agent, `api-contracts.md`, `hierarchy.json`; eskirgan “CEO agent yo'q” gapi va `.env` commit'i ko'chirilmadi |
 | CTO — Saidabzal (`origin/said`) | ✅ **birlashtirildi** (23.11) | repo ildizidagi `agent.md` → `agents/cto/charter.md`; lokal `C:/Users/User/OneDrive/...` yo'li va “LMS repo'da CEO/CTO yo'q” gapi rosterga moslandi |
 | COO qabuli | ✅ **Team Lead qabuli** (23.11) | ustoz ko'rigi kutilmasdan, o'z qabulimizdan o'tkazildi: `install.sh --check` 7/7, 16 test, 28 MCP tool, jonli audit 6/6 (§10) |
+| HR qabuli | ✅ **Muallif va profil qabuli** (24.11) | Muhammadali (@muhammadali850) tomonidan 11 ta profil Hermes muhitida tayyorlandi (§11) |
 
 **Mualliflik (ochiq yozilgan):** `ceo/` — Rustam o'zi yozgan (ustoz qabul qildi); `cto/` mazmuni —
 Rustam namunasi (qabul qilingan, egasi Saidabzal). Qolgan 5 rol skeleti Team Lead tomonidan
@@ -151,3 +153,24 @@ Xulosa: **6/6 tool xatosiz javob berdi**, filial chegarasi va o'qish-only rejim
 saqlandi. Ma'lumot bo'shligi (davomat/status yozuvi yo'q, jadval o'qilmadi) — bu
 "muammo yo'q" degani emas; hisobotda `partial`/`unavailable` deb qaytdi. Bu test
 filialida tekshirish uchun ma'lumot yo'q, shuning uchun raqamli xulosa berilmadi.
+
+## 11. HR Agent topshirilishi va Hermes profillari (24.11.2026)
+
+Mas'ul: **Muhammadali "Chihuahua"** (@muhammadali850, GitHub: https://github.com/muhammadali850)
+Profil: `mars-hr`
+
+1. **Fayllar to'plami:**
+   - `agents/hr/soul.md` — HR shaxsiyati, ovoz ohangi, adolatli va empatik muloqot tamoyillari, chegaralari.
+   - `agents/hr/agents.md` — HR vazifalari, hisobot zanjiri, 4 ta sub-agent, haftalik ish zanjiri, HITL (inson tasdig'i: pul va PII).
+   - `agents/hr/hierarchy.json` — CEO va HR sub-agentlari bo'ysunuv arxitekturasi.
+   - `agents/hr/api-contracts.md` — LMS backend read-only kontraktlari va FastMCP spetsifikatsiyalari.
+   - `agents/hr/sub-agents/` — 4 ta amaliy sub-agent:
+     1. `01-hr-recruiter` (`agent.md`, `soul.md`)
+     2. `02-hr-onboarding` (`agent.md`, `soul.md`)
+     3. `03-hr-attendance` (`agent.md`, `soul.md`)
+     4. `04-hr-records` (`agent.md`, `soul.md`)
+   - `skills/mars-hr-agent/SKILL.md` — Hermes skill formati.
+2. **Hermes Profiles:**
+   - `agents/install.py` yaratildi va ishga tushirildi.
+   - `hermes profile list` tekshiruvi: barcha 7 C-level profili (`mars-ceo`, `mars-coo`, `mars-cfo`, `mars-cto`, `mars-cmo`, `mars-cpo`, `mars-hr`) hamda 4 ta HR sub-agenti profillari Hermes Dashboardda to'liq tayyor bo'ldi.
+
