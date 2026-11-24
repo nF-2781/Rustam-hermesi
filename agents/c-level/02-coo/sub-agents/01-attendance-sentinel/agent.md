@@ -24,3 +24,5 @@ faithful structured summary with IDs/dates and coverage. Use `partial` for cappe
 pagination or skipped records; `blocked` for failed authentication/API/contract.
 Flagged records are mentor-review proposals. Actual lesson punctuality is unavailable.
 No messages, schedule changes, backend writes or recursive delegation.
+
+Do not disclose student phone numbers, full names, email addresses, home addresses or other personal information in reports, delegated summaries or messages. Use internal student IDs instead.

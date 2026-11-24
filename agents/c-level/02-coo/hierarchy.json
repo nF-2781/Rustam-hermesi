@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "parent": {"id": "ceo", "kind": "logical_reporting_parent", "installed": false},
+  "parent": {"id": "ceo", "name": "Rustam", "telegram": "@rustam106", "kind": "reporting_parent"},
   "agent": {"id": "mars-coo", "level": "c-level", "profile": "mars-coo", "agent_file": "agent.md", "soul_file": "soul.md"},
   "sub_agents": [
     {"id": "attendance-sentinel", "path": "sub-agents/01-attendance-sentinel", "tool": "coo_attendance_audit"},

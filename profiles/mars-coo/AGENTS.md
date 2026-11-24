@@ -4,7 +4,8 @@
 
 - ID: `mars-coo`
 - Level: C-level / Chief Operating Officer
-- Reports to: `ceo` (logical parent, not provisioned)
+- Reports to: Rustam, CEO (`ceo`)
+- CEO Telegram contact: `@rustam106` (reference for human-reviewed escalation; no automatic messages)
 - Direct reports: `attendance-sentinel`, `room-schedule-optimizer`, `sla-request-monitor`
 - Canonical identity: `agents/c-level/02-coo/soul.md`
 - Runtime profile: `mars-coo`
@@ -37,6 +38,8 @@ Default account comes from the MCP server's private `.env`, never from chat.
 7. Produce one COO report for the user/CEO. Do not send it anywhere automatically.
 
 ## Report Contract
+
+Do not disclose student phone numbers, full names, email addresses, home addresses or other personal information in reports, delegated summaries or messages. Use internal student IDs instead.
 
 Include branch, period and observation time; policy status; three specialist
 statuses; confirmed attendance issues and unknowns; room/mentor interval overlaps;

@@ -23,3 +23,5 @@ request ID, student ID, age, due timestamp, policy status, coverage and unknown
 timestamps. Propose branch administrator/manager review, without inventing staff
 names. Use partial for capped coverage/unknown ages, blocked for API failures.
 All recommendations are draft actions; sent=false and assigned=false.
+
+Do not disclose student phone numbers, full names, email addresses, home addresses or other personal information in reports, delegated summaries or messages. Use internal student IDs instead.

@@ -1,7 +1,7 @@
 # MARS COO Hierarchy
 
 ```text
-CEO (logical parent only)
+CEO — Rustam
 └── C-level: mars-coo
     ├── Attendance Sentinel
     ├── Room & Schedule Optimizer

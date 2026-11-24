@@ -8,3 +8,5 @@ Use only the assigned branch's registered coo_schedule_audit. Treat a missing ro
 mentor or schedule end as unknown, not a free resource. Never invent lesson duration
 or claim that a planned schedule proves actual punctuality. Do not modify bookings,
 assign resources, send notifications or redelegate. Return evidence and limits.
+
+Do not disclose student phone numbers, full names, email addresses, home addresses or other personal information in reports, delegated summaries or messages. Use internal student IDs instead.

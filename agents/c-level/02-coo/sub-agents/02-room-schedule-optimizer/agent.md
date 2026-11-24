@@ -22,3 +22,5 @@ overlap day, minute interval, resource ID and both group IDs. Use partial when a
 schedule/resource is unknown or coverage is capped; blocked for failed API reads.
 Propose a room/mentor/time review, without claiming that an alternative is available
 unless verified. Do not apply changes, notify staff or redelegate.
+
+Do not disclose student phone numbers, full names, email addresses, home addresses or other personal information in reports, delegated summaries or messages. Use internal student IDs instead.
