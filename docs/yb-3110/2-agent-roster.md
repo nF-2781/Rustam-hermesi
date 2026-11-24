@@ -51,13 +51,14 @@ agents/
   ceo/soul.md  ceo/agents.md      ← ✅ qabul (Rustam o'zi yozgan)
   coo/soul.md  coo/agents.md      ← ✅ qabul: Kamollidin ishi (5 tool, 3 sub-agent) + Team Lead moslashi va jonli audit
   coo/api-contracts.md  coo/hierarchy.json  coo/sub-agents/…  ← COO dalil/ierarxiya fayllari
-  cfo/soul.md  cfo/agents.md      ← skelet: Islom o'zi yozadi/tasdiqlaydi
+  cfo/soul.md  cfo/agents.md      ← ✅ qabul: Islom o'zi to'liq yozdi va tasdiqladi
+  cfo/api-contracts.md  cfo/hierarchy.json  cfo/sub-agents/…  ← CFO dalil/ierarxiya va 3 ta sub-agent
   cto/soul.md  cto/agents.md      ← ✅ mazmun qabul (namuna — Rustam; egasi Saidabzal tasdiqlaydi)
   cto/charter.md                  ← Saidabzalning batafsil CTO charteri (repo yo'li va ierarxiyasi tuzatilgan)
   cmo/soul.md  cmo/agents.md      ← skelet: Muhammadrizo o'zi yozadi/tasdiqlaydi
   cpo/soul.md  cpo/agents.md      ← skelet: Muhammadsolih o'zi yozadi/tasdiqlaydi
   hr/soul.md   hr/agents.md       ← skelet: Muhammadali o'zi yozadi/tasdiqlaydi
-  install.sh         — soul.md + agents.md → Hermes profil SOUL.md
+  install.sh / install.py         — soul.md + agents.md → Hermes profil SOUL.md
 ```
 
 - `soul.md` — agent **kim**: xarakter, til, ohang, nimaga javob beradi, chegaralari.
