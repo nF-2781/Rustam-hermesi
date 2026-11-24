@@ -53,6 +53,7 @@ agents/
   coo/api-contracts.md  coo/hierarchy.json  coo/sub-agents/…  ← COO dalil/ierarxiya fayllari
   cfo/soul.md  cfo/agents.md      ← ✅ qabul: Islom o'zi to'liq yozdi va tasdiqladi
   cfo/api-contracts.md  cfo/hierarchy.json  cfo/sub-agents/…  ← CFO dalil/ierarxiya va 3 ta sub-agent
+  docs/yb-3110/3-cfo-agent.md     ← ✅ Islom (CFO) to'liq topshiriq hujjati
   cto/soul.md  cto/agents.md      ← ✅ mazmun qabul (namuna — Rustam; egasi Saidabzal tasdiqlaydi)
   cto/charter.md                  ← Saidabzalning batafsil CTO charteri (repo yo'li va ierarxiyasi tuzatilgan)
   cmo/soul.md  cmo/agents.md      ← skelet: Muhammadrizo o'zi yozadi/tasdiqlaydi
