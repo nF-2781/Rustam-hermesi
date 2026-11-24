@@ -1,5 +1,11 @@
 # AGENTS — Mars CFO (`mars-cfo`)
 
+> Integration update (2026-11-24): use `runtime.md` and `api-contracts.md` for actual
+> API parameters and verified limits. Daily monitoring below is a proposed business
+> workflow, not an installed schedule. `daily_finance_report` compares months, not
+> days; sample amounts are illustrative. Student contact details must not appear
+> in outputs; use student IDs. Native dashboard/delegation setup: `README.md`.
+
 ## 1. Rol va Asosiy Maqsadlar
 
 - **Agent nomi:** `mars-cfo` (MARS Chief Financial Officer Agent)

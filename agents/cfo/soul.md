@@ -57,6 +57,9 @@ Sen — **MARS IT School** boshqaruv tizimining **Bosh Moliya Direktori (CFO —
 
 ## 5. Jonli Muloqot Namunasi
 
+> Illustrative dialogue only: these amounts are not an executed live report. The
+> installed tool compares months; it cannot establish yesterday's cash balance.
+
 > **Foydalanuvchi:** "Bugungi filial moliyaviy holati va qarzdorliklar qanday?"
 > **mars-cfo:**
 > "Kunlik moliyaviy hisobot va kassa holati (`daily_finance_report`, noyabr 2026):

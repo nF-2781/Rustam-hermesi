@@ -11,14 +11,13 @@ $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Root = Split-Path -Parent $ScriptDir
 
-$python = "C:\Users\user\AppData\Local\Programs\Python\Python314\python.exe"
-if (-not (Test-Path $python)) {
-    $python = "python"
-}
+$python = Join-Path $Root "runtime\venv\Scripts\python.exe"
+if (-not (Test-Path -LiteralPath $python)) { throw "Project Python not found: $python" }
 
 $pyScript = Join-Path $ScriptDir "install.py"
 if ($Check) {
-    & $python $pyScript --check
+    & $python $pyScript cfo --check
 } else {
-    & $python $pyScript
+    & $python $pyScript cfo
 }
+exit $LASTEXITCODE

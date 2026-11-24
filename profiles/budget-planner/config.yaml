@@ -1,0 +1,25 @@
+mcp_servers:
+  mars_lms:
+    command: ${PYTHONPATH}/../mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+    - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
+    tools:
+      include:
+      - lms_login
+      - get_finance_report
+      - daily_finance_report
+      - lms_context
+      prompts: false
+      resources: false
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
+    timeout: 180
+    connect_timeout: 60
+platform_toolsets:
+  cli:
+  - mars_lms
+model:
+  provider: nous
+  default: qwen/qwen4-max:free
+  base_url: https://inference-api.nousresearch.com/v1

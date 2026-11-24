@@ -51,9 +51,17 @@ def install(name):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('profile', choices=[*AGENTS, 'all'], default='all', nargs='?')
+    parser.add_argument('profile', choices=[*AGENTS, 'cfo', 'mars-cfo', 'all'], default='all', nargs='?')
+    parser.add_argument('--check', action='store_true', help='Inspect selected profiles without changing them')
     args = parser.parse_args()
+    if args.profile in {'cfo','mars-cfo'}:
+        from cfo.install import install_profiles
+        install_profiles(check=args.check)
+        raise SystemExit(0)
     names = list(AGENTS) if args.profile == 'all' else [args.profile]
+    if args.check:
+        print(json.dumps([{'profile':name,'installed':get_profile_dir(name).is_dir()} for name in names]))
+        raise SystemExit(0)
     if any(get_profile_dir(name).exists() for name in names):
         raise SystemExit('A target profile already exists; no profile changes made.')
     for name in names:

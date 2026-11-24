@@ -1,5 +1,14 @@
 # YB-3110 — CFO (Bosh Moliya Direktori) Agenti Hujjati
 
+> Integration verification (2026-11-24): the requested commits are imported into
+> this checkout. Four finance profiles are installed and visible in the dashboard;
+> native MCP login and all seven finance reads returned 200. Current parameters
+> and limits are in `agents/cfo/api-contracts.md` and `agents/cfo/README.md`.
+> The API table and numeric dialogue below describe the upstream scenario, not a
+> newly executed report: current `daily_finance_report` compares months, and no
+> `/api/finance/daily` call is made. Model completion/delegation was not run;
+> existing Nous authentication currently requires re-login. No cron is installed.
+
 **Jamoa:** Mars (LMS) | **Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40  
 **Mas’ul a’zo:** **Islom Muhsimov** (@vxrnox, GitHub: https://github.com/muxsimovislom98-sketch)  
 **Agent profili:** `mars-cfo` | **Lavozim:** CFO (Chief Financial Officer)  

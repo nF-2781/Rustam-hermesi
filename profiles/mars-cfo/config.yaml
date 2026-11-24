@@ -1,0 +1,34 @@
+mcp_servers:
+  mars_lms:
+    command: ${PYTHONPATH}/../mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+    - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
+    tools:
+      include:
+      - lms_login
+      - lms_context
+      - get_debts
+      - debt_control_agent
+      - daily_finance_report
+      - get_finance_report
+      - get_payments
+      - list_students
+      prompts: false
+      resources: false
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
+    timeout: 180
+    connect_timeout: 60
+platform_toolsets:
+  cli:
+  - delegation
+  - mars_lms
+delegation:
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: false
+model:
+  provider: nous
+  default: qwen/qwen4-max:free
+  base_url: https://inference-api.nousresearch.com/v1

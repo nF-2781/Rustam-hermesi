@@ -4,7 +4,8 @@
     "id": "ceo",
     "kind": "reporting_parent",
     "profile": "mars-ceo",
-    "installed": true
+    "name": "Rustam",
+    "telegram": "@rustam106"
   },
   "agent": {
     "id": "mars-cfo",

@@ -1,49 +1,47 @@
-# CFO API Contracts & Data Specifications
+# CFO API Contracts
 
-## 1. Manbalar va Kontekst
+## Checked Implementation
 
-Ushbu spetsifikatsiya MARS LMS backend tizimi (`https://mars-backend-six.vercel.app`) va uning FastAPI/OpenAPI manbasi (`/api-docs.json`) asosida tuzilgan.
-Tizim kodlari bazasi (`mars-backend/src`):
-- `router/auth.router.js` (`POST /api/auth/login`)
-- `router/branchAdmin.router.js` (`GET /api/branch/overview`, `GET /api/branch/students`)
-- `router/finance.router.js` (`GET /api/finance/overview`, `GET /finance/debts`, `GET /api/branch/payments`)
+The backend is an Express service, with OpenAPI at
+`https://mars-backend-six.vercel.app/api-docs.json`. This integration follows the
+actual existing `mcp-servers/mars_lms/server.py` and `lms_client.py` contracts, not
+unverified route names in illustrative upstream reports. Credentials are read
+privately from `mcp-servers/mars_lms/.env`; no account secrets are copied to profiles.
 
-Akkaunt ma'lumotlari faqat git'ga kiritilmaydigan lokal `.env` faylida saqlanadi (`MARS_PHONE` va `MARS_PASSWORD`).
+| Tool | Parameters used | Actual backend reads / result |
+| --- | --- | --- |
+| `lms_login` | No arguments by default | POST `/api/auth/login`; in-memory session summary |
+| `lms_context` | None | `/api/branch/overview`, `/api/branch/groups`; session/branch context |
+| `get_debts` | `month`, `status`, `search`, `limit` | `/api/branch/debtors`; `details.debtors`, total_remaining, counts, pagination |
+| `debt_control_agent` | `month`, `min_days_overdue`, `limit` | `/api/branch/debtors`; report and reminder drafts |
+| `get_payments` | `month`, `page`, `limit` | `/api/branch/payments`; `details.payments` and pagination |
+| `get_finance_report` | `month` | `/api/branch/overview?month=...` and `/api/finance/overview`; `details.branch` and `details.finance` |
+| `daily_finance_report` | `month`, `compare` | Same overview reads plus previous branch month when compare=true |
+| `list_students` | `search`, `group_id`, `only_debtors`, `limit`, `offset` | `/api/branch/students`; selected student records and pagination |
 
----
+## Evidence and Limits
 
-## 2. CFO Tomonidan Ishlatiladigan Read-Only Kontraktlar
+- Current tools do not call `/finance/debts` or `/api/finance/daily`.
+- Workflow responses use `error/status_code/message/endpoint/details`. Inspect error
+  before using details; do not treat failures or absent fields as zero.
+- `daily_finance_report` is a monthly snapshot/comparison despite its name. Its
+  computed income-expense balance is not verified cash-on-hand or a reconciled till.
+- The branch overview accepts month. Finance overview is fetched without month;
+  establish its period and scope before combining figures or claiming comparisons.
+- Payment methods are cash/card/transfer unless actual records provide finer labels.
+- Budget target, period and projection assumptions must be supplied explicitly.
+  No authoritative budget plan endpoint or completed forecast is implied.
+- Follow available pagination and report caps/incomplete coverage. Source branch
+  authorization does not establish company-wide visibility.
+- Raw tools may return phone/name fields. Agent reports and delegated summaries
+  must omit these and use internal student IDs. No automatic PII masking is claimed.
+- No write, payment/refund, salary, approval or message-sending tool is exposed to
+  these profiles. Proposed timetable rows do not install recurring jobs.
 
-| Endpoint | HTTP Metod | Vazifasi va CFO Ishlatishi | Cheklovlar / Filtrlash |
-|---|---|---|---|
-| `/api/auth/login` | POST | CFO sessiyasini ochish va JWT tokenni xotirada saqlash | Token tashqariga chiqarilmaydi |
-| `/api/branch/overview` | GET | Filial umumiy oylik ko'rsatkichlari (oylik filtr bilan) | Faqat joriy filial doirasida |
-| `/api/finance/overview` | GET | Tushum, xarajatlar moddasi, sof foyda va kassa balansi | Boshqaruv darajasidagi moliya |
-| `/finance/debts` | GET | Qarzdor o'quvchilar ro'yxati, kechikish kunlari, summasi | Sahifalangan ro'yxat |
-| `/api/branch/payments` | GET | Barcha to'lovlar (Naqd, Uzcard, Humo) tranzaksiyalar jurnali | Oy va sana bo'yicha filtr |
+## Runtime Integration
 
----
-
-## 3. FastMCP Toollarining Ishlash Qoidalari
-
-1. **`daily_finance_report`**:
-   - Parametr: `compare=true` (kechagi kun va o'tgan oy bilan taqqoslash).
-   - Chiqish: `gross_revenue`, `expenses`, `net_balance`, `cash_breakdown`, `anomaly_detected`.
-   - Natija: Kassa kamomadi yoki kutilmagan tafovut bo'lsa zudlik bilan bayon qilinadi.
-
-2. **`get_debts` & `debt_control_agent`**:
-   - Parametr: `min_days_overdue` (masalan 14 yoki 30).
-   - Chiqish: Qarzdorlik summasi, muddati va tavsiya etiladigan eslatma loyihasi (`message_drafts`).
-   - PII filtri: Telefon raqamlari qat'iy ravishda maskalangan (`+998 90 *** ** 45`).
-
-3. **`get_payments`**:
-   - Tranzaksiya ID, sana, to'lovchi ID, summa va to'lov turi.
-   - CFO uchun: To'lov usullari diversifikatsiyasi va dublikat to'lovlarni tekshirish.
-
----
-
-## 4. Dalil va Ma'lumot Sifati Qoidalari (Evidence Rules)
-
-- **Moliyaviy aniqlik:** Har bir raqam manbasi (tool nomi) bilan beriladi; hisoblanmagan raqam "kiritilmagan" deb belgilanadi.
-- **PII himoyasi:** Karta raqamlari yoki to'lovchining to'liq telefon raqamlari ochiq chiqarilmaydi.
-- **O'qish rejimi (Read-only):** CFO agenti to'lov yechish, bekor qilish (refund), qarz o'chirish kabi yozish/o'zgartirish amallarini bajarmaydi.
+`agents/cfo/install.py` creates only `mars-cfo`, `debt-collector`,
+`cashier-reporter` and `budget-planner`, using one existing MCP SDK/environment.
+The CFO's generated SOUL embeds supported native delegation tasks and actual child
+role text. Shared finance whitelist8 for native delegates; standalone specialists
+have minimal toolsets3/3/4. See `README.md` for current setup and verification.
