@@ -1,0 +1,45 @@
+﻿{
+  "schema_version": 1,
+  "parent": {
+    "id": "ceo",
+    "kind": "reporting_parent",
+    "profile": "mars-ceo",
+    "name": "Rustam",
+    "telegram": "@rustam106"
+  },
+  "agent": {
+    "id": "mars-cmo",
+    "level": "c-level",
+    "profile": "mars-cmo",
+    "agent_file": "agents.md",
+    "soul_file": "soul.md",
+    "owner": "Muhammadrizo",
+    "telegram": "@rizo_x7k",
+    "github": "https://github.com/rizo04684-sudo"
+  },
+  "sub_agents": [
+    {
+      "id": "lid-flow",
+      "path": "sub-agents/01-lid-flow",
+      "tool": "new_student_followup",
+      "description": "Lidlar, konversiya va CAC tahlili agenti"
+    },
+    {
+      "id": "content-pulse",
+      "path": "sub-agents/02-content-pulse",
+      "tool": "list_groups",
+      "description": "Kontent, SMM va brend signallari agenti"
+    },
+    {
+      "id": "parent-voice",
+      "path": "sub-agents/03-parent-voice",
+      "tool": "list_students",
+      "description": "Reputatsiya, NPS va ota-onalar bilan aloqa agenti"
+    }
+  ],
+  "delegation": {
+    "mechanism": "native_delegate_task_with_explicit_role_context",
+    "max_spawn_depth": 1,
+    "shared_read_only_whitelist": true
+  }
+}
