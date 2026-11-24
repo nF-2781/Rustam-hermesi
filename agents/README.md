@@ -9,8 +9,8 @@ The corrected user roster has seven departments. Definitions live only in `agent
 | mars-cfo | Islom | `agents/c-level/03-cfo/soul.md` + `agents.md` |
 | mars-cto | Saidabzal | `agents/c-level/04-cto/soul.md` + `agents.md` |
 | mars-cmo | Muhammadrizo | `agents/c-level/05-cmo/soul.md` + `agents.md` |
-| mars-cpo | Muhammadsolih | `agents/c-level/06-cpo/soul.md` + `agents.md` |
-| mars-hr | Muhammadali | `agents/c-level/07-hr/soul.md` + `agents.md` |
+| mars-cpo | Kamoliddin | `agents/c-level/06-cpo/soul.md` + `agents.md` |
+| mars-hr | Kamoliddin | `agents/c-level/07-hr/soul.md` + `agents.md` |
 
 ## Install and Run
 

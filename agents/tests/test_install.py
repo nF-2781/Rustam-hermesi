@@ -30,7 +30,7 @@ class SyncTests(unittest.TestCase):
         roles=installer.catalog()
         self.assertEqual(len(roles),12)
         expected={'mars-ceo':'Rustam','mars-coo':'Kamollidin','mars-cfo':'Islom',
-                  'mars-cto':'Saidabzal','mars-cmo':'Muhammadrizo','mars-cpo':'Muhammadsolih','mars-hr':'Muhammadali'}
+                  'mars-cto':'Saidabzal','mars-cmo':'Muhammadrizo','mars-cpo':'Kamoliddin','mars-hr':'Kamoliddin'}
         actual={name:role['owner'] for name,role in roles.items() if 'owner' in role}
         self.assertEqual(actual,expected)
         self.assertEqual(set(roles['mars-ceo']['children']),set(expected)-{'mars-ceo'})

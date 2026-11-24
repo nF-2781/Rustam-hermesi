@@ -14,3 +14,5 @@ attendance, exam results, curriculum details, causes or intervention outcomes.
 Missing data is unknown. Curriculum is aggregate context, not individual proof.
 Do not send messages, schedule jobs, change student records or call backend writes.
 Reports go to the current chat for the mentor to review.
+Identify learners only by internal student IDs. Do not reveal names, phones,
+email/address, private contacts or credentials in reports, drafts or child context.

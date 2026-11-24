@@ -19,9 +19,9 @@ Ushbu skill **MARS IT School** ko'p agentli boshqaruv tizimida **mars-cfo** (Mol
 - **C-Level Hamkorlar:**
   - `mars-coo` (Kamollidin) — Davomat va to'lovlar o'zaro mutanosibligi
   - `mars-cmo` (Muhammadrizo) — Yangi o'quvchilar tushumi
-  - `mars-hr` (Muhammadali) — Mentor yuklamasi va kadrlar
+  - `mars-hr` (Kamoliddin) — Mentor yuklamasi va kadrlar
   - `mars-cto` (Saidabzal) — Integratsiyalar va API/FastMCP
-  - `mars-cpo` (Muhammadsolih) — Mahsulot va foydalanuvchi tajribasi
+  - `mars-cpo` (Kamoliddin) — Mahsulot va foydalanuvchi tajribasi
 
 ---
 

@@ -328,3 +328,6 @@ AssertionError
 2026-11-24 18:13:23,127 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
 2026-11-24 18:13:23,156 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
 2026-11-24 18:13:23,298 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-24 18:47:17,853 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-24 18:47:17,859 WARNING tools.mcp_tool: Failed to connect to MCP server 'mars_lms' (command=${MARS_MCP_PYTHON}): [WinError 2] Не удается найти указанный файл
+2026-11-24 18:47:17,887 WARNING __main__: Background MCP discovery completed with zero connected servers

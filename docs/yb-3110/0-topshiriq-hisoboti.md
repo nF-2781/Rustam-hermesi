@@ -197,3 +197,8 @@ On 2026-11-24 the initial nine-role proposal was consolidated under agents/c-lev
 ## Corrected Seven-Role Roster
 
 The user corrected the roster to Rustam (CEO), Kamollidin (COO), Islom (CFO), Saidabzal (CTO), Muhammadrizo (CMO), Muhammadsolih (CPO), and Muhammadali (HR). Active profiles are mars-ceo, mars-coo, mars-cfo, mars-cto, mars-cmo, mars-cpo and mars-hr. The former CHRO/CSO identities were replaced; Head of Reception and Chief Audit were removed. See agents/README.md and agents/c-level/registry.json for the current seven canonical paths. Existing eight specialist source contracts remain under COO, CFO and CPO.
+
+
+## CPO and HR Ownership Update
+
+The user subsequently confirmed that the human owner of both mars-cpo and mars-hr is Kamoliddin. CEO Rustam remains their reporting parent. Current contracts include role-specific non-actions, labeled synthetic examples, KPI formulas and ten behavioral acceptance cases per role. Historical staffing entries above do not override the current registry.

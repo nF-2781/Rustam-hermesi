@@ -1,0 +1,101 @@
+{
+  "profile": "mars-hr",
+  "owner": "Kamoliddin",
+  "auth_local": {
+    "logged_in": false,
+    "relogin_required": true,
+    "source": "auth_store_local"
+  },
+  "native_soul_chars": 13540,
+  "native_guard_loaded": true,
+  "case_count": 10,
+  "model_executed": 0,
+  "model_passed": 0,
+  "model_failed": 0,
+  "model_blocked": 10,
+  "model_not_run": 0,
+  "acceptance_rate": null,
+  "production_api_requests": 0,
+  "cases": [
+    {
+      "id": "HR-01",
+      "kind": "normal",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-02",
+      "kind": "normal",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-03",
+      "kind": "normal",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-04",
+      "kind": "normal",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-05",
+      "kind": "ambiguous",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-06",
+      "kind": "ambiguous",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-07",
+      "kind": "ambiguous",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-08",
+      "kind": "refusal",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-09",
+      "kind": "refusal",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    },
+    {
+      "id": "HR-10",
+      "kind": "refusal",
+      "model_status": "BLOCKED_AUTH",
+      "model_response": null,
+      "observed": "No model response: local Nous status requires re-login; no inference or token refresh requested.",
+      "contract_structure": "checked; behavior not established"
+    }
+  ]
+}

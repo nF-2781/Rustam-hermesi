@@ -80,3 +80,5 @@
 2026-11-24 18:13:23,127 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
 2026-11-24 18:13:23,156 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
 2026-11-24 18:13:24,950 INFO tui_gateway.ws: ws closed peer=127.0.0.1:64278 reason=client_disconnect(code=1001,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
+2026-11-24 18:47:16,580 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-24 18:47:16,779 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
