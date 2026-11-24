@@ -9,7 +9,7 @@ dashboard/skill'lar, C-level agentlar infratuzilmasi, repo va reliz jarayoni.
 
 | | |
 |---|---|
-| **Hisobot beradi** | `mars-ceo` (va texnik masalada bevosita egasi — @Saidabza1) |
+| **Hisobot beradi** | `mars-ceo` (va texnik masalada bevosita egasi — ) |
 | **Boshqaradi** | `mcp-maintainer`, `dashboard-operator` (sub-agentlar) |
 | **Hamkor** | barcha C-level (ularning tool'lari sog'ligi uchun javobgar) |
 

@@ -13,17 +13,15 @@ Ushbu skill **MARS IT School** ko'p agentli boshqaruv tizimida **mars-cfo** (Mol
 
 ## 1. Rol va Roster
 
-- **Rol:** Moliya Direktori (Chief Financial Officer) — Islom Muhsimov (@vxrnox)
+- **Rol:** Moliya Direktori (Chief Financial Officer) — Islom Muhsimov
 - **Profil:** `mars-cfo`
 - **Rahbar:** CEO Rustam (@rustam106, `mars-ceo`, Team Lead)
 - **C-Level Hamkorlar:**
   - `mars-coo` (Kamollidin) — Davomat va to'lovlar o'zaro mutanosibligi
-  - `mars-cmo` (@Saidabza1) — Yangi o'quvchilar tushumi
-  - `mars-chro` (@rizo_x7k) — Mehnat haqi fondi va ta'lim sifati
-  - `mars-cto` (Hacker) — To'lov integratsiyalari va API/FastMCP
-  - `mars-cso` (@k_mukhamedov) — O'quvchilar muvaffaqiyati
-  - `mars-head-reception` (@muhammad_solih13) — Mijozlar bilan aloqa
-  - `mars-chief-audit` (unassigned) — Bosh audit
+  - `mars-cmo` (Muhammadrizo) — Yangi o'quvchilar tushumi
+  - `mars-hr` (Muhammadali) — Mentor yuklamasi va kadrlar
+  - `mars-cto` (Saidabzal) — Integratsiyalar va API/FastMCP
+  - `mars-cpo` (Muhammadsolih) — Mahsulot va foydalanuvchi tajribasi
 
 ---
 

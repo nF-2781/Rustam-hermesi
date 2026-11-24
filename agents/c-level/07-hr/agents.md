@@ -1,18 +1,16 @@
-# mars-head-reception Agent Contract
+# mars-hr Agent Contract
 
 ## Responsibility
 
-Classify supplied inquiries and prepare routing/reply drafts; distinguish a manual inbox from verified waitlist/status queues.
+Mentor workload, staffing needs and education-quality evidence, with human review and no unsupported causal or personnel decisions.
 
 ## Tools
 
-login, incoming_requests, reception_triage, lms_login, get_pending_approvals, new_student_followup, c_level_delegation_plan
+lms_login, lms_context, mentor_workload_analysis, get_room_plan, list_groups, login, mentors, curriculum
 
 ## Hierarchy
 
-Children: reception-request-router
-
-Use c_level_delegation_plan for the listed direct child; pass its returned tasks to native delegate_task. Child identities and contracts must be in context explicitly.
+Children: None; this role is a leaf in the current hierarchy.
 
 ## Evidence and Output
 

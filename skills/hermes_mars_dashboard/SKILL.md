@@ -12,7 +12,7 @@ From the repository root:
 .\hermes.bat dashboard --port 9120
 ```
 
-Select one of the nine C-level profiles. Synchronize managed contracts with
+Select one of the seven C-level profiles. Synchronize managed contracts with
 `runtime/venv/Scripts/python.exe agents/install.py all --sync`; check with `--check`.
 The root launcher sets HERMES_HOME and PYTHONPATH from the checkout path.
 

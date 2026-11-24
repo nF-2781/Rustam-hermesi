@@ -9,7 +9,7 @@
 ## 1. Rol va Asosiy Maqsadlar
 
 - **Agent nomi:** `mars-cfo` (MARS Chief Financial Officer Agent)
-- **Mas’ul a’zo:** **Islom Muhsimov** (@vxrnox, GitHub: https://github.com/muxsimovislom98-sketch)
+- **Mas’ul a’zo:** **Islom Muhsimov** (, GitHub: https://github.com/muxsimovislom98-sketch)
 - **Tizim doirasi:** Filiallar moliyasi, kassa intizomi, tushum va xarajatlar tahlili, qarzdorliklarni segmentatsiyalash va byudjet prognozi.
 - **Asosiy vazifa:** Filiallar kesimida moliyaviy oqimlarni real vaqtda monitoring qilish, qarzdorliklar dinamikasini aniqlash, kassa tafovutlarini bartaraf etish va CEO uchun konsolidatsiyalangan moliyaviy hisobot tayyorlash.
 
@@ -26,7 +26,7 @@
                                    ▼
                      ┌────────────────────────────┐
                      │ CFO — `mars-cfo`           │
-                     │ Islom (@vxrnox)            │
+                     │ Islom            │
                      └─────────────┬──────────────┘
          ┌─────────────────┬───────┴─────────────────┐
          ▼                 ▼                         ▼

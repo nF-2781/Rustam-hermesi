@@ -43,3 +43,11 @@
 2026-11-22 22:09:47,691 INFO httpx HTTP Request: GET https://mars-backend-six.vercel.app/api/branch/attendance?from=2026-11-14&to=2026-11-23&page=1&limit=100 "HTTP/1.1 200 OK"
 2026-11-22 22:09:47,696 INFO mcp.server.lowlevel.server Processing request of type CallToolRequest
 2026-11-22 22:09:48,722 INFO httpx HTTP Request: GET https://mars-backend-six.vercel.app/api/branch/me "HTTP/1.1 200 OK"
+
+===== [2026-11-24 17:29:00] starting MCP server 'mars_lms' =====
+2026-11-24 17:29:01,926 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-24 17:29:01,952 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+
+===== [2026-11-24 18:02:31] starting MCP server 'mars_lms' =====
+2026-11-24 18:02:33,627 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-24 18:02:33,678 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest

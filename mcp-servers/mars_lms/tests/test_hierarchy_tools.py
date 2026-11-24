@@ -26,7 +26,7 @@ class LoginCompatibilityTests(unittest.IsolatedAsyncioTestCase):
 
 class HierarchyTests(unittest.TestCase):
     def test_direct_department_context_contains_real_identity_and_contract(self):
-        reply=delegation_plan('mars-ceo',['mars-coo','mars-cfo','mars-cso'],'Audit the confirmed branch')
+        reply=delegation_plan('mars-ceo',['mars-coo','mars-cfo','mars-cpo'],'Audit the confirmed branch')
         self.assertTrue(reply['success'])
         tasks=reply['data']['delegate_task_arguments']['tasks']
         self.assertEqual(len(tasks),3)
@@ -40,14 +40,14 @@ class HierarchyTests(unittest.TestCase):
 
     def test_cannot_skip_hierarchy_exceed_batch_or_pass_secrets(self):
         cases=[('mars-ceo',['attendance-sentinel'],'Audit',{}),
-               ('mars-ceo',['mars-coo','mars-cfo','mars-cso','mars-cmo'],'Audit',{}),
+               ('mars-ceo',['mars-coo','mars-cfo','mars-cpo','mars-cmo'],'Audit',{}),
                ('mars-ceo',['mars-coo','mars-coo'],'Audit',{}),
-               ('mars-cso',['student-progress-auditor'],'Audit',{'password':'fixture'}),
+               ('mars-cpo',['student-progress-auditor'],'Audit',{'password':'fixture'}),
                ('../../outside',['mars-coo'],'Audit',{})]
         for args in cases:self.assertFalse(delegation_plan(*args)['success'])
 
-    def test_cso_and_reception_keep_existing_specialists(self):
-        for parent,child in [('mars-cso','student-progress-auditor'),('mars-head-reception','reception-request-router')]:
+    def test_cpo_keeps_both_keep_existing_specialists(self):
+        for parent,child in [('mars-cpo','student-progress-auditor'),('mars-cpo','reception-request-router')]:
             reply=delegation_plan(parent,[child],'Review supplied evidence')
             self.assertTrue(reply['success'])
             self.assertIn(child,reply['data']['delegate_task_arguments']['tasks'][0]['goal'])

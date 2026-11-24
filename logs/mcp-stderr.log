@@ -59,3 +59,37 @@
 ===== [2026-11-22 22:41:13] starting MCP server 'mars_lms' =====
 2026-11-22 22:41:14,833 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
 2026-11-22 22:41:14,861 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+
+===== [2026-11-24 16:54:03] starting MCP server 'mars_lms' =====
+2026-11-24 16:54:04,653 INFO mars_lms.server MARS LMS MCP server ishga tushdi (stdio)
+2026-11-24 16:54:04,683 INFO mcp.server.lowlevel.server Processing request of type ListToolsRequest
+2026-11-24 16:57:04,694 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:00:04,701 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:03:04,712 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:06:04,721 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:09:04,736 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:12:04,754 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:15:04,770 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:18:04,787 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:21:04,798 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:24:04,803 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:27:04,814 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:30:04,823 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:39:14,872 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:42:42,060 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:45:42,081 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:48:42,093 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:51:42,104 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:54:42,115 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 17:57:42,122 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+2026-11-24 18:00:42,138 INFO mcp.server.lowlevel.server Processing request of type PingRequest
+
+===== [2026-11-24 18:03:45] starting MCP server 'mars_lms' =====
+
+===== [2026-11-24 18:08:46] starting MCP server 'mars_lms' =====
+
+===== [2026-11-24 18:12:35] starting MCP server 'mars_lms' =====
+
+===== [2026-11-24 18:13:22] starting MCP server 'mars_lms' =====
+
+===== [2026-11-24 18:13:23] starting MCP server 'mars_lms' =====

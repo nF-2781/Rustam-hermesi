@@ -65,3 +65,18 @@
 2026-11-22 21:03:01,117 INFO tui_gateway.ws: ws closed peer=127.0.0.1:49959 reason=client_disconnect(code=1012,reason=) messages=7 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
 2026-11-22 22:41:14,054 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
 2026-11-22 22:41:14,202 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-24 16:54:02,843 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-24 16:54:03,134 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-24 17:37:50,112 WARNING hermes_cli.web_server: event loop stalled 369.4s (GIL pressure suspected)
+2026-11-24 17:42:25,550 WARNING hermes_cli.web_server: event loop stalled 26.7s (GIL pressure suspected)
+2026-11-24 18:03:45,333 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-24 18:03:45,478 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-24 18:12:34,548 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-24 18:12:34,678 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-24 18:13:21,441 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:64278
+2026-11-24 18:13:21,514 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-24 18:13:22,047 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-24 18:13:22,084 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-24 18:13:23,127 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-24 18:13:23,156 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-24 18:13:24,950 INFO tui_gateway.ws: ws closed peer=127.0.0.1:64278 reason=client_disconnect(code=1001,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0

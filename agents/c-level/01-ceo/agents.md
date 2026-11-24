@@ -10,7 +10,7 @@ Union of department read tools plus c_level_delegation_plan (computed by the ins
 
 ## Hierarchy
 
-Children: mars-coo, mars-cfo, mars-cto, mars-cmo, mars-chro, mars-cso, mars-head-reception, mars-chief-audit
+Children: mars-coo, mars-cfo, mars-cto, mars-cmo, mars-cpo, mars-hr
 
 Use c_level_delegation_plan with batches of at most three direct department IDs. Pass returned delegate_task_arguments to native delegate_task. Collect actual child results before consolidation. Departments can delegate once more; leaf specialists cannot.
 

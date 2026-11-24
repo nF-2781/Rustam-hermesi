@@ -26,9 +26,15 @@ class SyncTests(unittest.TestCase):
             self.assertEqual((target/'auth.json').read_text(),'fixture-private-auth')
             self.assertEqual((target/'history.txt').read_text(),'fixture-history')
 
-    def test_nine_roles_and_existing_specialists_have_bounded_runtime_prompts(self):
+    def test_seven_roles_and_existing_specialists_have_bounded_runtime_prompts(self):
         roles=installer.catalog()
-        self.assertEqual(len(roles),14)
+        self.assertEqual(len(roles),12)
+        expected={'mars-ceo':'Rustam','mars-coo':'Kamollidin','mars-cfo':'Islom',
+                  'mars-cto':'Saidabzal','mars-cmo':'Muhammadrizo','mars-cpo':'Muhammadsolih','mars-hr':'Muhammadali'}
+        actual={name:role['owner'] for name,role in roles.items() if 'owner' in role}
+        self.assertEqual(actual,expected)
+        self.assertEqual(set(roles['mars-ceo']['children']),set(expected)-{'mars-ceo'})
+        self.assertEqual(set(roles['mars-cpo']['children']),{'student-progress-auditor','reception-request-router'})
         for role in roles.values():
             soul,agent=installer.render_soul(role)
             self.assertTrue(agent.is_file())

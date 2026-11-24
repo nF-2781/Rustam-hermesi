@@ -873,3 +873,116 @@ AssertionError
 2026-11-22 22:41:14,885 INFO tools.mcp_tool: MCP server 'mars_lms' (stdio): registered 41 tool(s): mcp__mars_lms__lms_login, mcp__mars_lms__lms_context, mcp__mars_lms__list_groups, mcp__mars_lms__list_students, mcp__mars_lms__get_debts, mcp__mars_lms__get_attendance, mcp__mars_lms__get_homework, mcp__mars_lms__get_finance_report, mcp__mars_lms__get_payments, mcp__mars_lms__get_pending_approvals, mcp__mars_lms__get_room_plan, mcp__mars_lms__get_student_progress, mcp__mars_lms__debt_control_agent, mcp__mars_lms__attendance_control_agent, mcp__mars_lms__homework_control_agent, mcp__mars_lms__daily_finance_report, mcp__mars_lms__new_student_followup, mcp__mars_lms__pending_approvals_digest, mcp__mars_lms__room_schedule_assistant, mcp__mars_lms__mentor_workload_analysis, mcp__mars_lms__student_progress_audit, mcp__mars_lms__reception_router, mcp__mars_lms__coo_branch_context, mcp__mars_lms__coo_attendance_audit, mcp__mars_lms__coo_schedule_audit, mcp__mars_lms__coo_status_request_sla, mcp__mars_lms__coo_delegation_plan, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__login, mcp__mars_lms__students, mcp__mars_lms__attendance, mcp__mars_lms__homework, mcp__mars_lms__student_progress, mcp__mars_lms__curriculum, mcp__mars_lms__incoming_requests, mcp__mars_lms__reception_triage
 2026-11-22 22:41:14,887 INFO tools.mcp_tool: MCP: registered 41 tool(s) from 1 server(s)
 2026-11-22 22:41:14,887 INFO tools.mcp_tool:   MCP: 41 tool(s) from 1 server(s)
+2026-11-24 16:53:59,239 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-24 16:53:59,250 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-24 16:53:59,262 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-24 16:53:59,802 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-24 16:53:59,805 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-24 16:53:59,810 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-24 16:53:59,815 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-24 16:53:59,819 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-24 16:53:59,824 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-24 16:53:59,829 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-24 16:53:59,830 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-24 16:53:59,838 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-24 16:53:59,890 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-24 16:53:59,895 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-24 16:53:59,900 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-24 16:53:59,918 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-24 16:53:59,926 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-24 16:53:59,935 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-24 16:53:59,955 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-24 16:53:59,965 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-24 16:53:59,974 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-24 16:53:59,983 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-24 16:53:59,994 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-24 16:54:00,004 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-24 16:54:00,015 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-24 16:54:00,249 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-24 16:54:02,843 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-24 16:54:03,134 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-24 16:54:04,732 INFO tools.mcp_tool: MCP server 'mars_lms' (stdio): registered 41 tool(s): mcp__mars_lms__lms_login, mcp__mars_lms__lms_context, mcp__mars_lms__list_groups, mcp__mars_lms__list_students, mcp__mars_lms__get_debts, mcp__mars_lms__get_attendance, mcp__mars_lms__get_homework, mcp__mars_lms__get_finance_report, mcp__mars_lms__get_payments, mcp__mars_lms__get_pending_approvals, mcp__mars_lms__get_room_plan, mcp__mars_lms__get_student_progress, mcp__mars_lms__debt_control_agent, mcp__mars_lms__attendance_control_agent, mcp__mars_lms__homework_control_agent, mcp__mars_lms__daily_finance_report, mcp__mars_lms__new_student_followup, mcp__mars_lms__pending_approvals_digest, mcp__mars_lms__room_schedule_assistant, mcp__mars_lms__mentor_workload_analysis, mcp__mars_lms__student_progress_audit, mcp__mars_lms__reception_router, mcp__mars_lms__coo_branch_context, mcp__mars_lms__coo_attendance_audit, mcp__mars_lms__coo_schedule_audit, mcp__mars_lms__coo_status_request_sla, mcp__mars_lms__coo_delegation_plan, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__login, mcp__mars_lms__students, mcp__mars_lms__attendance, mcp__mars_lms__homework, mcp__mars_lms__student_progress, mcp__mars_lms__curriculum, mcp__mars_lms__incoming_requests, mcp__mars_lms__reception_triage
+2026-11-24 16:54:04,733 INFO tools.mcp_tool: MCP: registered 41 tool(s) from 1 server(s)
+2026-11-24 16:54:04,735 INFO tools.mcp_tool:   MCP: 41 tool(s) from 1 server(s)
+2026-11-24 16:55:03,362 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-11-24 17:10:03,407 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-11-24 17:25:03,453 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-11-24 17:37:50,112 WARNING hermes_cli.web_server: event loop stalled 369.4s (GIL pressure suspected)
+2026-11-24 17:42:25,550 WARNING hermes_cli.web_server: event loop stalled 26.7s (GIL pressure suspected)
+2026-11-24 17:46:40,709 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-11-24 18:01:40,760 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-11-24 18:03:42,130 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-24 18:03:42,139 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-24 18:03:42,150 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-24 18:03:42,688 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-24 18:03:42,695 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-24 18:03:42,702 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-24 18:03:42,708 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-24 18:03:42,714 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-24 18:03:42,719 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-24 18:03:42,727 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-24 18:03:42,727 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-24 18:03:42,735 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-24 18:03:42,791 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-24 18:03:42,797 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-24 18:03:42,804 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-24 18:03:42,824 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-24 18:03:42,835 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-24 18:03:42,844 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-24 18:03:42,864 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-24 18:03:42,877 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-24 18:03:42,886 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-24 18:03:42,897 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-24 18:03:42,904 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-24 18:03:42,913 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-24 18:03:42,921 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-24 18:03:43,131 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-24 18:03:45,333 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-24 18:03:45,478 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-24 18:03:46,108 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-24 18:03:46,109 WARNING tools.mcp_tool: Failed to connect to MCP server 'mars_lms' (command=${MARS_MCP_PYTHON}): [WinError 2] Не удается найти указанный файл
+2026-11-24 18:03:46,111 INFO tools.mcp_tool: MCP: registered 0 tool(s) from 0 server(s) (1 failed)
+2026-11-24 18:03:46,111 INFO tools.mcp_tool:   MCP: 0 tool(s) from 0 server(s) (1 failed)
+2026-11-24 18:03:46,123 WARNING __main__: Background MCP discovery completed with zero connected servers
+2026-11-24 18:04:45,845 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-11-24 18:08:46,217 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-24 18:12:31,834 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-24 18:12:31,844 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-24 18:12:31,853 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-24 18:12:32,374 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-24 18:12:32,379 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-24 18:12:32,384 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-24 18:12:32,390 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-24 18:12:32,396 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-24 18:12:32,400 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-24 18:12:32,405 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-24 18:12:32,405 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-24 18:12:32,413 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-24 18:12:32,466 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-24 18:12:32,470 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-24 18:12:32,475 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-24 18:12:32,490 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-24 18:12:32,500 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-24 18:12:32,507 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-24 18:12:32,525 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-24 18:12:32,534 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-24 18:12:32,542 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-24 18:12:32,551 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-24 18:12:32,558 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-24 18:12:32,566 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-24 18:12:32,574 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-24 18:12:32,765 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-24 18:12:34,548 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-24 18:12:34,678 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-24 18:13:21,441 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:64278
+2026-11-24 18:13:21,514 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-24 18:13:21,615 WARNING agent.model_metadata: Failed to fetch model metadata from OpenRouter: HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/models (Caused by NewConnectionError("HTTPSConnection(host='openrouter.ai', port=443): Failed to establish a new connection: [WinError 10013] Сделана попытка доступа к сокету методом, запрещенным правами доступа"))
+2026-11-24 18:13:22,047 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-24 18:13:22,077 INFO run_agent: Loaded environment variables from C:\Users\Asus\Desktop\Rustam-hermesi\.env
+2026-11-24 18:13:22,084 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-24 18:13:22,279 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-24 18:13:22,344 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
+2026-11-24 18:13:23,127 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-24 18:13:23,156 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-24 18:13:23,298 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-24 18:13:24,950 INFO tui_gateway.ws: ws closed peer=127.0.0.1:64278 reason=client_disconnect(code=1001,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0

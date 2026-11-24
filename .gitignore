@@ -54,3 +54,4 @@ Thumbs.db
 /.update_check
 /spawn-ledger.json
 /profiles/*/skills/.hub/
+/runtime/backups/

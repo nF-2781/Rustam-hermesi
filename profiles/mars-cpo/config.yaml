@@ -23,6 +23,12 @@ mcp_servers:
       - homework
       - curriculum
       - c_level_delegation_plan
+      - incoming_requests
+      - reception_triage
+      - lms_login
+      - get_pending_approvals
+      - new_student_followup
+      - lms_context
       prompts: false
       resources: false
     timeout: 180

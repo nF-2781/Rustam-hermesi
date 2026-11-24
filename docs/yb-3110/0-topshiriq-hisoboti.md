@@ -192,4 +192,8 @@ Alohida to'liq hisobot hujjati: [`docs/yb-3110/3-cfo-agent.md`](./3-cfo-agent.md
 
 ## C-Level Merge Integration
 
-On 2026-11-24 the nine canonical roles were consolidated under agents/c-level. See agents/README.md and registry.json for current paths and ownership; pre-merge reports remain under references. Verification evidence is recorded separately after actual checks.
+On 2026-11-24 the initial nine-role proposal was consolidated under agents/c-level. This was subsequently superseded by the user's corrected seven-role roster below. Pre-merge reports remain under references.
+
+## Corrected Seven-Role Roster
+
+The user corrected the roster to Rustam (CEO), Kamollidin (COO), Islom (CFO), Saidabzal (CTO), Muhammadrizo (CMO), Muhammadsolih (CPO), and Muhammadali (HR). Active profiles are mars-ceo, mars-coo, mars-cfo, mars-cto, mars-cmo, mars-cpo and mars-hr. The former CHRO/CSO identities were replaced; Head of Reception and Chief Audit were removed. See agents/README.md and agents/c-level/registry.json for the current seven canonical paths. Existing eight specialist source contracts remain under COO, CFO and CPO.
