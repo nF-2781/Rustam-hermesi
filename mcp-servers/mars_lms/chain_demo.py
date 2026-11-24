@@ -19,6 +19,17 @@ from datetime import datetime, timezone
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
+# lms_client `.env` faylini o'qiydi va DEFAULT_API_URL ni hal qiladi.
+# Shu sababli backend manzili faqat bitta joyda (`.env`) sozlanadi.
+from lms_client import DEFAULT_API_URL
+
+# Windows konsoli (CP866/CP1251) UTF-8 o'rniga o'z kodlashini ishlatib matnni buzadi.
+for stream in (sys.stdout, sys.stderr):
+    try:
+        stream.reconfigure(encoding="utf-8")
+    except (AttributeError, ValueError):
+        pass
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 PYTHON = sys.executable
 SERVER = os.path.join(HERE, "server.py")
@@ -49,9 +60,7 @@ def arg_value(flag: str, default: str) -> str:
 
 async def main() -> int:
     month = arg_value("--month", datetime.now(timezone.utc).strftime("%Y-%m"))
-    base_url = "http://localhost:7000" if "--local" in sys.argv else os.environ.get(
-        "MARS_API_URL", "https://mars-backend-six.vercel.app"
-    )
+    base_url = "http://localhost:7000" if "--local" in sys.argv else DEFAULT_API_URL
     env = {**os.environ, "MARS_API_URL": base_url, "PYTHONIOENCODING": "utf-8"}
 
     params = StdioServerParameters(command=PYTHON, args=[SERVER], env=env)
@@ -85,6 +94,8 @@ async def main() -> int:
                 return 1
 
             ctx = context.get("details") or {}
+            # lms_context raqamlarni details.counts ichida qaytaradi, details'ning o'zida emas.
+            counts = ctx.get("counts") or {}
             debt_details = debts.get("details") or {}
             pay_details = payments.get("details") or {}
             fin_details = finance.get("details") or {}
@@ -94,12 +105,13 @@ async def main() -> int:
                 f"## MARS LMS — kunlik holat ({datetime.now(timezone.utc):%Y-%m-%d %H:%M UTC})",
                 "",
                 f"- Backend: `{base_url}` | Oy: `{month}`",
-                f"- Guruhlar: {len(ctx.get('groups') or [])} | "
-                f"O'quvchilar: {len(ctx.get('students') or [])} | "
-                f"Mentorlar: {len(ctx.get('mentors') or [])}",
+                f"- Guruhlar: {counts.get('groups', 0)} | "
+                f"Faol o'quvchilar: {counts.get('active_students', 0)} | "
+                f"To'lamaganlar: {counts.get('unpaid_students', 0)}",
                 f"- Qarzdorlar: {len(debt_details.get('debtors') or [])} ta",
-                f"- Tushumlar (ro'yxat): {len(pay_details.get('payments') or [])} ta",
-                f"- Moliyaviy KPI: {json.dumps(fin_details.get('kpi') or {}, ensure_ascii=False)}",
+                # Ikkala raqam ham har xil manbadan: ro'yxat hisob oyi (month), KPI to'langan sana (paidAt) bo'yicha.
+                f"- Tushumlar (hisob oyi bo'yicha ro'yxat): {len(pay_details.get('payments') or [])} ta",
+                f"- Moliyaviy KPI (to'langan sana bo'yicha): {json.dumps(fin_details.get('kpi') or {}, ensure_ascii=False)}",
                 f"- Eslatma loyihalari: {len(drafts)} ta (yuborilmagan)",
                 "",
                 "### Zanjir qadamlari",

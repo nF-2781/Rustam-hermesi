@@ -1,0 +1,35 @@
+model:
+  provider: nous
+  default: qwen/qwen4-max:free
+  base_url: https://inference-api.nousresearch.com/v1
+plugins:
+  enabled: []
+_config_version: 43
+agent: {}
+mcp_servers:
+  mars_lms:
+    command: ${PYTHONPATH}/../mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+    - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
+    tools:
+      include:
+      - lms_login
+      - lms_context
+      - new_student_followup
+      - get_pending_approvals
+      - list_students
+      - get_payments
+      prompts: false
+      resources: false
+    timeout: 180
+    connect_timeout: 60
+platform_toolsets:
+  cli:
+  - mars_lms
+delegation:
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: false

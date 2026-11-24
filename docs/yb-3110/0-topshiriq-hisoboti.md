@@ -188,3 +188,8 @@ Alohida to'liq hisobot hujjati: [`docs/yb-3110/3-cfo-agent.md`](./3-cfo-agent.md
    ```
 
 
+
+
+## C-Level Merge Integration
+
+On 2026-11-24 the nine canonical roles were consolidated under agents/c-level. See agents/README.md and registry.json for current paths and ownership; pre-merge reports remain under references. Verification evidence is recorded separately after actual checks.

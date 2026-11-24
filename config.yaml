@@ -2,12 +2,21 @@ model:
   provider: nous
   base_url: https://inference-api.nousresearch.com/v1
   default: qwen/qwen4-max:free
+web:
+  backend: nous
+browser:
+  cloud_provider: nous
+stt:
+  provider: nous
+onboarding:
+  seen:
+    openclaw_residue_cleanup: true
 _config_version: 43
 mcp_servers:
   mars_lms:
     command: ${MARS_MCP_PYTHON}
     args:
-      - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
+    - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
     env:
       PYTHONIOENCODING: utf-8
       PYTHONUNBUFFERED: '1'
@@ -17,6 +26,5 @@ mcp_servers:
     tools:
       resources: false
       prompts: false
-onboarding:
-  seen:
-    openclaw_residue_cleanup: true
+image_gen:
+  provider: nous

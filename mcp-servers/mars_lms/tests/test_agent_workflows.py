@@ -11,10 +11,10 @@ import unittest
 
 import httpx
 from mcp import StdioServerParameters
-from smoke import connected_client
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+sys.path.append(str(ROOT))
+from smoke import connected_client
 import agent_workflows as workflow
 from scoped_client import LMSClient
 
@@ -177,7 +177,7 @@ class ScopeTests(unittest.IsolatedAsyncioTestCase):
                 stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
             stdout, stderr = await asyncio.wait_for(process.communicate(), timeout=30)
             self.assertEqual(process.returncode, 0, stderr.decode(errors='replace'))
-            self.assertIn(b'tools: 41', stdout)
+            self.assertIn(b'tools: 43', stdout)
             self.assertEqual(calls, [])
 
     async def test_student_outside_roster_makes_no_group_requests(self):
@@ -206,7 +206,7 @@ class ScopeTests(unittest.IsolatedAsyncioTestCase):
                                            env={'MARS_API_URL': url})
             async with connected_client(params) as client:
                 tools = {tool.name for tool in (await client.list_tools()).tools}
-                self.assertEqual(len(tools), 41)
+                self.assertEqual(len(tools), 43)
                 self.assertTrue({'branch_me', 'groups', 'mentors', 'payments',
                                  'finance_overview', 'finance_salaries'} <= tools)
                 self.assertTrue({'lms_login', 'student_progress_audit', 'reception_router'} <= tools)

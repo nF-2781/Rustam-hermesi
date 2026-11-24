@@ -3,6 +3,9 @@ mcp_servers:
     command: ${PYTHONPATH}/../mcp-servers/mars_lms/.venv/Scripts/python.exe
     args:
     - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
     tools:
       include:
       - lms_login
@@ -10,9 +13,6 @@ mcp_servers:
       - get_payments
       prompts: false
       resources: false
-    env:
-      PYTHONIOENCODING: utf-8
-      PYTHONUNBUFFERED: '1'
     timeout: 180
     connect_timeout: 60
 platform_toolsets:
@@ -22,3 +22,7 @@ model:
   provider: nous
   default: qwen/qwen4-max:free
   base_url: https://inference-api.nousresearch.com/v1
+delegation:
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: false

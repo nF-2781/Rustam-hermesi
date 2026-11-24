@@ -12,7 +12,7 @@ import httpx
 from mcp import StdioServerParameters
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+sys.path.append(str(ROOT))
 import coo_workflows as coo
 from scoped_client import LMSClient
 from smoke import connected_client
@@ -237,10 +237,10 @@ class ContractTests(unittest.IsolatedAsyncioTestCase):
         try:
             params=StdioServerParameters(command=sys.executable,args=[str(ROOT/'server.py')],env={'MARS_API_URL':f'http://127.0.0.1:{backend.server_port}'})
             async with connected_client(params) as client:
-                self.assertEqual(len((await client.list_tools()).tools),41)
+                self.assertEqual(len((await client.list_tools()).tools),43)
                 denied=await client.call_tool('coo_branch_context',{})
                 self.assertTrue(denied.isError);self.assertEqual(calls,[])
-                logged=await client.call_tool('login',{'phone':'fixture','password':'fixture'})
+                logged=await client.call_tool('coo_login',{'phone':'fixture','password':'fixture'})
                 self.assertFalse(logged.isError)
                 arguments={'period_start':'2025-01-01','period_end':'2025-01-31'}
                 for tool,args in [('coo_branch_context',{}),('coo_attendance_audit',arguments),

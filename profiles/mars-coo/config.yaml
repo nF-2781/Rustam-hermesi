@@ -4,7 +4,8 @@ mcp_servers:
     args:
     - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
     env:
-      MARS_API_URL: https://mars-backend-six.vercel.app
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
     tools:
       include:
       - login
@@ -15,6 +16,8 @@ mcp_servers:
       - coo_status_request_sla
       prompts: false
       resources: false
+    timeout: 180
+    connect_timeout: 60
 platform_toolsets:
   cli:
   - delegation

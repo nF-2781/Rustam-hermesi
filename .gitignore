@@ -39,3 +39,18 @@ Thumbs.db
 /logs/
 /cache/
 
+
+# Local credentials and generated root state (preserve files, do not commit)
+/.env
+/auth.json
+/shared/
+/state.db*
+/shared-state.db*
+/provider_models_cache.json
+/ollama_cloud_models_cache.json
+/models_dev_cache.json
+/models_dev_cache.etag
+/.mcp-discovery.lock
+/.update_check
+/spawn-ledger.json
+/profiles/*/skills/.hub/

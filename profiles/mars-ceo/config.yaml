@@ -1,0 +1,58 @@
+model:
+  provider: nous
+  default: qwen/qwen4-max:free
+  base_url: https://inference-api.nousresearch.com/v1
+plugins:
+  enabled: []
+_config_version: 43
+agent: {}
+mcp_servers:
+  mars_lms:
+    command: ${PYTHONPATH}/../mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+    - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
+    tools:
+      include:
+      - attendance
+      - c_level_delegation_plan
+      - coo_attendance_audit
+      - coo_branch_context
+      - coo_delegation_plan
+      - coo_schedule_audit
+      - coo_status_request_sla
+      - curriculum
+      - daily_finance_report
+      - debt_control_agent
+      - get_debts
+      - get_finance_report
+      - get_payments
+      - get_pending_approvals
+      - get_room_plan
+      - homework
+      - incoming_requests
+      - list_groups
+      - list_students
+      - lms_context
+      - lms_login
+      - login
+      - mentor_workload_analysis
+      - mentors
+      - new_student_followup
+      - reception_triage
+      - student_progress
+      - students
+      prompts: false
+      resources: false
+    timeout: 180
+    connect_timeout: 60
+platform_toolsets:
+  cli:
+  - delegation
+  - mars_lms
+delegation:
+  max_concurrent_children: 3
+  max_spawn_depth: 2
+  orchestrator_enabled: false

@@ -16,8 +16,8 @@ if (-not (Test-Path -LiteralPath $python)) { throw "Project Python not found: $p
 
 $pyScript = Join-Path $ScriptDir "install.py"
 if ($Check) {
-    & $python $pyScript cfo --check
+    & $python $pyScript all --check
 } else {
-    & $python $pyScript cfo
+    & $python $pyScript all --sync
 }
 exit $LASTEXITCODE

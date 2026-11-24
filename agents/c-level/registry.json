@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "roles": [
+    {
+      "id": "mars-ceo",
+      "folder": "01-ceo",
+      "title": "Chief Executive Officer",
+      "owner": "Rustam",
+      "contact": "@rustam106",
+      "mission": "Consolidate branch evidence, delegate bounded department audits and propose priorities to human leadership.",
+      "tools": [],
+      "children": [
+        "mars-coo",
+        "mars-cfo",
+        "mars-cto",
+        "mars-cmo",
+        "mars-chro",
+        "mars-cso",
+        "mars-head-reception",
+        "mars-chief-audit"
+      ]
+    },
+    {
+      "id": "mars-coo",
+      "folder": "02-coo",
+      "title": "Chief Operating Officer",
+      "owner": null,
+      "contact": "@jamkaILZ",
+      "mission": "Branch operational discipline, confirmed attendance, planned lesson coverage, room/mentor overlaps and pending status-request SLA.",
+      "tools": [
+        "login",
+        "coo_branch_context",
+        "coo_delegation_plan",
+        "coo_attendance_audit",
+        "coo_schedule_audit",
+        "coo_status_request_sla"
+      ],
+      "children": [
+        "attendance-sentinel",
+        "room-schedule-optimizer",
+        "sla-request-monitor"
+      ]
+    },
+    {
+      "id": "mars-cfo",
+      "folder": "03-cfo",
+      "title": "Chief Financial Officer",
+      "owner": "Islom",
+      "contact": "@vxrnox",
+      "mission": "Source-backed branch monthly finance, debts and payment reporting; qualified budget projections only when a target is supplied.",
+      "tools": [
+        "lms_login",
+        "lms_context",
+        "get_debts",
+        "debt_control_agent",
+        "daily_finance_report",
+        "get_finance_report",
+        "get_payments",
+        "list_students",
+        "c_level_delegation_plan"
+      ],
+      "children": [
+        "debt-collector",
+        "cashier-reporter",
+        "budget-planner"
+      ]
+    },
+    {
+      "id": "mars-cto",
+      "folder": "04-cto",
+      "title": "Chief Technology Officer",
+      "owner": "Hacker",
+      "contact": null,
+      "mission": "Inspect available LMS/MCP evidence and integration contracts, diagnose technical gaps and propose reviewed technical fixes without claiming deployment or host inspection.",
+      "tools": [
+        "lms_login",
+        "lms_context",
+        "login",
+        "coo_branch_context"
+      ],
+      "children": []
+    },
+    {
+      "id": "mars-cmo",
+      "folder": "05-cmo",
+      "title": "Chief Marketing Officer",
+      "owner": null,
+      "contact": "@Saidabza1",
+      "mission": "Analyze observable new-student follow-up and waiting-list signals; distinguish verified stages from unavailable advertising, CAC and conversion data.",
+      "tools": [
+        "lms_login",
+        "lms_context",
+        "new_student_followup",
+        "get_pending_approvals",
+        "list_students",
+        "get_payments"
+      ],
+      "children": []
+    },
+    {
+      "id": "mars-chro",
+      "folder": "06-chro",
+      "title": "Chief Human Resources and Education Quality Officer",
+      "owner": null,
+      "contact": "@rizo_x7k",
+      "mission": "Mentor workload, staffing needs and education-quality evidence, with human review and no unsupported causal or personnel decisions.",
+      "tools": [
+        "lms_login",
+        "lms_context",
+        "mentor_workload_analysis",
+        "get_room_plan",
+        "list_groups",
+        "login",
+        "mentors",
+        "curriculum"
+      ],
+      "children": []
+    },
+    {
+      "id": "mars-cso",
+      "folder": "07-cso",
+      "title": "Chief Student Success Officer",
+      "owner": null,
+      "contact": "@k_mukhamedov",
+      "mission": "Student success through scoped progress, attendance and homework evidence; propose learner support without exposing personal contacts.",
+      "tools": [
+        "login",
+        "students",
+        "student_progress",
+        "attendance",
+        "homework",
+        "curriculum",
+        "c_level_delegation_plan"
+      ],
+      "children": [
+        "student-progress-auditor"
+      ]
+    },
+    {
+      "id": "mars-head-reception",
+      "folder": "08-head-reception",
+      "title": "Head of Reception",
+      "owner": null,
+      "contact": "@muhammad_solih13",
+      "mission": "Classify supplied inquiries and prepare routing/reply drafts; distinguish a manual inbox from verified waitlist/status queues.",
+      "tools": [
+        "login",
+        "incoming_requests",
+        "reception_triage",
+        "lms_login",
+        "get_pending_approvals",
+        "new_student_followup",
+        "c_level_delegation_plan"
+      ],
+      "children": [
+        "reception-request-router"
+      ]
+    },
+    {
+      "id": "mars-chief-audit",
+      "folder": "09-chief-audit",
+      "title": "Chief Audit Officer",
+      "owner": null,
+      "contact": null,
+      "mission": "Cross-check available operational/financial evidence, incomplete data, policy assumptions and branch scope; report audit findings without claiming an independent model run.",
+      "tools": [
+        "login",
+        "coo_branch_context",
+        "coo_attendance_audit",
+        "coo_schedule_audit",
+        "coo_status_request_sla",
+        "lms_login",
+        "lms_context",
+        "get_finance_report",
+        "get_pending_approvals",
+        "curriculum"
+      ],
+      "children": []
+    }
+  ],
+  "specialists": [
+    {
+      "id": "attendance-sentinel",
+      "parent": "mars-coo",
+      "folder": "02-coo/sub-agents/01-attendance-sentinel",
+      "tools": [
+        "login",
+        "coo_branch_context",
+        "coo_attendance_audit"
+      ],
+      "standalone": false
+    },
+    {
+      "id": "room-schedule-optimizer",
+      "parent": "mars-coo",
+      "folder": "02-coo/sub-agents/02-room-schedule-optimizer",
+      "tools": [
+        "login",
+        "coo_branch_context",
+        "coo_schedule_audit"
+      ],
+      "standalone": false
+    },
+    {
+      "id": "sla-request-monitor",
+      "parent": "mars-coo",
+      "folder": "02-coo/sub-agents/03-sla-request-monitor",
+      "tools": [
+        "login",
+        "coo_branch_context",
+        "coo_status_request_sla"
+      ],
+      "standalone": false
+    },
+    {
+      "id": "debt-collector",
+      "parent": "mars-cfo",
+      "folder": "03-cfo/sub-agents/01-debt-collector",
+      "tools": [
+        "lms_login",
+        "get_debts",
+        "debt_control_agent"
+      ],
+      "standalone": true
+    },
+    {
+      "id": "cashier-reporter",
+      "parent": "mars-cfo",
+      "folder": "03-cfo/sub-agents/02-cashier-reporter",
+      "tools": [
+        "lms_login",
+        "daily_finance_report",
+        "get_payments"
+      ],
+      "standalone": true
+    },
+    {
+      "id": "budget-planner",
+      "parent": "mars-cfo",
+      "folder": "03-cfo/sub-agents/03-budget-planner",
+      "tools": [
+        "lms_login",
+        "get_finance_report",
+        "daily_finance_report",
+        "lms_context"
+      ],
+      "standalone": true
+    },
+    {
+      "id": "student-progress-auditor",
+      "parent": "mars-cso",
+      "folder": "07-cso/sub-agents/01-student-progress-auditor",
+      "tools": [
+        "login",
+        "students",
+        "student_progress",
+        "attendance",
+        "homework",
+        "curriculum"
+      ],
+      "standalone": true,
+      "skill": "mars-student-progress-auditor"
+    },
+    {
+      "id": "reception-request-router",
+      "parent": "mars-head-reception",
+      "folder": "08-head-reception/sub-agents/01-reception-request-router",
+      "tools": [
+        "login",
+        "incoming_requests",
+        "reception_triage"
+      ],
+      "standalone": true,
+      "skill": "mars-reception-request-router"
+    }
+  ]
+}

@@ -16,9 +16,13 @@ def result(payload):
 
 
 def register_profile_tools(mcp):
+    if getattr(mcp, '_mars_profiles_registered', False):
+        return
     api = LMSClient(os.environ.get('MARS_API_URL', DEFAULT_API_URL),
                     timeout=float(os.environ.get('MARS_API_TIMEOUT_SECONDS', '20')))
     register_coo_tools(mcp, api, result)
+    from hierarchy_tools import register_hierarchy_tools
+    register_hierarchy_tools(mcp, result)
 
     @mcp.tool()
     async def branch_me():
@@ -58,8 +62,10 @@ def register_profile_tools(mcp):
         if phone is None:
             settings = read_settings(Path(__file__).with_name('.env'))
             phone, password = settings.get('MARS_PHONE', ''), settings.get('MARS_PASSWORD', '')
-            role = settings.get('MARS_ROLE')
+            role = role or settings.get('MARS_ROLE')
         return result(await api.login(phone, password, role))
+
+    mcp.tool(name='coo_login')(login)
 
     @mcp.tool()
     async def students():
@@ -106,4 +112,6 @@ def register_profile_tools(mcp):
     async def reception_triage(requests: list[dict[str, str]], responsible_roles: dict[str, str] | None = None):
         """Suggest payment/schedule/education/technical/other categories, responsible roles and draft replies. Flag ambiguity. Never send or assign anything."""
         return result(workflow.reception_triage(requests, responsible_roles))
+
+    mcp._mars_profiles_registered = True
 

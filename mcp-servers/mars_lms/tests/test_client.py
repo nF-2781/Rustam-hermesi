@@ -4,7 +4,7 @@ import unittest
 
 import httpx
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from scoped_client import LMSClient
 from smoke import TOOL_PATHS, exercise, fixture_backend
 from mcp import StdioServerParameters

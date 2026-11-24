@@ -18,10 +18,12 @@ Ushbu skill **MARS IT School** ko'p agentli boshqaruv tizimida **mars-cfo** (Mol
 - **Rahbar:** CEO Rustam (@rustam106, `mars-ceo`, Team Lead)
 - **C-Level Hamkorlar:**
   - `mars-coo` (Kamollidin) — Davomat va to'lovlar o'zaro mutanosibligi
-  - `mars-cmo` (Muhammadrizo) — Yangi o'quvchilar tushumi
-  - `mars-hr` (Muhammadali) — Mehnat haqi fondi va darsbay to'lovlar
-  - `mars-cto` (Saidabzal) — To'lov integratsiyalari va API/FastMCP
-  - `mars-cpo` (Muhammadsolih) — Kurslar narxi va to'lov modellari
+  - `mars-cmo` (@Saidabza1) — Yangi o'quvchilar tushumi
+  - `mars-chro` (@rizo_x7k) — Mehnat haqi fondi va ta'lim sifati
+  - `mars-cto` (Hacker) — To'lov integratsiyalari va API/FastMCP
+  - `mars-cso` (@k_mukhamedov) — O'quvchilar muvaffaqiyati
+  - `mars-head-reception` (@muhammad_solih13) — Mijozlar bilan aloqa
+  - `mars-chief-audit` (unassigned) — Bosh audit
 
 ---
 
@@ -50,7 +52,7 @@ Ushbu skill **MARS IT School** ko'p agentli boshqaruv tizimida **mars-cfo** (Mol
 The times below are proposed routines, not installed cron jobs. In this checkout,
 `daily_finance_report(month="YYYY-MM", compare=true)` compares the selected month
 with the previous month. It does not fetch yesterday-versus-today totals or verify
-cash-on-hand. See `agents/cfo/api-contracts.md` and the profile's runtime contract.
+cash-on-hand. See `agents/c-level/03-cfo/api-contracts.md` and the profile's runtime contract.
 Use the actual three specialist contexts embedded in SOUL with native delegate_task;
 role names alone do not select native delegate profiles.
 

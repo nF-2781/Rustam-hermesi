@@ -76,7 +76,7 @@ async def main() -> int:
             print(f"tools: {len(names)}")
             check(EXPECTED_AGENTS.issubset(names), "10 ta workflow-agent tool ro'yxatga olindi")
             check({"lms_login", "lms_context", "get_debts", "list_groups"} <= names, "yordamchi tool'lar mavjud")
-            check(len(names) == 41, "barcha 41 ta birlashtirilgan tool mavjud")
+            check(len(names) == 43, "barcha 43 ta birlashtirilgan tool mavjud")
 
             if not live:
                 return 1 if failures else 0

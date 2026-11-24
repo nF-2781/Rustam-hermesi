@@ -3,7 +3,7 @@
 > Integration verification (2026-11-24): the requested commits are imported into
 > this checkout. Four finance profiles are installed and visible in the dashboard;
 > native MCP login and all seven finance reads returned 200. Current parameters
-> and limits are in `agents/cfo/api-contracts.md` and `agents/cfo/README.md`.
+> and limits are in `agents/c-level/03-cfo/api-contracts.md` and `agents/c-level/03-cfo/README.md`.
 > The API table and numeric dialogue below describe the upstream scenario, not a
 > newly executed report: current `daily_finance_report` compares months, and no
 > `/api/finance/daily` call is made. Model completion/delegation was not run;
@@ -113,10 +113,10 @@ Kunlik moliyaviy hisobot va kassa holati (daily_finance_report, noyabr 2026):
 
 Ushbu CFO arxitekturasi repoda to'liq realizatsiya qilingan:
 
-- **Operatsion Nizom:** [`agents/cfo/agents.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/cfo/agents.md)
-- **Shaxsiyat va Jonli Muloqot:** [`agents/cfo/soul.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/cfo/soul.md)
-- **API Kontraktlar:** [`agents/cfo/api-contracts.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/cfo/api-contracts.md)
-- **Ierarxiya:** [`agents/cfo/hierarchy.json`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/cfo/hierarchy.json)
-- **Sub-Agentlar:** [`agents/cfo/sub-agents/`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/cfo/sub-agents/)
+- **Operatsion Nizom:** [`agents/c-level/03-cfo/agents.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/agents.md)
+- **Shaxsiyat va Jonli Muloqot:** [`agents/c-level/03-cfo/soul.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/soul.md)
+- **API Kontraktlar:** [`agents/c-level/03-cfo/api-contracts.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/api-contracts.md)
+- **Ierarxiya:** [`agents/c-level/03-cfo/hierarchy.json`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/hierarchy.json)
+- **Sub-Agentlar:** [`agents/c-level/03-cfo/sub-agents/`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/sub-agents/)
 - **Hermes Skill:** [`skills/mars-cfo-agent/SKILL.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/skills/mars-cfo-agent/SKILL.md)
 - **Hermes Profil O'rnatuvchi:** [`agents/install.py`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/install.py)
