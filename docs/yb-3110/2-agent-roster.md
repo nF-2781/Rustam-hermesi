@@ -3,8 +3,9 @@
 **Jamoa:** Mars | **Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40
 **Team Lead:** Rustam (@rustam106) — CEO agenti (`mars-ceo`)
 **Holat:** 7 a'zo, 7 agent — barcha fayl repo'da. Ustoz `ceo` va `cto` fayllarini qabul qilgan;
-`coo` Kamollidin branchidagi ishi asosida strukturaga birlashtirildi va **Team Lead o'z qabulidan
-o'tkazdi** (23.11: 5 ta read-only tool + 3 sub-agent, jonli audit o'tdi); qolgan 4 rol fayli a'zo
+`coo` Kamollidin branchidagi ishi asosida birlashtirildi va **Team Lead o'z qabulidan o'tkazdi**
+(23.11: 5 ta read-only tool + 3 sub-agent, jonli audit o'tdi); `cfo` Islom branchidan
+birlashtirildi (24.11: 3 sub-agent, api-contracts, hierarchy); qolgan 3 rol fayli a'zo
 **o'zi yozib/tasdiqlagach** hisobga olinadi (quyida belgilangan)
 
 Har bir a'zoga bitta agent: jamoa **7 kishi**, agent ham **7 ta**.
@@ -51,7 +52,8 @@ agents/
   ceo/soul.md  ceo/agents.md      ← ✅ qabul (Rustam o'zi yozgan)
   coo/soul.md  coo/agents.md      ← ✅ qabul: Kamollidin ishi (5 tool, 3 sub-agent) + Team Lead moslashi va jonli audit
   coo/api-contracts.md  coo/hierarchy.json  coo/sub-agents/…  ← COO dalil/ierarxiya fayllari
-  cfo/soul.md  cfo/agents.md      ← skelet: Islom o'zi yozadi/tasdiqlaydi
+  cfo/soul.md  cfo/agents.md      ← ✅ birlashtirildi: Islom ishi (5 real tool, 3 sub-agent)
+  cfo/api-contracts.md  cfo/hierarchy.json  cfo/sub-agents/…  ← CFO dalil/ierarxiya fayllari
   cto/soul.md  cto/agents.md      ← ✅ mazmun qabul (namuna — Rustam; egasi Saidabzal tasdiqlaydi)
   cto/charter.md                  ← Saidabzalning batafsil CTO charteri (repo yo'li va ierarxiyasi tuzatilgan)
   cmo/soul.md  cmo/agents.md      ← skelet: Muhammadrizo o'zi yozadi/tasdiqlaydi
@@ -66,7 +68,8 @@ agents/
 
 > **Holat (halol):** repo'da 7 agentning fayli bor. `ceo` va `cto` ustoz tomonidan qabul
 > qilingan; `coo` — Kamollidin branchidagi ish asosida birlashtirilgan va Team Lead o'z
-> qabulidan o'tkazgan (23.11). Qolgan 4 rol fayli Team Lead yozgan **skelet** — a'zo o'zi o'qib,
+> qabulidan o'tkazgan (23.11), `cfo` esa Islom branchidan birlashtirildi (24.11). Qolgan 3 rol
+> fayli Team Lead yozgan **skelet** — a'zo o'zi o'qib,
 > o'z ishiga moslab qayta yozmaguncha "bajarildi" hisoblanmaydi.
 > Tartib: `git pull` → `agents/<rol>/` ni ochish → o'z nomidan yozish/tasdiqlash →
 > `bash agents/install.sh` → `0-topshiriq-hisobrati.md` ga o'z qatorini yopish.

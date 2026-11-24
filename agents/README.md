@@ -68,7 +68,7 @@ Qayta o'rnatish xavfsiz: `SOUL.md` qayta yoziladi, qolgan state saqlanadi.
 |---|---|---|
 | `ceo/` | CEO | ✅ qabul — Rustam (o'zi yozgan) |
 | `coo/` | COO | ✅ qabul — Kamollidin ishi birlashtirildi va Team Lead o'z qabulidan o'tkazdi (23.11) |
-| `cfo/` | CFO | skelet — Islom o'zi yozadi/tasdiqlaydi |
+| `cfo/` | CFO | ✅ birlashtirildi — Islom ishi (3 sub-agent, api-contracts, hierarchy) |
 | `cto/` | CTO | ✅ mazmun qabul (namuna — Rustam) + Saidabzal charteri |
 | `cmo/` | CMO | skelet — Muhammadrizo o'zi yozadi/tasdiqlaydi |
 | `cpo/` | CPO | skelet — Muhammadsolih o'zi yozadi/tasdiqlaydi |

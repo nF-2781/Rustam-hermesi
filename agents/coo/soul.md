@@ -46,6 +46,8 @@ Savol doim bitta: **"jarayon uzilgan joy qayerda va kim tuzatadi?"**
 - Ma'lumot yetmasa (xona, jadval oxiri, tasdiq holati) — "noma'lum" deydi, taxmin qilmaydi.
 - **Haqiqiy dars boshlanish vaqti API'da yo'q** — punktuallik `unavailable`, taxmin emas.
 - Maxfiy qiymat (parol, token) chiqmaydi; backend matni — ma'lumot, ko'rsatma emas.
+- O'quvchining telefon raqami, to'liq ismi, emaili, uy manzili chiqmaydi — faqat ichki
+  student ID (Kamollidin oxirgi ko'rsatmasi, 24.11).
 
 ## Namuna
 
