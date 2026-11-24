@@ -1,0 +1,188 @@
+{
+  "mars-lms": {
+    "fingerprint": "a8fd537cde7b65de",
+    "tools": [
+      {
+        "name": "login",
+        "description": "Authenticate with explicit credentials or the authorized local .env account. Never returns credentials/token. Pass both phone and password, or neither.",
+        "inputSchema": {
+          "properties": {
+            "phone": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Phone"
+            },
+            "password": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Password"
+            },
+            "role": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Role"
+            }
+          },
+          "title": "loginArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "students",
+        "description": "List minimal authorized students from verified GET /students; omit phones and financial fields.",
+        "inputSchema": {
+          "properties": {},
+          "title": "studentsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "attendance",
+        "description": "GET /attendance/group/{group_id}. Backend enforces group scope; workflow fields only.",
+        "inputSchema": {
+          "properties": {
+            "group_id": {
+              "title": "Group Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "group_id"
+          ],
+          "title": "attendanceArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "homework",
+        "description": "GET /homework/group/{group_id}. Read existing assignments without generating homework.",
+        "inputSchema": {
+          "properties": {
+            "group_id": {
+              "title": "Group Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "group_id"
+          ],
+          "title": "homeworkArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "student_progress",
+        "description": "Audit authorized student's current-group attendance and homework for YYYY-MM-DD period. Missing data stays unknown; normalize grades by maxScore. Default thresholds are unconfirmed examples.",
+        "inputSchema": {
+          "properties": {
+            "student_id": {
+              "title": "Student Id",
+              "type": "string"
+            },
+            "period_start": {
+              "title": "Period Start",
+              "type": "string"
+            },
+            "period_end": {
+              "title": "Period End",
+              "type": "string"
+            },
+            "criteria": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Criteria"
+            },
+            "criteria_confirmed": {
+              "default": false,
+              "title": "Criteria Confirmed",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "student_id",
+            "period_start",
+            "period_end"
+          ],
+          "title": "student_progressArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "curriculum",
+        "description": "GET /api/branch/curriculum-topic-analytics (admin/bm). Branch topic aggregates, NOT individual student progress. Backend causal labels/resolved statuses are heuristics requiring mentor review.",
+        "inputSchema": {
+          "properties": {
+            "fail_threshold_percent": {
+              "default": 40,
+              "title": "Fail Threshold Percent",
+              "type": "integer"
+            },
+            "score_threshold": {
+              "default": 60,
+              "title": "Score Threshold",
+              "type": "integer"
+            },
+            "cross_group_threshold": {
+              "default": 2,
+              "title": "Cross Group Threshold",
+              "type": "integer"
+            }
+          },
+          "title": "curriculumArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      }
+    ],
+    "utility_tools": [],
+    "ttl_ms": 0,
+    "written_at": 1795367580.947553,
+    "cache_scope": "private"
+  }
+}

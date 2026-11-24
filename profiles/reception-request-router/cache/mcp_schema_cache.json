@@ -1,0 +1,132 @@
+{
+  "mars-lms": {
+    "fingerprint": "092b5dac642e6089",
+    "tools": [
+      {
+        "name": "login",
+        "description": "Authenticate with explicit credentials or the authorized local .env account. Never returns credentials/token. Pass both phone and password, or neither.",
+        "inputSchema": {
+          "properties": {
+            "phone": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Phone"
+            },
+            "password": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Password"
+            },
+            "role": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Role"
+            }
+          },
+          "title": "loginArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "incoming_requests",
+        "description": "Without input return explicit 501: no verified generic backend inbox. With [{id,text}] ingest manual messages; never substitute frozen-status requests.",
+        "inputSchema": {
+          "properties": {
+            "requests": {
+              "anyOf": [
+                {
+                  "items": {
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Requests"
+            }
+          },
+          "title": "incoming_requestsArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      },
+      {
+        "name": "reception_triage",
+        "description": "Suggest payment/schedule/education/technical/other categories, responsible roles and draft replies. Flag ambiguity. Never send or assign anything.",
+        "inputSchema": {
+          "properties": {
+            "requests": {
+              "items": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              "title": "Requests",
+              "type": "array"
+            },
+            "responsible_roles": {
+              "anyOf": [
+                {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Responsible Roles"
+            }
+          },
+          "required": [
+            "requests"
+          ],
+          "title": "reception_triageArguments",
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": false
+        }
+      }
+    ],
+    "utility_tools": [],
+    "ttl_ms": 0,
+    "written_at": 1795367584.5136182,
+    "cache_scope": "private"
+  }
+}

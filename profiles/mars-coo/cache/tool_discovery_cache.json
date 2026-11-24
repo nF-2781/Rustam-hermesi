@@ -1,0 +1,1267 @@
+{
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\annotate_preview_tool.py": [
+1794249728562976700,
+3947,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\ansi_strip.py": [
+1794249728562976700,
+4341,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\apply_layout_tool.py": [
+1794249728563977200,
+2335,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval.py": [
+1794249728563977200,
+61469,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval_context.py": [
+1794249728564976000,
+14454,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval_detection.py": [
+1794249728564976000,
+80844,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval_floors.py": [
+1794249728565975700,
+9676,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval_gateway_wait.py": [
+1794249728565975700,
+8362,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval_human_wait.py": [
+1794249728565975700,
+8416,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval_prompt.py": [
+1794249728566975300,
+15007,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\approval_smart.py": [
+1794249728566975300,
+7282,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\arg_coercion.py": [
+1794249728566975300,
+9068,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\async_delegation.py": [
+1794249728567975400,
+56377,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\audio_container.py": [
+1794249728567975400,
+2674,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\binary_extensions.py": [
+1794249728567975400,
+2274,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\blueprints.py": [
+1794249728568976700,
+9210,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\bot_failure_reasons.py": [
+1794249728568976700,
+3516,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\bot_live_delivery.py": [
+1794249728568976700,
+8872,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\bot_mode_dm.py": [
+1794249728570091600,
+33243,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\bot_mode_probe.py": [
+1794249728570091600,
+15592,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\bot_relay.py": [
+1794249728571231800,
+24582,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_camofox.py": [
+1794249728571231800,
+28441,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_camofox_state.py": [
+1794249728572242700,
+1566,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_cdp_tool.py": [
+1794249728572242700,
+22348,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_dialog_tool.py": [
+1794249728572242700,
+5405,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_extension_router.py": [
+1794249728573242900,
+6355,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_lightpanda.py": [
+1794249728573242900,
+13117,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_supervisor.py": [
+1794249728573242900,
+27452,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_supervisor_dialogs.py": [
+1794249728574243000,
+15371,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_supervisor_frames.py": [
+1794249728574243000,
+8335,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool.py": [
+1794249728575242600,
+67293,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_cdp.py": [
+1794249728575242600,
+6285,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_cloud.py": [
+1794249728575242600,
+12295,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_eval_policy.py": [
+1794249728576243100,
+8639,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_install.py": [
+1794249728576243100,
+16089,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_lifecycle.py": [
+1794249728577246700,
+31451,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_lightpanda_fallback.py": [
+1794249728577246700,
+10116,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_origin.py": [
+1794249728578242800,
+2913,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_real_profile.py": [
+1794249728578242800,
+16067,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_session.py": [
+1794249728578242800,
+30545,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_snapshot.py": [
+1794249728579242900,
+5350,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_tool_vision.py": [
+1794249728579242900,
+7148,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_use_cli.py": [
+1794249728580243600,
+41088,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\browser_vault_tool.py": [
+1794249728580243600,
+36137,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\budget_config.py": [
+1794249728580243600,
+5629,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\checkpoint_manager.py": [
+1794249728581243900,
+57825,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\clarify_gateway.py": [
+1794249728581243900,
+14074,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\clarify_tool.py": [
+1794249728582242500,
+15373,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\close_preview_tool.py": [
+1794249728582242500,
+2571,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\close_terminal_tool.py": [
+1794249728583242900,
+2056,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\code_execution_env.py": [
+1794249728583242900,
+13537,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\code_execution_rpc.py": [
+1794249728584242900,
+8696,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\code_execution_tool.py": [
+1794249728584242900,
+47906,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\code_kernel.py": [
+1794249728585243100,
+36091,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\code_kernel_remote.py": [
+1794249728585243100,
+18303,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\computer_use_tool.py": [
+1794249728592242500,
+1104,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\connections_tool.py": [
+1794249728593242600,
+22541,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\connector_search.py": [
+1794249728593242600,
+6755,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\credential_files.py": [
+1794249728593242600,
+17937,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\cronjob_job_args.py": [
+1794249728594244300,
+20122,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\cronjob_prompt_scan.py": [
+1794249728594244300,
+7861,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\cronjob_tools.py": [
+1794249728595243100,
+55690,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\daemon_pool.py": [
+1794249728595243100,
+2533,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\debug_helpers.py": [
+1794249728595243100,
+2187,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool.py": [
+1794249728596243000,
+41602,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_child_run.py": [
+1794249728597242700,
+46599,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_config.py": [
+1794249728597242700,
+30271,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_dispatch.py": [
+1794249728597242700,
+25408,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_progress.py": [
+1794249728598243500,
+21080,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_registry.py": [
+1794249728598243500,
+15610,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_results.py": [
+1794249728599242600,
+20948,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_tasks.py": [
+1794249728599242600,
+6381,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegate_tool_toolsets.py": [
+1794249728599242600,
+5489,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegation_live_log.py": [
+1794249728600242500,
+13883,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\delegation_output_schema.py": [
+1794249728600242500,
+5232,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\desktop_ui.py": [
+1794249728601243900,
+2770,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\discord_tool.py": [
+1794249728601243900,
+31472,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\drive_preview_tool.py": [
+1794249728602245200,
+7033,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\env_passthrough.py": [
+1794249728602245200,
+6793,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\env_probe.py": [
+1794249728602245200,
+11445,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\fal_common.py": [
+1794249728612243200,
+7548,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\feishu_doc_tool.py": [
+1794249728612243200,
+3603,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\feishu_drive_tool.py": [
+1794249728612243200,
+8198,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\feishu_lark.py": [
+1794249728613248200,
+3248,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_operations.py": [
+1794249728613248200,
+77116,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_operations_common.py": [
+1794249728613248200,
+10396,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_operations_lint.py": [
+1794249728614248000,
+13701,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_operations_search.py": [
+1794249728614248000,
+49937,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_state.py": [
+1794249728615247600,
+9713,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_tools.py": [
+1794249728615247600,
+64756,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_tools_paths.py": [
+1794249728616248900,
+8884,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_tools_read_tracking.py": [
+1794249728616248900,
+11085,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\file_tools_write_guards.py": [
+1794249728616248900,
+22094,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\focus_pane_tool.py": [
+1794249728617247400,
+2631,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\fuzzy_match.py": [
+1794249728617247400,
+27644,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\homeassistant_tool.py": [
+1794249728617247400,
+14025,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\hook_output_spill.py": [
+1794249728618598500,
+4878,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\image_generation_catalog.py": [
+1794249728618598500,
+18077,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\image_generation_tool.py": [
+1794249728619597900,
+42796,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\image_source.py": [
+1794249728619597900,
+14590,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\interpreter_shutdown.py": [
+1794249728619597900,
+1225,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\interrupt.py": [
+1794249728620597000,
+4884,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\kanban_tools.py": [
+1794249728620597000,
+49584,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\kanban_tools_schemas.py": [
+1794249728621596400,
+21807,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\lazy_deps.py": [
+1794249728621596400,
+36631,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\managed_gateway_auth.py": [
+1794249728622597600,
+2896,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\managed_tool_gateway.py": [
+1794249728622597600,
+16774,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_dashboard_oauth.py": [
+1794249728622597600,
+5491,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_death_supervisor.py": [
+1794249728623596900,
+9341,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_oauth.py": [
+1794249728623596900,
+54006,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_oauth_device.py": [
+1794249728624597000,
+9489,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_oauth_manager.py": [
+1794249728624597000,
+23926,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_oauth_provider.py": [
+1794249728625597100,
+8163,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_schema_cache.py": [
+1794249728625597100,
+5175,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_agent.py": [
+1794249728626597900,
+14029,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_common.py": [
+1794249728626597900,
+5746,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_config.py": [
+1794249728626597900,
+16312,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_content.py": [
+1794249728628102300,
+11489,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_discovery.py": [
+1794249728628102300,
+28311,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_errors.py": [
+1794249728628102300,
+17337,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_handlers.py": [
+1794249728629108000,
+34211,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_health.py": [
+1794249728629108000,
+15879,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_lifecycle.py": [
+1794249728630107500,
+16566,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_loop.py": [
+1794249728630107500,
+13304,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_registration.py": [
+1794249728630107500,
+27536,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_sampling.py": [
+1794249728631106900,
+18431,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_schema.py": [
+1794249728631106900,
+11299,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_scope.py": [
+1794249728631106900,
+3012,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_server_run.py": [
+1794249728632107900,
+24347,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\mcp_tool_transport.py": [
+1794249728632107900,
+30044,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\memory_tool.py": [
+1794249728633107100,
+20728,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\memory_tool_store.py": [
+1794249728633107100,
+23548,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\microsoft_graph_auth.py": [
+1794249728634108200,
+7438,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\microsoft_graph_client.py": [
+1794249728634108200,
+10885,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\neutts_synth.py": [
+1794249728639107600,
+3134,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\open_preview_tool.py": [
+1794249728639107600,
+3854,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\openrouter_client.py": [
+1794249728640107500,
+1587,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\osv_check.py": [
+1794249728640107500,
+10273,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\patch_parser.py": [
+1794249728641107600,
+19035,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\path_security.py": [
+1794249728641107600,
+1508,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\plugin_guard.py": [
+1794249728642110000,
+7845,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\preview_tool.py": [
+1794249728642110000,
+3535,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\process_registry.py": [
+1794249728643108700,
+117636,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\process_registry_checkpoint.py": [
+1794249728643108700,
+6124,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\process_registry_notifications.py": [
+1794249728643108700,
+19065,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\process_registry_results.py": [
+1794249728644118600,
+4300,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\project_tools.py": [
+1794249728644118600,
+6450,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\react_to_message_tool.py": [
+1794249728644118600,
+6336,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\read_extract.py": [
+1794249728645119700,
+25189,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\read_preview_tool.py": [
+1794249728645119700,
+3262,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\read_terminal_tool.py": [
+1794249728646118800,
+3275,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\read_window_tool.py": [
+1794249728646118800,
+2613,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\schema_sanitizer.py": [
+1794249728647118900,
+19583,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\self_repo_guard.py": [
+1794249728647118900,
+21197,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\send_message_senders.py": [
+1794249728648119200,
+35757,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\send_message_targets.py": [
+1794249728648119200,
+11099,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\send_message_tool.py": [
+1794249728649118200,
+39570,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\session_search_tool.py": [
+1794249728649118200,
+36518,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\setup_mcp_tool.py": [
+1794249728650119400,
+4603,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\shell_heredoc.py": [
+1794249728650119400,
+8788,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skill_ledger.py": [
+1794249728650119400,
+18664,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skill_linter.py": [
+1794249728651119000,
+11118,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skill_manager_batch.py": [
+1794249728651119000,
+9964,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skill_manager_guards.py": [
+1794249728652124500,
+15422,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skill_manager_tool.py": [
+1794249728652124500,
+45926,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skill_provenance.py": [
+1794249728653120300,
+1885,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skill_usage.py": [
+1794249728653120300,
+36245,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skillevaluator_scan.py": [
+1794249728653120300,
+7363,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_ast_audit.py": [
+1794249728654120400,
+4142,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_guard.py": [
+1794249728654120400,
+43471,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub.py": [
+1794249728655120700,
+15561,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_clawhub.py": [
+1794249728655120700,
+24472,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_github.py": [
+1794249728656118900,
+24404,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_install.py": [
+1794249728656118900,
+14728,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_models.py": [
+1794249728656118900,
+14518,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_official.py": [
+1794249728657120200,
+18828,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_search.py": [
+1794249728657120200,
+8827,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_skillssh.py": [
+1794249728658120200,
+17634,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_hub_sources.py": [
+1794249728658120200,
+20944,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_sync.py": [
+1794249728658120200,
+23396,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_sync_bundled_ops.py": [
+1794249728659119300,
+10119,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_sync_client.py": [
+1794249728659119300,
+27582,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_sync_client_org.py": [
+1794249728660119500,
+14522,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_sync_client_wire.py": [
+1794249728660119500,
+17289,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_sync_optional.py": [
+1794249728660119500,
+11390,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_tool.py": [
+1794249728661121100,
+37321,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_tool_dedup.py": [
+1794249728661121100,
+3721,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_tool_plugin.py": [
+1794249728662120100,
+8474,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\skills_tool_setup.py": [
+1794249728662120100,
+6848,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\slash_confirm.py": [
+1794249728662120100,
+4839,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\spill_safety.py": [
+1794249728663120200,
+3063,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\subagent_worktree.py": [
+1794249728663120200,
+9397,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_hints.py": [
+1794249728663120200,
+8388,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_scope.py": [
+1794249728664119700,
+9185,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool.py": [
+1794249728664119700,
+66513,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool_backends.py": [
+1794249728665119400,
+17908,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool_background.py": [
+1794249728665119400,
+13023,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool_config.py": [
+1794249728666123300,
+4896,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool_guards.py": [
+1794249728666123300,
+11522,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool_lifecycle.py": [
+1794249728667119900,
+13516,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool_result.py": [
+1794249728667119900,
+14315,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\terminal_tool_sudo.py": [
+1794249728667119900,
+21968,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\thread_context.py": [
+1794249728668120600,
+3381,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\threat_patterns.py": [
+1794249728668120600,
+9493,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tip_tool.py": [
+1794249728669126300,
+3222,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tirith_security.py": [
+1794249728669126300,
+25813,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\todo_tool.py": [
+1794249728670125600,
+13102,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tool_backend_helpers.py": [
+1794249728670125600,
+12545,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tool_output_limits.py": [
+1794249728674125600,
+2710,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tool_result_storage.py": [
+1794249728674125600,
+12368,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tool_search.py": [
+1794249728675125000,
+31592,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tool_search_catalog.py": [
+1794249728675125000,
+11709,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tool_search_validation.py": [
+1794249728675125000,
+8609,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tour_tool.py": [
+1794249728676124800,
+6589,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\transcription_audio.py": [
+1794249728676124800,
+14540,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\transcription_cloud.py": [
+1794249728677126000,
+23337,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\transcription_command.py": [
+1794249728677126000,
+14244,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\transcription_common.py": [
+1794249728677126000,
+3926,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\transcription_local.py": [
+1794249728678125500,
+13836,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\transcription_tools.py": [
+1794249728678125500,
+31333,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_command_provider.py": [
+1794249728679125900,
+15550,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_streaming.py": [
+1794249728679125900,
+14997,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_text_normalize.py": [
+1794249728679125900,
+10598,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool.py": [
+1794249728680125500,
+37613,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool_delivery.py": [
+1794249728680125500,
+21080,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool_lifecycle.py": [
+1794249728680125500,
+8070,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool_local.py": [
+1794249728681125500,
+9524,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool_openai.py": [
+1794249728681125500,
+7872,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool_plugins.py": [
+1794249728682309000,
+4576,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool_providers.py": [
+1794249728682309000,
+30749,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\tts_tool_speaker.py": [
+1794249728682309000,
+16419,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\url_safety.py": [
+1794249728683307400,
+26138,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\video_generation_tool.py": [
+1794249728683814000,
+17356,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\vision_tools.py": [
+1794249728683814000,
+52035,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\vision_tools_image_prep.py": [
+1794249728684819100,
+11330,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\voice_client_config.py": [
+1794249728684819100,
+10455,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\voice_live.py": [
+1794249728684819100,
+9332,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\voice_mode.py": [
+1794249728685819000,
+72573,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\voice_mode_transcript.py": [
+1794249728685819000,
+5530,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\wake_word.py": [
+1794249728686820200,
+37289,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\wake_word_engines.py": [
+1794249728686820200,
+12022,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\web_result_cache.py": [
+1794249728690819500,
+13605,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\web_tools.py": [
+1794249728691820100,
+28374,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\web_tools_extract.py": [
+1794249728691820100,
+9530,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\web_tools_rescue.py": [
+1794249728692819400,
+5397,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\web_tools_truncate.py": [
+1794249728692819400,
+8375,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\website_policy.py": [
+1794249728692819400,
+8873,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\working_diff.py": [
+1794249728693818800,
+4440,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\write_approval.py": [
+1794249728693818800,
+12431,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\x_search_tool.py": [
+1794249728693818800,
+15035,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\xai_http.py": [
+1794249728694819900,
+10948,
+false
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\xai_video_tools.py": [
+1794249728694819900,
+4599,
+true
+],
+"C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\hermes-agent\\tools\\yuanbao_tools.py": [
+1794249728695820300,
+21901,
+true
+]
+}
