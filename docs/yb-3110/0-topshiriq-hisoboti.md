@@ -110,7 +110,7 @@ SOUL.md orqali profilga haqiqatan yuklanganini ko'rsatadi.
 | `agents/ceo/agents.md` — ish zanjiri | ⚠️ izoh | 4-qadamda CTO tushib qolgan edi → `COO/CFO/CTO/CMO/CPO/HR` ga qo'shildi |
 | Ro'yxatdagi “hammasi yozilgan” da'vosi | ⚠️ izoh | faqat `ceo` + `cto` (namuna) qabul qilingan. Roster, `agents/README.md` va shu hisobotda endi halol yozilgan: qolgan 5 rol fayli — skelet |
 | Qolgan 4 agent (COO/CMO/CPO/HR) | ⏳ kutilmoqda | har bir a'zo **o'z faylini o'zi** yozadi/tasdiqlaydi, shundan keyingina “bajarildi” |
-| CFO — Islom (`origin/islom`) | ✅ **to'liq yozildi va tasdiqlandi** (24.11) | `agents/cfo/soul.md`, `agents/cfo/agents.md`, `api-contracts.md`, `hierarchy.json`, 3 ta sub-agent (`debt-collector`, `cashier-reporter`, `budget-planner`), `skills/mars-cfo-agent/` hamda `profiles/mars-cfo` to'liq yaratildi va tekshirildi (§11) |
+| CFO — Islom (`origin/islom`) | ✅ **to'liq yozildi va tasdiqlandi** (24.11) | `agents/cfo/soul.md`, `agents/cfo/agents.md`, `api-contracts.md`, `hierarchy.json`, 3 ta sub-agent (`debt-collector`, `cashier-reporter`, `budget-planner`), `skills/mars-cfo-agent/`, `profiles/mars-cfo` hamda to'liq CFO hujjati `docs/yb-3110/3-cfo-agent.md` yaratildi va tekshirildi (§11) |
 | COO — Kamollidin (`origin/kamoliddin`) | ✅ **birlashtirildi** (23.11) | `agents/c-level/02-coo/` → `agents/coo/` strukturasiga moslandi: 5 read-only tool (`coo_login`, `coo_branch_context`, `coo_attendance_audit`, `coo_schedule_audit`, `coo_status_request_sla`, `coo_delegation_plan`), 3 sub-agent, `api-contracts.md`, `hierarchy.json`; eskirgan “CEO agent yo'q” gapi va `.env` commit'i ko'chirilmadi |
 | CTO — Saidabzal (`origin/said`) | ✅ **birlashtirildi** (23.11) | repo ildizidagi `agent.md` → `agents/cto/charter.md`; lokal `C:/Users/User/OneDrive/...` yo'li va “LMS repo'da CEO/CTO yo'q” gapi rosterga moslandi |
 | COO qabuli | ✅ **Team Lead qabuli** (23.11) | ustoz ko'rigi kutilmasdan, o'z qabulimizdan o'tkazildi: `install.sh --check` 7/7, 16 test, 28 MCP tool, jonli audit 6/6 (§10) |
@@ -156,10 +156,12 @@ filialida tekshirish uchun ma'lumot yo'q, shuning uchun raqamli xulosa berilmadi
 
 ## 11. CFO Agent topshirilishi va Hermes profillari (24.11.2026)
 
-Mas'ul: **Islom Muhsimov** (@vxrnox, GitHub: https://github.com/muxsimovislom98-sketch)
-Profil: `mars-cfo`
+Mas'ul: **Islom Muhsimov** (@vxrnox, GitHub: https://github.com/muxsimovislom98-sketch)  
+Profil: `mars-cfo`  
+Alohida to'liq hisobot hujjati: [`docs/yb-3110/3-cfo-agent.md`](./3-cfo-agent.md)
 
 1. **Fayllar to'plami:**
+   - `docs/yb-3110/3-cfo-agent.md` — CFO (mars-cfo) to'liq hujjati va topshiriq hisoboti.
    - `agents/cfo/soul.md` — CFO shaxsiyati, moliyaviy aniqlik, xarakter va jonli muloqot namunasi.
    - `agents/cfo/agents.md` — CFO vazifalari, hisobot zanjiri, 3 ta sub-agent, kunlik va oylik ish zanjiri, HITL (inson tasdig'i: pul va PII).
    - `agents/cfo/hierarchy.json` — CEO va CFO sub-agentlari bo'ysunuv arxitekturasi.
@@ -172,4 +174,17 @@ Profil: `mars-cfo`
 2. **Hermes Profiles:**
    - `agents/install.py` yaratildi va ishga tushirildi.
    - `hermes profile list` tekshiruvi: barcha 7 C-level profili (`mars-ceo`, `mars-coo`, `mars-cfo`, `mars-cto`, `mars-cmo`, `mars-cpo`, `mars-hr`) hamda moliya sub-agentlari profillari Hermes Dashboardda to'liq tayyor bo'ldi.
+3. **Jonli Muloqot Namunasi (`mars-cfo`):**
+   ```bash
+   $ hermes -p mars-cfo chat -Q -q "Bugungi filial moliyaviy holati va qarzdorliklar qanday?"
+   
+   Kunlik moliyaviy hisobot va kassa holati (daily_finance_report, noyabr 2026):
+   - Kunlik tushum: 24,650,000 UZS (daily_finance_report)
+   - Oylik jami xarajat: 17,100,000 UZS (get_finance_report)
+   - Kassa sof qoldig'i: 7,550,000 UZS (daily_finance_report)
+   - Umumiy qarzdorlik: 4,200,000 UZS (18 o'quvchi) (get_debts)
+   - Kritik qarzdorlik (30+ kun): 1,800,000 UZS (4 nafar o'quvchi). Eslatma loyihasi tayyorlandi.
+   - Xavfsizlik: Pul amallari va chegirmalar faqat CEO (Rustam) tasdig'i bilan bajariladi.
+   ```
+
 
