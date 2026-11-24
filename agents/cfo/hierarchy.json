@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "parent": {
+    "id": "ceo",
+    "kind": "reporting_parent",
+    "profile": "mars-ceo",
+    "installed": true
+  },
+  "agent": {
+    "id": "mars-cfo",
+    "level": "c-level",
+    "profile": "mars-cfo",
+    "agent_file": "agents.md",
+    "soul_file": "soul.md",
+    "owner": "Islom",
+    "telegram": "@vxrnox",
+    "github": "https://github.com/muxsimovislom98-sketch"
+  },
+  "sub_agents": [
+    {
+      "id": "debt-collector",
+      "path": "sub-agents/01-debt-collector",
+      "tool": "debt_control_agent",
+      "description": "Qarzdorlik muddati va summasini tahlil qilish, eslatma loyihalarini tayyorlash"
+    },
+    {
+      "id": "cashier-reporter",
+      "path": "sub-agents/02-cashier-reporter",
+      "tool": "daily_finance_report",
+      "description": "Kunlik kassa qoldig'i, to'lov turlari va tushumlar hisobini yuritish"
+    },
+    {
+      "id": "budget-planner",
+      "path": "sub-agents/03-budget-planner",
+      "tool": "get_finance_report",
+      "description": "Oylik tushum va xarajatlar balansi, byudjet reja ijrosi prognozi"
+    }
+  ],
+  "delegation": {
+    "mechanism": "native_delegate_task_with_explicit_role_context",
+    "max_spawn_depth": 1,
+    "shared_read_only_whitelist": true
+  }
+}
