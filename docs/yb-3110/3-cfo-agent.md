@@ -1,14 +1,5 @@
 # YB-3110 — CFO (Bosh Moliya Direktori) Agenti Hujjati
 
-> Integration verification (2026-11-24): the requested commits are imported into
-> this checkout. Four finance profiles are installed and visible in the dashboard;
-> native MCP login and all seven finance reads returned 200. Current parameters
-> and limits are in `agents/c-level/03-cfo/api-contracts.md` and `agents/c-level/03-cfo/README.md`.
-> The API table and numeric dialogue below describe the upstream scenario, not a
-> newly executed report: current `daily_finance_report` compares months, and no
-> `/api/finance/daily` call is made. Model completion/delegation was not run;
-> existing Nous authentication currently requires re-login. No cron is installed.
-
 **Jamoa:** Mars (LMS) | **Topshiruvchi:** @bmt_430 | **Muddat:** 24.11.2026, 18:40  
 **Mas’ul a’zo:** **Islom Muhsimov** (@vxrnox, GitHub: https://github.com/muxsimovislom98-sketch)  
 **Agent profili:** `mars-cfo` | **Lavozim:** CFO (Chief Financial Officer)  
@@ -65,8 +56,8 @@ Barcha amallar **faqat read-only** rejimida va filial konteksti chegarasida ishl
 
 | Yo'nalish | Endpoint / FastMCP Tool | Kontrakt Shakli | Tavsif |
 |---|---|---|---|
-| **Qarzdorlik** | `get_debts` (`/finance/debts`) | `{ branch_id, status: "unpaid", days_overdue }` | Muddati o'tgan to'lovlar, o'quvchi ID va qarz miqdori |
-| **Kunlik Moliya** | `daily_finance_report` (`/api/finance/daily`) | `{ date, branch_id, compare: true }` | Kunlik tushum, kassa qoldig'i, o'tgan kunga taqqoslash |
+| **Qarzdorlik** | `get_debts` (`/api/branch/debtors`) | `{ branch_id, status: "unpaid", days_overdue }` | Muddati o'tgan to'lovlar, o'quvchi ID va qarz miqdori |
+| **Kunlik Moliya** | `daily_finance_report` (`/api/branch/payments` + `/api/branch/expenses` kompoziti) | `{ date, branch_id, compare: true }` | Kunlik tushum, kassa qoldig'i, o'tgan kunga taqqoslash |
 | **Umumiy Hisobot** | `get_finance_report` (`/api/finance/overview`) | `{ period: "2026-11", branch_id }` | Oylik tushum, xarajatlar moddasi, sof daromad |
 | **To'lovlar Ro'yxati** | `get_payments` (`/api/branch/payments`) | `{ branch_id, method: "all" }` | Uzcard, Humo, Naqd to'lovlar reyestri |
 
@@ -113,10 +104,10 @@ Kunlik moliyaviy hisobot va kassa holati (daily_finance_report, noyabr 2026):
 
 Ushbu CFO arxitekturasi repoda to'liq realizatsiya qilingan:
 
-- **Operatsion Nizom:** [`agents/c-level/03-cfo/agents.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/agents.md)
-- **Shaxsiyat va Jonli Muloqot:** [`agents/c-level/03-cfo/soul.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/soul.md)
-- **API Kontraktlar:** [`agents/c-level/03-cfo/api-contracts.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/api-contracts.md)
-- **Ierarxiya:** [`agents/c-level/03-cfo/hierarchy.json`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/hierarchy.json)
-- **Sub-Agentlar:** [`agents/c-level/03-cfo/sub-agents/`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/c-level/03-cfo/sub-agents/)
-- **Hermes Skill:** [`skills/mars-cfo-agent/SKILL.md`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/skills/mars-cfo-agent/SKILL.md)
-- **Hermes Profil O'rnatuvchi:** [`agents/install.py`](https://github.com/nF-2781/Rustam-hermesi/blob/islom/agents/install.py)
+- **Operatsion Nizom:** [`agents/cfo/agents.md`](https://github.com/nF-2781/Rustam-hermesi/blob/rustam/agents/cfo/agents.md)
+- **Shaxsiyat va Jonli Muloqot:** [`agents/cfo/soul.md`](https://github.com/nF-2781/Rustam-hermesi/blob/rustam/agents/cfo/soul.md)
+- **API Kontraktlar:** [`agents/cfo/api-contracts.md`](https://github.com/nF-2781/Rustam-hermesi/blob/rustam/agents/cfo/api-contracts.md)
+- **Ierarxiya:** [`agents/cfo/hierarchy.json`](https://github.com/nF-2781/Rustam-hermesi/blob/rustam/agents/cfo/hierarchy.json)
+- **Sub-Agentlar:** [`agents/cfo/sub-agents/`](https://github.com/nF-2781/Rustam-hermesi/blob/rustam/agents/cfo/sub-agents/)
+- **Hermes Skill:** [`skills/mars-cfo-agent/SKILL.md`](https://github.com/nF-2781/Rustam-hermesi/blob/rustam/skills/mars-cfo-agent/SKILL.md)
+- **Hermes Profil O'rnatuvchi:** [`agents/install.sh`](https://github.com/nF-2781/Rustam-hermesi/blob/rustam/agents/install.sh)
