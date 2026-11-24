@@ -76,6 +76,111 @@
 2026-11-09 10:08:26,552 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
 2026-11-09 10:08:26,554 WARNING tools.registry: check_fn check_vision_requirements returned False; dependent tools will be unavailable this turn
 2026-11-09 10:08:26,646 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
+2026-11-12 18:54:23,823 WARNING hermes_cli.plugins: Failed to load plugin 'slack-platform': No module named 'aiohttp'
+2026-11-12 18:57:12,159 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
+2026-11-12 18:58:18,677 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:58:20,280 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60405 — frame left in flight
+2026-11-12 18:58:30,291 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:19,958 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60405 — frame left in flight
+2026-11-12 18:59:22,276 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:29,961 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:34,452 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:59:37,810 WARNING hermes_cli.plugins: Failed to load plugin 'slack-platform': No module named 'aiohttp'
+2026-11-12 19:32:01,632 WARNING hermes_cli.web_server: event loop stalled 1296.2s (GIL pressure suspected)
+2026-11-17 18:46:49,562 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,233 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,239 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,929 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,949 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:54,615 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:54,636 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:55,321 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:55,342 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,013 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,033 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,104 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,757 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,836 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,471 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,633 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,666 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,671 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,678 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,796 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,198 WARNING tools.registry: check_fn check_discord_tool_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,202 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,329 WARNING tools.registry: check_fn _check_yuanbao returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,329 WARNING tools.registry: check_fn _check_ha_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,336 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,412 WARNING tools.registry: check_fn check_tts_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,437 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,495 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-17 18:47:17,495 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,496 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-17 18:47:17,520 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,534 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-17 18:47:17,535 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,535 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-17 18:47:17,536 WARNING tools.registry: check_fn check_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,583 WARNING tools.registry: check_fn check_video_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,587 WARNING tools.registry: check_fn _check_xai_video_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,725 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:22,133 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:22,682 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:23,293 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:24,393 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:07,287 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:07,980 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:07,986 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:08,554 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:08,568 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:09,293 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:09,350 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:10,425 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:10,445 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:11,166 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:11,499 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:12,513 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-18 23:06:56,131 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:56,150 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-18 23:06:56,152 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:56,153 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-18 23:06:56,952 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:57,061 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-18 23:06:57,067 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:57.
+2026-11-18 23:06:57,073 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-18 23:07:26,588 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-18 23:07:59,974 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:54199 — frame left in flight
+2026-11-18 23:08:03,314 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-18 23:08:09,985 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60567 — frame left in flight
+2026-11-18 23:08:27,899 WARNING hermes_cli.web_server: event loop stalled 89.3s (GIL pressure suspected)
+2026-11-18 23:08:27,908 ERROR asyncio: Exception in callback BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55112))>) at C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py:840
+handle: <Handle BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55112))>) at C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py:840>
+Traceback (most recent call last):
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 855, in loop
+    self._make_socket_transport(
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 646, in _make_socket_transport
+    return _ProactorSocketTransport(self, sock, protocol, waiter,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 612, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 189, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 334, in __init__
+    super().__init__(*args, **kw)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 66, in __init__
+    self._server._attach()
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 295, in _attach
+    assert self._sockets is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+2026-11-18 23:08:27,930 WARNING tui_gateway.ws: ws send failed peer=127.0.0.1:54199 error_type=WebSocketDisconnect error=
+2026-11-18 23:08:27,937 WARNING tui_gateway.ws: ws send failed peer=127.0.0.1:60567 error_type=WebSocketDisconnect error=
+2026-11-18 23:08:27,940 WARNING tui_gateway.ws: ws response send failed peer=127.0.0.1:54199 id=r7 method=pet.info.meta
+2026-11-18 23:08:27,949 WARNING tui_gateway.ws: ws heartbeat reply send failed peer=127.0.0.1:60567 id=heartbeat-1
+2026-11-18 23:11:06,512 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
 2026-11-12 18:51:07,218 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
 2026-11-12 18:51:07,243 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
 2026-11-12 18:51:07,246 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
@@ -153,3 +258,59 @@
 2026-11-19 18:17:00,999 WARNING tools.registry: check_fn check_video_generation_requirements returned False; dependent tools will be unavailable this turn
 2026-11-19 18:17:01,000 WARNING tools.registry: check_fn _check_xai_video_requirements returned False; dependent tools will be unavailable this turn
 2026-11-19 18:17:01,006 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:05,568 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:05,569 WARNING tools.mcp_tool: Failed to connect to MCP server 'mars_lms' (command=C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe): [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:05,583 WARNING __main__: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:35,040 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:35,081 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:35,089 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:36,477 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:36,550 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:36,566 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:36,568 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
+2026-11-19 19:12:40,233 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,274 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:40,290 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:40,302 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,345 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:40,353 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:48,932 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:48,933 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:49,560 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:49,564 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,181 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,184 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,784 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,787 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,400 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,403 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,479 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,479 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,130 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,135 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,840 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,855 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:53,457 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:53,465 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,130 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,133 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,833 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,839 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,334 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,338 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,373 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,374 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,386 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,388 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,391 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,393 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,397 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,400 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,417 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,418 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-22 21:01:26,248 WARNING hermes_cli.auth: Nous OAuth state quarantined (terminal auth death): {"agent_key_id": null, "auth_json_exists": true, "auth_json_mtime": 1795097558.0096476, "auth_json_path": "C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\auth.json", "auth_json_size": 10541, "client_id": "hermes-cli", "error_code": "invalid_grant", "reason": "runtime_access_refresh_failure", "refresh_token_fp": "1dc471e5bf32", "token_already_expired": true}
+2026-11-22 21:01:26,285 WARNING hermes_cli.auth: Nous OAuth state quarantined (terminal auth death): {"agent_key_id": null, "auth_json_exists": true, "auth_json_mtime": 1795363286.2597976, "auth_json_path": "C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\auth.json", "auth_json_size": 808, "client_id": "hermes-cli", "error_code": "invalid_grant", "reason": "credential_pool_refresh_failure", "refresh_token_fp": null, "token_already_expired": null}
+2026-11-22 21:01:29,890 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-22 21:01:29,891 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 21:02:29.
+2026-11-22 21:01:29,891 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-22 21:01:29,896 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 21:02:29.

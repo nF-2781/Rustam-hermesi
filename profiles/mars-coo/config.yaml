@@ -1,0 +1,29 @@
+mcp_servers:
+  mars_lms:
+    command: ${PYTHONPATH}/../mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+    - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
+    env:
+      MARS_API_URL: https://mars-backend-six.vercel.app
+    tools:
+      include:
+      - login
+      - coo_branch_context
+      - coo_delegation_plan
+      - coo_attendance_audit
+      - coo_schedule_audit
+      - coo_status_request_sla
+      prompts: false
+      resources: false
+platform_toolsets:
+  cli:
+  - delegation
+  - mars_lms
+delegation:
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: false
+model:
+  provider: nous
+  default: qwen/qwen4-max:free
+  base_url: https://inference-api.nousresearch.com/v1

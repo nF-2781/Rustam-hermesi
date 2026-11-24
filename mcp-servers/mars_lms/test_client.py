@@ -65,9 +65,6 @@ async def main() -> int:
     env = {
         **os.environ,
         "MARS_API_URL": os.environ.get("MARS_API_URL", "https://mars-backend-six.vercel.app"),
-        "MARS_PHONE": os.environ.get("MARS_PHONE", "998990000001"),
-        "MARS_PASSWORD": os.environ.get("MARS_PASSWORD", "Admin123!"),
-        "MARS_ROLE": os.environ.get("MARS_ROLE", "admin"),
         "PYTHONIOENCODING": "utf-8",
     }
     params = StdioServerParameters(command=PYTHON, args=[SERVER], env=env)
@@ -79,13 +76,14 @@ async def main() -> int:
             print(f"tools: {len(names)}")
             check(EXPECTED_AGENTS.issubset(names), "10 ta workflow-agent tool ro'yxatga olindi")
             check({"lms_login", "lms_context", "get_debts", "list_groups"} <= names, "yordamchi tool'lar mavjud")
+            check(len(names) == 41, "barcha 41 ta birlashtirilgan tool mavjud")
+
+            if not live:
+                return 1 if failures else 0
 
             payload = await session.call_tool("lms_login", {})
             data = body_of(payload)
             check(not data.get("error"), f"lms_login muvaffaqiyatli ({data.get('message')})")
-
-            if not live:
-                return 1 if failures else 0
 
             for tool_name, arguments in (
                 ("debt_control_agent", {}),

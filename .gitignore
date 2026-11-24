@@ -7,27 +7,35 @@
 # Node dependencies
 **/node_modules/
 
+# MCP credentials stay local after server consolidation
+/mcp-servers/**/.env
+/mcp-servers/**/.env.local
+
+# Local runtime downloads and dashboard build
+/runtime/bootstrap/
+/runtime/python/
+/cache/uv/
+/hermes-agent/hermes_cli/web_dist/
+
 # OS metadata
 Thumbs.db
 .DS_Store
 
-# Maxfiy kalitlar (MCP server credentials)
-.env
+# Isolated Hermes profiles: retain config/SOUL/skills, exclude credentials and runtime state
+/profiles/*/.env
+/profiles/*/auth.json
+/profiles/*/.anthropic_oauth.json
+/profiles/*/credentials/
+/profiles/*/sessions/
+/profiles/*/state.db*
+/profiles/*/shared-state.db*
+/profiles/*/spawn-ledger.json
+/profiles/*/logs/
+/profiles/*/cache/
+/profiles/*/audio_cache/
+/profiles/*/image_cache/
 
 # Hermes runtime holati va sessiya tokenlari
-/auth.json
-/shared/
 /logs/
 /cache/
-/runtime/
-/state.db
-/state.db-shm
-/state.db-wal
-/spawn-ledger.json
-/provider_models_cache.json
-/ollama_cloud_models_cache.json
-/models_dev_cache.json
-/models_dev_cache.etag
-/.mcp-discovery.lock
-/skills/.curator_state
-/.update_check
+

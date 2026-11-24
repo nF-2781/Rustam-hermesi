@@ -139,6 +139,399 @@
 2026-11-09 10:08:26,628 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
 2026-11-09 10:08:26,646 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
 2026-11-09 10:08:26,725 INFO tools.tool_search: tool_search activated (tier 1): 21 core/visible tools kept, 5 deferred (~4444 tokens), listing full (budget ~4000 tokens)
+2026-11-12 18:53:25,506 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-12 18:53:25,558 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-12 18:53:25,622 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-12 18:53:27,801 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-12 18:53:27,832 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-12 18:53:27,885 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-12 18:53:27,923 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-12 18:53:27,968 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-12 18:53:28,006 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-12 18:53:28,058 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-12 18:53:28,059 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-12 18:53:28,135 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-12 18:53:28,879 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-12 18:53:28,935 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-12 18:53:28,979 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-12 18:53:29,112 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-12 18:53:29,174 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-12 18:53:29,220 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-12 18:53:29,413 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-12 18:53:29,464 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-12 18:53:29,514 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-12 18:53:29,585 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-12 18:53:29,633 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-12 18:53:29,683 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-12 18:53:29,745 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-12 18:53:31,455 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-12 18:53:36,824 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-12 18:53:37,105 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-12 18:53:43,415 INFO tools.lazy_deps: Lazy-installing boto3==1.42.89 for feature 'provider.bedrock'
+2026-11-12 18:54:23,823 WARNING hermes_cli.plugins: Failed to load plugin 'slack-platform': No module named 'aiohttp'
+2026-11-12 18:54:44,617 INFO tools.lazy_deps: Lazy install complete for feature 'provider.bedrock'
+2026-11-12 18:57:09,833 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:60405
+2026-11-12 18:57:09,908 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-12 18:57:11,315 INFO run_agent: No .env file found. Using system environment variables.
+2026-11-12 18:57:12,159 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
+2026-11-12 18:57:14,520 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:50623
+2026-11-12 18:57:15,226 INFO tools.lazy_deps: Lazy-installing faster-whisper==1.2.1 sounddevice==0.5.5 numpy==2.4.3 for feature 'stt.faster_whisper'
+2026-11-12 18:57:25,244 INFO tools.lazy_deps: Lazy-installing google-auth==2.55.1 pyasn1==0.6.4 for feature 'provider.vertex'
+2026-11-12 18:57:40,133 INFO tools.lazy_deps: Lazy install complete for feature 'provider.vertex'
+2026-11-12 18:58:18,677 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:58:20,280 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60405 — frame left in flight
+2026-11-12 18:58:30,291 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:12,235 INFO tools.lazy_deps: Lazy install complete for feature 'stt.faster_whisper'
+2026-11-12 18:59:12,263 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-12 18:59:19,958 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60405 — frame left in flight
+2026-11-12 18:59:22,276 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:28,129 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-12 18:59:28,143 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-12 18:59:28,157 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-12 18:59:28,775 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-12 18:59:28,783 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-12 18:59:28,791 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-12 18:59:28,800 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-12 18:59:28,808 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-12 18:59:28,817 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-12 18:59:28,825 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-12 18:59:28,826 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-12 18:59:28,837 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-12 18:59:28,907 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-12 18:59:28,918 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-12 18:59:28,930 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-12 18:59:28,957 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-12 18:59:28,972 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-12 18:59:28,984 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-12 18:59:29,006 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-12 18:59:29,019 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-12 18:59:29,031 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-12 18:59:29,043 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-12 18:59:29,055 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-12 18:59:29,067 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-12 18:59:29,081 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-12 18:59:29,334 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-12 18:59:29,961 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:50623 — frame left in flight
+2026-11-12 18:59:30,660 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-12 18:59:30,849 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-12 18:59:34,452 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-12 18:59:37,810 WARNING hermes_cli.plugins: Failed to load plugin 'slack-platform': No module named 'aiohttp'
+2026-11-12 19:32:01,632 WARNING hermes_cli.web_server: event loop stalled 1296.2s (GIL pressure suspected)
+2026-11-17 18:46:42,696 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-17 18:46:42,707 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-17 18:46:42,719 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-17 18:46:43,256 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-17 18:46:43,266 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-17 18:46:43,277 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-17 18:46:43,291 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-17 18:46:43,310 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-17 18:46:43,331 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-17 18:46:43,351 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-17 18:46:43,351 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-17 18:46:43,371 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-17 18:46:43,435 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-17 18:46:43,449 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-17 18:46:43,465 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-17 18:46:43,502 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-17 18:46:43,516 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-17 18:46:43,531 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-17 18:46:43,557 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-17 18:46:43,569 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-17 18:46:43,581 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-17 18:46:43,594 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-17 18:46:43,605 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-17 18:46:43,620 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-17 18:46:43,633 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-17 18:46:43,893 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-17 18:46:48,327 INFO hermes_cli.active_sessions: Pruned 1 stale active session lease(s)
+2026-11-17 18:46:49,562 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,233 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,239 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,929 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:53,949 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:54,615 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:54,636 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:55,321 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:55,342 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,013 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,033 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,104 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,757 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:56,836 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,471 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,633 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,666 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,671 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,678 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,796 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:57,875 INFO tools.lazy_deps: Lazy-installing edge-tts==7.2.7 for feature 'tts.edge'
+2026-11-17 18:46:58,198 WARNING tools.registry: check_fn check_discord_tool_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,202 WARNING tools.registry: check_fn _check_feishu returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,329 WARNING tools.registry: check_fn _check_yuanbao returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,329 WARNING tools.registry: check_fn _check_ha_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,336 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:46:58,347 INFO tools.lazy_deps: Lazy-installing edge-tts==7.2.7 for feature 'tts.edge'
+2026-11-17 18:47:17,412 WARNING tools.registry: check_fn check_tts_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,437 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,495 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-17 18:47:17,495 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,496 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-17 18:47:17,520 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,534 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-17 18:47:17,535 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 18:48:17.
+2026-11-17 18:47:17,535 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-17 18:47:17,536 WARNING tools.registry: check_fn check_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,561 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-11-17 18:47:17,583 WARNING tools.registry: check_fn check_video_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,587 WARNING tools.registry: check_fn _check_xai_video_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:17,707 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-11-17 18:47:17,725 WARNING tools.registry: check_fn check_x_search_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:20,451 INFO tools.lazy_deps: Lazy install complete for feature 'tts.edge'
+2026-11-17 18:47:22,129 INFO tools.tool_search: tool_search activated (tier 1): 15 core/visible tools kept, 4 deferred (~3030 tokens), listing full (budget ~4000 tokens)
+2026-11-17 18:47:22,133 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:22,682 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:23,293 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:47:24,393 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:04,396 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-17 18:48:04,415 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-17 18:48:04,437 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-17 18:48:04,923 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-17 18:48:04,938 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-17 18:48:04,953 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-17 18:48:04,961 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-17 18:48:04,968 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-17 18:48:04,976 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-17 18:48:04,986 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-17 18:48:04,987 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-17 18:48:04,998 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-17 18:48:05,057 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-17 18:48:05,070 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-17 18:48:05,092 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-17 18:48:05,138 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-17 18:48:05,169 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-17 18:48:05,190 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-17 18:48:05,238 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-17 18:48:05,261 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-17 18:48:05,277 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-17 18:48:05,297 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-17 18:48:05,312 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-17 18:48:05,335 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-17 18:48:05,359 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-17 18:48:05,481 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-17 18:48:06,147 INFO hermes_cli.active_sessions: Pruned 1 stale active session lease(s)
+2026-11-17 18:48:07,287 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:07,980 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:07,986 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:08,554 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:08,568 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:09,153 INFO run_agent: No .env file found. Using system environment variables.
+2026-11-17 18:48:09,293 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:09,350 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:10,425 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:10,445 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:11,166 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:11,499 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-17 18:48:12,513 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-17 19:19:07,731 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-17 19:19:07,746 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-17 19:19:07,761 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-17 19:19:08,359 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-17 19:19:08,369 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-17 19:19:08,378 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-17 19:19:08,388 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-17 19:19:08,398 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-17 19:19:08,408 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-17 19:19:08,418 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-17 19:19:08,419 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-17 19:19:08,430 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-17 19:19:08,497 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-17 19:19:08,505 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-17 19:19:08,515 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-17 19:19:08,536 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-17 19:19:08,550 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-17 19:19:08,562 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-17 19:19:08,584 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-17 19:19:08,599 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-17 19:19:08,613 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-17 19:19:08,670 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-17 19:19:08,685 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-17 19:19:08,698 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-17 19:19:08,710 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-17 19:19:08,892 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-17 19:19:10,371 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-17 19:19:10,500 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-18 23:06:41,447 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-18 23:06:41,453 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-18 23:06:41,459 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-18 23:06:41,765 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-18 23:06:41,768 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-18 23:06:41,772 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-18 23:06:41,775 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-18 23:06:41,777 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-18 23:06:41,780 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-18 23:06:41,783 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-18 23:06:41,783 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-18 23:06:41,789 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-18 23:06:41,819 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-18 23:06:41,821 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-18 23:06:41,825 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-18 23:06:41,834 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-18 23:06:41,840 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-18 23:06:41,844 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-18 23:06:41,855 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-18 23:06:41,860 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-18 23:06:41,866 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-18 23:06:41,872 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-18 23:06:41,878 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-18 23:06:41,883 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-18 23:06:41,887 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-18 23:06:42,006 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-18 23:06:43,500 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-18 23:06:43,667 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-18 23:06:45,162 INFO tools.mcp_tool: MCP server 'mars-lms' (stdio): registered 12 tool(s): mcp__mars_lms__login, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__students, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__list_resources, mcp__mars_lms__read_resource, mcp__mars_lms__list_prompts, mcp__mars_lms__get_prompt
+2026-11-18 23:06:45,162 INFO tools.mcp_tool: MCP: registered 12 tool(s) from 1 server(s)
+2026-11-18 23:06:45,164 INFO tools.mcp_tool:   MCP: 12 tool(s) from 1 server(s)
+2026-11-18 23:06:49,677 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:60567
+2026-11-18 23:06:49,739 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-18 23:06:50,080 INFO run_agent: No .env file found. Using system environment variables.
+2026-11-18 23:06:53,286 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54199
+2026-11-18 23:06:53,467 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-18 23:06:56,131 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:56,150 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-18 23:06:56,152 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:56,153 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-18 23:06:56,952 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:56.
+2026-11-18 23:06:57,061 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-18 23:06:57,067 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 23:07:57.
+2026-11-18 23:06:57,073 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-18 23:07:26,588 WARNING tools.registry: check_fn _a2a_tools_available returned False; dependent tools will be unavailable this turn
+2026-11-18 23:07:59,974 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:54199 — frame left in flight
+2026-11-18 23:08:03,314 WARNING tools.registry: check_fn _check_spotify_available returned False; dependent tools will be unavailable this turn
+2026-11-18 23:08:09,985 WARNING tui_gateway.ws: ws write slow (loop stalled >10.0s) peer=127.0.0.1:60567 — frame left in flight
+2026-11-18 23:08:27,893 INFO hermes_cli.web_server: plugins/hub rebuilt in 89.703s (plugins=57 memory_options=8)
+2026-11-18 23:08:27,899 WARNING hermes_cli.web_server: event loop stalled 89.3s (GIL pressure suspected)
+2026-11-18 23:08:27,908 ERROR asyncio: Exception in callback BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55112))>) at C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py:840
+handle: <Handle BaseProactorEventLoop._start_serving.<locals>.loop(<_OverlappedF...0.1', 55112))>) at C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py:840>
+Traceback (most recent call last):
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 855, in loop
+    self._make_socket_transport(
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 646, in _make_socket_transport
+    return _ProactorSocketTransport(self, sock, protocol, waiter,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 612, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 189, in __init__
+    super().__init__(loop, sock, protocol, waiter, extra, server)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 334, in __init__
+    super().__init__(*args, **kw)
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\proactor_events.py", line 66, in __init__
+    self._server._attach()
+  File "C:\Users\Asus\Desktop\Rustam-hermesi\runtime\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 295, in _attach
+    assert self._sockets is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+2026-11-18 23:08:27,930 WARNING tui_gateway.ws: ws send failed peer=127.0.0.1:54199 error_type=WebSocketDisconnect error=
+2026-11-18 23:08:27,937 WARNING tui_gateway.ws: ws send failed peer=127.0.0.1:60567 error_type=WebSocketDisconnect error=
+2026-11-18 23:08:27,940 WARNING tui_gateway.ws: ws response send failed peer=127.0.0.1:54199 id=r7 method=pet.info.meta
+2026-11-18 23:08:27,949 WARNING tui_gateway.ws: ws heartbeat reply send failed peer=127.0.0.1:60567 id=heartbeat-1
+2026-11-18 23:08:27,956 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54199 reason=send_failed_after_response messages=7 parse_errors=0 dispatch_crashes=0 send_failures=1 reaped_sessions=0 detached_sessions=0
+2026-11-18 23:08:32,584 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-18 23:08:32,591 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-18 23:08:32,595 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-18 23:08:32,864 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-18 23:08:32,868 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-18 23:08:32,870 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-18 23:08:32,872 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-18 23:08:32,876 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-18 23:08:32,878 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-18 23:08:32,881 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-18 23:08:32,881 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-18 23:08:32,885 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-18 23:08:32,915 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-18 23:08:32,918 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-18 23:08:32,920 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-18 23:08:32,930 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-18 23:08:32,934 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-18 23:08:32,938 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-18 23:08:32,949 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-18 23:08:32,955 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-18 23:08:32,960 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-18 23:08:32,965 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-18 23:08:32,969 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-18 23:08:32,974 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-18 23:08:32,979 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-18 23:10:35,574 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-18 23:10:35,578 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-18 23:10:35,583 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-18 23:10:35,832 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-18 23:10:35,835 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-18 23:10:35,837 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-18 23:10:35,839 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-18 23:10:35,842 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-18 23:10:35,845 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-18 23:10:35,847 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-18 23:10:35,847 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-18 23:10:35,851 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-18 23:10:35,875 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-18 23:10:35,877 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-18 23:10:35,879 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-18 23:10:35,886 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-18 23:10:35,890 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-18 23:10:35,894 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-18 23:10:35,902 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-18 23:10:35,906 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-18 23:10:35,911 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-18 23:10:35,916 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-18 23:10:35,921 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-18 23:10:35,925 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-18 23:10:35,929 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-18 23:10:36,034 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-18 23:10:36,975 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-18 23:10:37,046 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-18 23:10:38,391 INFO tools.mcp_tool: MCP server 'mars-lms' (stdio): registered 12 tool(s): mcp__mars_lms__login, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__students, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__list_resources, mcp__mars_lms__read_resource, mcp__mars_lms__list_prompts, mcp__mars_lms__get_prompt
+2026-11-18 23:10:38,391 INFO tools.mcp_tool: MCP: registered 12 tool(s) from 1 server(s)
+2026-11-18 23:10:38,391 INFO tools.mcp_tool:   MCP: 12 tool(s) from 1 server(s)
+2026-11-18 23:11:05,929 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:50483
+2026-11-18 23:11:05,982 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-18 23:11:06,328 INFO run_agent: No .env file found. Using system environment variables.
+2026-11-18 23:11:06,512 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
+2026-11-18 23:11:07,966 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:64909
+2026-11-18 23:11:08,080 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-18 23:18:38,622 INFO tui_gateway.ws: ws closed peer=127.0.0.1:50483 reason=client_disconnect(code=1001,reason=) messages=23 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
+2026-11-18 23:31:00,309 INFO tui_gateway.ws: ws closed peer=127.0.0.1:64909 reason=client_disconnect(code=1012,reason=) messages=559 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-11-19 17:15:04,360 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-19 17:15:04,366 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-19 17:15:04,372 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-19 17:15:04,624 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-19 17:15:04,627 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-19 17:15:04,630 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-19 17:15:04,632 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-19 17:15:04,634 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-19 17:15:04,637 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-19 17:15:04,640 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-19 17:15:04,641 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-19 17:15:04,644 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-19 17:15:04,669 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-19 17:15:04,672 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-19 17:15:04,674 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-19 17:15:04,682 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-19 17:15:04,687 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-19 17:15:04,692 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-19 17:15:04,702 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-19 17:15:04,708 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-19 17:15:04,713 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-19 17:15:04,716 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-19 17:15:04,721 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-19 17:15:04,726 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-19 17:15:04,731 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-19 17:15:04,838 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-19 17:15:06,045 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-19 17:15:06,186 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-19 17:15:06,945 INFO tools.mcp_tool: MCP server 'mars-lms' (stdio): registered 12 tool(s): mcp__mars_lms__login, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__students, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__list_resources, mcp__mars_lms__read_resource, mcp__mars_lms__list_prompts, mcp__mars_lms__get_prompt
+2026-11-19 17:15:06,946 INFO tools.mcp_tool: MCP: registered 12 tool(s) from 1 server(s)
+2026-11-19 17:15:06,946 INFO tools.mcp_tool:   MCP: 12 tool(s) from 1 server(s)
 2026-11-12 18:51:05,435 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
 2026-11-12 18:51:05,447 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
 2026-11-12 18:51:05,458 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
@@ -282,3 +675,201 @@
 2026-11-19 18:20:14,003 INFO run_agent: Loaded environment variables from C:\Users\user\Documents\Hermes-2\.env
 2026-11-19 18:20:22,389 INFO tools.lazy_deps: Lazy-installing google-auth==2.55.1 pyasn1==0.6.4 for feature 'provider.vertex'
 2026-11-19 18:20:27,674 INFO tools.lazy_deps: Lazy install complete for feature 'provider.vertex'
+2026-11-19 19:06:59,337 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-19 19:06:59,345 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-19 19:06:59,353 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-19 19:06:59,891 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-19 19:06:59,895 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-19 19:06:59,900 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-19 19:06:59,904 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-19 19:06:59,908 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-19 19:06:59,912 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-19 19:06:59,916 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-19 19:06:59,917 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-19 19:06:59,923 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-19 19:06:59,973 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-19 19:06:59,978 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-19 19:06:59,983 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-19 19:07:00,000 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-19 19:07:00,006 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-19 19:07:00,015 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-19 19:07:00,034 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-19 19:07:00,042 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-19 19:07:00,050 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-19 19:07:00,058 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-19 19:07:00,065 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-19 19:07:00,074 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-19 19:07:00,082 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-19 19:07:00,238 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-19 19:12:02,050 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-19 19:12:02,065 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-19 19:12:02,077 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-19 19:12:02,644 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-19 19:12:02,652 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-19 19:12:02,665 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-19 19:12:02,671 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-19 19:12:02,679 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-19 19:12:02,686 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-19 19:12:02,693 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-19 19:12:02,694 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-19 19:12:02,703 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-19 19:12:02,777 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-19 19:12:02,783 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-19 19:12:02,789 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-19 19:12:02,804 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-19 19:12:02,813 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-19 19:12:02,824 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-19 19:12:02,843 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-19 19:12:02,851 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-19 19:12:02,861 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-19 19:12:02,869 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-19 19:12:02,878 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-19 19:12:02,887 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-19 19:12:02,895 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-19 19:12:03,091 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-19 19:12:04,963 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-19 19:12:05,090 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-19 19:12:05,568 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:05,569 WARNING tools.mcp_tool: Failed to connect to MCP server 'mars_lms' (command=C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe): [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:05,570 INFO tools.mcp_tool: MCP: registered 0 tool(s) from 0 server(s) (1 failed)
+2026-11-19 19:12:05,571 INFO tools.mcp_tool:   MCP: 0 tool(s) from 0 server(s) (1 failed)
+2026-11-19 19:12:05,583 WARNING __main__: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:34,388 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:63511
+2026-11-19 19:12:34,456 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-19 19:12:35,040 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:35,081 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:35,088 INFO run_agent: Loaded environment variables from C:\Users\Asus\Desktop\Rustam-hermesi\.env
+2026-11-19 19:12:35,089 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:35,360 INFO agent.model_metadata: Cached context length qwen/qwen4-max:free@https://inference-api.nousresearch.com/v1 -> 1,000,000 tokens
+2026-11-19 19:12:36,477 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:36,550 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:36,566 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:36,568 WARNING hermes_state: 5 live SessionDB handles on C:\Users\Asus\Desktop\Rustam-hermesi\state.db in this process; each holds its own writer connection (read connections are capped at 8 for the file). A long-lived process should share one handle per path.
+2026-11-19 19:12:38,402 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:56115
+2026-11-19 19:12:39,207 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-19 19:12:40,233 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,274 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:40,290 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:40,302 WARNING tui_gateway.entry: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-11-19 19:12:40,345 WARNING tools.mcp_tool: MCP server 'mars_lms' failed initial connection with a permanent error, parking without retries (state: connecting → parked): FileNotFoundError: [WinError 2] Не удается найти указанный файл
+2026-11-19 19:12:40,353 WARNING tui_gateway.entry: Background MCP discovery completed with zero connected servers
+2026-11-19 19:12:48,144 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-14 (_build):9676 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=qwen/qwen4-max:free
+2026-11-19 19:12:48,145 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-24 (_build):20064 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=qwen/qwen4-max:free
+2026-11-19 19:12:48,932 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:48,933 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:49,560 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:49,564 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,181 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,184 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,784 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:50,787 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,400 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,403 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,479 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:51,479 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,130 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,135 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,840 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:52,855 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:53,457 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:53,465 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,130 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,133 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,833 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:54,839 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,334 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,338 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,373 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,374 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,386 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,388 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,391 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,393 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,397 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,400 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,417 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,418 WARNING tools.registry: check_fn _connectors_available returned False; dependent tools will be unavailable this turn
+2026-11-19 19:12:56,460 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-11-19 19:12:56,461 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-11-19 19:12:56,715 INFO tools.tool_search: tool_search activated (tier 1): 16 core/visible tools kept, 5 deferred (~3208 tokens), listing full (budget ~4000 tokens)
+2026-11-19 19:12:56,716 INFO tools.tool_search: tool_search activated (tier 1): 16 core/visible tools kept, 5 deferred (~3208 tokens), listing full (budget ~4000 tokens)
+2026-11-19 19:17:00,189 INFO tui_gateway.ws: ws closed peer=127.0.0.1:56115 reason=client_disconnect(code=1012,reason=) messages=526 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-11-19 19:17:00,206 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=asyncio_2:16800 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=qwen/qwen4-max:free
+2026-11-19 19:17:00,214 INFO tui_gateway.ws: ws closed peer=127.0.0.1:63511 reason=client_disconnect(code=1012,reason=) messages=16 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
+2026-11-19 19:17:00,424 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=MainThread:20972 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=qwen/qwen4-max:free
+2026-11-22 21:01:16,162 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-22 21:01:16,166 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-22 21:01:16,170 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-22 21:01:16,417 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-22 21:01:16,421 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-22 21:01:16,423 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-22 21:01:16,426 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-22 21:01:16,428 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-22 21:01:16,430 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-22 21:01:16,433 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-22 21:01:16,433 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-22 21:01:16,436 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-22 21:01:16,464 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-22 21:01:16,466 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-22 21:01:16,468 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-22 21:01:16,476 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-22 21:01:16,480 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-22 21:01:16,483 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-22 21:01:16,492 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-22 21:01:16,495 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-22 21:01:16,500 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-22 21:01:16,504 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-22 21:01:16,508 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-22 21:01:16,511 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-22 21:01:16,515 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-22 21:01:16,620 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-22 21:01:17,760 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-22 21:01:17,904 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-22 21:01:18,531 INFO tools.mcp_tool: MCP server 'mars_lms' (stdio): registered 36 tool(s): mcp__mars_lms__lms_login, mcp__mars_lms__lms_context, mcp__mars_lms__list_groups, mcp__mars_lms__list_students, mcp__mars_lms__get_debts, mcp__mars_lms__get_attendance, mcp__mars_lms__get_homework, mcp__mars_lms__get_finance_report, mcp__mars_lms__get_payments, mcp__mars_lms__get_pending_approvals, mcp__mars_lms__get_room_plan, mcp__mars_lms__get_student_progress, mcp__mars_lms__debt_control_agent, mcp__mars_lms__attendance_control_agent, mcp__mars_lms__homework_control_agent, mcp__mars_lms__daily_finance_report, mcp__mars_lms__new_student_followup, mcp__mars_lms__pending_approvals_digest, mcp__mars_lms__room_schedule_assistant, mcp__mars_lms__mentor_workload_analysis, mcp__mars_lms__student_progress_audit, mcp__mars_lms__reception_router, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__login, mcp__mars_lms__students, mcp__mars_lms__attendance, mcp__mars_lms__homework, mcp__mars_lms__student_progress, mcp__mars_lms__curriculum, mcp__mars_lms__incoming_requests, mcp__mars_lms__reception_triage
+2026-11-22 21:01:18,531 INFO tools.mcp_tool: MCP: registered 36 tool(s) from 1 server(s)
+2026-11-22 21:01:18,533 INFO tools.mcp_tool:   MCP: 36 tool(s) from 1 server(s)
+2026-11-22 21:01:23,999 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:49959
+2026-11-22 21:01:24,080 INFO hermes_cli.web_server: pty accepted peer=127.0.0.1 mode=loopback cred=token
+2026-11-22 21:01:24,575 INFO run_agent: Loaded environment variables from C:\Users\Asus\Desktop\Rustam-hermesi\.env
+2026-11-22 21:01:26,248 WARNING hermes_cli.auth: Nous OAuth state quarantined (terminal auth death): {"agent_key_id": null, "auth_json_exists": true, "auth_json_mtime": 1795097558.0096476, "auth_json_path": "C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\auth.json", "auth_json_size": 10541, "client_id": "hermes-cli", "error_code": "invalid_grant", "reason": "runtime_access_refresh_failure", "refresh_token_fp": "1dc471e5bf32", "token_already_expired": true}
+2026-11-22 21:01:26,285 WARNING hermes_cli.auth: Nous OAuth state quarantined (terminal auth death): {"agent_key_id": null, "auth_json_exists": true, "auth_json_mtime": 1795363286.2597976, "auth_json_path": "C:\\Users\\Asus\\Desktop\\Rustam-hermesi\\auth.json", "auth_json_size": 808, "client_id": "hermes-cli", "error_code": "invalid_grant", "reason": "credential_pool_refresh_failure", "refresh_token_fp": null, "token_already_expired": null}
+2026-11-22 21:01:28,919 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61378
+2026-11-22 21:01:29,225 INFO tui_gateway.server: wake.start(tui): disabled (enabled=False, surface=auto)
+2026-11-22 21:01:29,890 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-11-22 21:01:29,891 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 21:02:29.
+2026-11-22 21:01:29,891 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-11-22 21:01:29,896 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 21:02:29.
+2026-11-22 21:02:17,972 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-11-22 21:03:01,089 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61378 reason=client_disconnect(code=1012,reason=) messages=191 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-11-22 21:03:01,117 INFO tui_gateway.ws: ws closed peer=127.0.0.1:49959 reason=client_disconnect(code=1012,reason=) messages=7 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=1 detached_sessions=0
+2026-11-22 22:41:12,371 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-11-22 22:41:12,376 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-11-22 22:41:12,380 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-11-22 22:41:12,636 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-11-22 22:41:12,639 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-11-22 22:41:12,643 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-11-22 22:41:12,646 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-11-22 22:41:12,649 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-11-22 22:41:12,652 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-11-22 22:41:12,655 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-11-22 22:41:12,655 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-11-22 22:41:12,660 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-11-22 22:41:12,690 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-11-22 22:41:12,693 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-11-22 22:41:12,696 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-11-22 22:41:12,704 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-11-22 22:41:12,709 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-11-22 22:41:12,713 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-11-22 22:41:12,725 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-11-22 22:41:12,730 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-11-22 22:41:12,737 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-11-22 22:41:12,741 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-11-22 22:41:12,746 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-11-22 22:41:12,750 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-11-22 22:41:12,756 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-11-22 22:41:12,868 INFO hermes_cli.plugins: Plugin discovery complete: 57 found, 51 enabled
+2026-11-22 22:41:14,054 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-11-22 22:41:14,202 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-11-22 22:41:14,885 INFO tools.mcp_tool: MCP server 'mars_lms' (stdio): registered 41 tool(s): mcp__mars_lms__lms_login, mcp__mars_lms__lms_context, mcp__mars_lms__list_groups, mcp__mars_lms__list_students, mcp__mars_lms__get_debts, mcp__mars_lms__get_attendance, mcp__mars_lms__get_homework, mcp__mars_lms__get_finance_report, mcp__mars_lms__get_payments, mcp__mars_lms__get_pending_approvals, mcp__mars_lms__get_room_plan, mcp__mars_lms__get_student_progress, mcp__mars_lms__debt_control_agent, mcp__mars_lms__attendance_control_agent, mcp__mars_lms__homework_control_agent, mcp__mars_lms__daily_finance_report, mcp__mars_lms__new_student_followup, mcp__mars_lms__pending_approvals_digest, mcp__mars_lms__room_schedule_assistant, mcp__mars_lms__mentor_workload_analysis, mcp__mars_lms__student_progress_audit, mcp__mars_lms__reception_router, mcp__mars_lms__coo_branch_context, mcp__mars_lms__coo_attendance_audit, mcp__mars_lms__coo_schedule_audit, mcp__mars_lms__coo_status_request_sla, mcp__mars_lms__coo_delegation_plan, mcp__mars_lms__branch_me, mcp__mars_lms__groups, mcp__mars_lms__mentors, mcp__mars_lms__payments, mcp__mars_lms__finance_overview, mcp__mars_lms__finance_salaries, mcp__mars_lms__login, mcp__mars_lms__students, mcp__mars_lms__attendance, mcp__mars_lms__homework, mcp__mars_lms__student_progress, mcp__mars_lms__curriculum, mcp__mars_lms__incoming_requests, mcp__mars_lms__reception_triage
+2026-11-22 22:41:14,887 INFO tools.mcp_tool: MCP: registered 41 tool(s) from 1 server(s)
+2026-11-22 22:41:14,887 INFO tools.mcp_tool:   MCP: 41 tool(s) from 1 server(s)

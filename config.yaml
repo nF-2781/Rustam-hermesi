@@ -5,9 +5,9 @@ model:
 _config_version: 43
 mcp_servers:
   mars_lms:
-    command: C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe
+    command: ${MARS_MCP_PYTHON}
     args:
-      - C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/server.py
+      - ${PYTHONPATH}/../mcp-servers/mars_lms/server.py
     env:
       PYTHONIOENCODING: utf-8
       PYTHONUNBUFFERED: '1'

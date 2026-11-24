@@ -1,0 +1,8 @@
+# Portable configuration: launch Hermes through hermes.bat or hermes.sh.
+mcp_servers:
+  mars-lms:
+    command: "${MARS_MCP_PYTHON}"
+    args:
+      - "${PYTHONPATH}/../mcp-servers/mars_lms/server.py"
+    env:
+      MARS_API_URL: "https://mars-backend-six.vercel.app"
