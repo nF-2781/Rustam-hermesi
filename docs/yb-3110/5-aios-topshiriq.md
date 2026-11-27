@@ -2,8 +2,9 @@
 
 **Muallif:** Rustam (nF-2781) — yakka tartibdagi ish
 **Sana:** 27.11.2026 · **Muddat:** 28.11.2026, 18:00
-**Repo:** https://github.com/nF-2781/Rustam-hermesi (branch `rustam`)
-**Shu fayl:** `docs/yb-3110/5-aios-topshiriq.md`
+**Repo (branch):** https://github.com/nF-2781/Rustam-hermesi/tree/rustam
+**Shu fayl:** https://github.com/nF-2781/Rustam-hermesi/blob/rustam/docs/yb-3110/5-aios-topshiriq.md
+**Lokal yo'l:** `docs/yb-3110/5-aios-topshiriq.md`
 **Asosiy kod:** `digital-org/`, `mcp-servers/mars_finance/`, `mcp-servers/obsidian_rag/`
 
 ---
