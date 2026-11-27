@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://mars.local/schemas/a2a-message.json",
+  "title": "Mars AI OS — Agent-to-Agent xabar konverti",
+  "description": "Agentlar bir-biriga bevosita yozmaydi: barcha xabar Orchestrator orqali shu konvertda o'tadi.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id", "from_agent", "to_agent", "event_type", "payload", "priority", "created_at"],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 8,
+      "description": "uuid4 — bitta biznes zanjiri bo'ylab o'zgarmaydi"
+    },
+    "reply_to": {
+      "type": ["string", "null"],
+      "description": "javob bo'lsa — oldingi xabar task_id si"
+    },
+    "from_agent": {
+      "type": "string",
+      "enum": ["orchestrator", "ceo-strategist", "academic-manager", "branch-manager", "finance-payroll", "auditor-security", "mentor-assistant", "tutor-intern", "student-parent", "human"]
+    },
+    "to_agent": {
+      "type": "string",
+      "enum": ["orchestrator", "ceo-strategist", "academic-manager", "branch-manager", "finance-payroll", "auditor-security", "mentor-assistant", "tutor-intern", "student-parent", "human"]
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "STRATEGY_BRIEF",
+        "DEMAND_SCAN",
+        "DEMAND_ALERT",
+        "GROUP_LAUNCH_ORDER",
+        "GROUP_LAUNCHED",
+        "DAILY_OPS_CHECK",
+        "SCHEDULE_CHANGED",
+        "SUBSTITUTION_REQUEST",
+        "SUBSTITUTION_ASSIGNED",
+        "PAYMENT_DUE",
+        "PAYROLL_DRAFT",
+        "ATTENDANCE_APPROVED_MONTH",
+        "ATTENDANCE_DISPUTE_SCAN",
+        "ATTENDANCE_RESOLVED",
+        "LESSON_PLAN",
+        "GRADING_TASK",
+        "RETENTION_ALERT",
+        "TUTOR_BOOKING_DONE",
+        "INTERN_TASK",
+        "HEALTH_CHECK",
+        "RISK_ALERT",
+        "GUARDRAIL_VIOLATION",
+        "APPROVAL_REQUEST",
+        "APPROVAL_GRANTED",
+        "APPROVAL_DENIED",
+        "BLOCKED"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "normal", "high", "critical"],
+      "default": "normal"
+    },
+    "payload": {
+      "type": "object",
+      "description": "Voqeaga xos ma'lumot. Raqamlar manbasi `context.sources` da ko'rsatiladi.",
+      "properties": {
+        "summary": { "type": "string", "maxLength": 2000 },
+        "branch_id": { "type": ["string", "null"] },
+        "period": { "type": ["string", "null"], "examples": ["2026-11"] },
+        "ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "student/group/lesson/homework ID lar — PII emas"
+        },
+        "numbers": {
+          "type": "object",
+          "additionalProperties": { "type": ["number", "null"] }
+        },
+        "next_step": { "type": ["string", "null"] },
+        "requires_human_approval": { "type": "boolean", "default": false }
+      },
+      "required": ["summary"]
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["endpoint"],
+            "properties": {
+              "endpoint": { "type": "string" },
+              "period": { "type": ["string", "null"] },
+              "tool": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "vault_chunks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "maxItems": 5,
+          "description": "RAG dan olingan 3–5 chunk yo'li"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["queued", "in_progress", "done", "blocked", "needs_human"],
+      "default": "queued"
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "expires_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "15 daqiqadan keyin `blocked` ga o'tadi"
+    },
+    "guardrails": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "checked": { "type": "boolean" },
+        "decision": { "type": ["string", "null"], "enum": ["ALLOW", "HUMAN_APPROVAL", "REASON_REQUIRED", "CANCEL_WINDOW", "ABAC_BRANCH", "LEGACY_ENDPOINT", "PROMPT_INJECTION", null] },
+        "approval_by": { "type": ["string", "null"], "description": "tasdiqlagan odam (telegram/2FA)" }
+      }
+    }
+  },
+  "examples": [
+    {
+      "task_id": "6f1c2b9e-4a7d-4c3e-9a10-1b2c3d4e5f60",
+      "from_agent": "academic-manager",
+      "to_agent": "branch-manager",
+      "event_type": "GROUP_LAUNCH_ORDER",
+      "priority": "high",
+      "payload": {
+        "summary": "Frontend-106: waitlist 12, o'rtacha kutish 19 kun — guruh ochish tavsiya etiladi",
+        "branch_id": "bran_01",
+        "period": "2026-11",
+        "ids": ["wl_101", "wl_102", "wl_103"],
+        "numbers": { "waitlist": 12, "avg_wait_days": 19, "mentor_load": 5 },
+        "next_step": "xona tanlash va 19:00 jadval bilan guruh ochish",
+        "requires_human_approval": false
+      },
+      "context": {
+        "sources": [
+          { "endpoint": "/api/branch/demand-stats", "period": "2026-11", "tool": "mcp-mars-analytics" },
+          { "endpoint": "/api/branch/waitlist", "period": "2026-11", "tool": "mcp-mars-branch" }
+        ],
+        "vault_chunks": ["02_academic/mentor-cards/d-yusupova.md"]
+      },
+      "status": "queued",
+      "created_at": "2026-11-27T09:02:11Z",
+      "expires_at": "2026-11-27T09:17:11Z",
+      "guardrails": { "checked": true, "decision": "ALLOW", "approval_by": null }
+    }
+  ]
+}

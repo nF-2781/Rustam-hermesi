@@ -1,5 +1,10 @@
 # Mars LMS — C-level agentlar
 
+> **Keyingi qatlam:** shu 7 C-level agent ustiga quriladigan **9 funksional agent**
+> (Orchestrator, Academic, Branch, Finance, Auditor, Mentor, Tutor, Student/​Parent) —
+> `digital-org/` papkasida (`mars-ai-*` profillari). Ikkisi bir-birini almashtirmaydi:
+> bu yerdagilar — egasi, u yerdagilar — jarayon ijrochisi.
+
 Har bir agent ikki fayldan iborat:
 
 | Fayl | Nima yoziladi |

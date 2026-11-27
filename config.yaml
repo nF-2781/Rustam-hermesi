@@ -26,6 +26,35 @@ mcp_servers:
     tools:
       resources: false
       prompts: false
+  # digital-org/mcp/servers.json bo'yicha ajratilgan domen serverlari.
+  # Yoqish uchun enabled: true qiling (mars_lms bilan bir xil venv ishlatiladi).
+  mars_finance:
+    command: C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+      - C:/Users/user/Documents/Hermes-2/mcp-servers/mars_finance/server.py
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
+    enabled: false
+    timeout: 180
+    connect_timeout: 60
+    tools:
+      resources: false
+      prompts: false
+  obsidian_rag:
+    command: C:/Users/user/Documents/Hermes-2/mcp-servers/mars_lms/.venv/Scripts/python.exe
+    args:
+      - C:/Users/user/Documents/Hermes-2/mcp-servers/obsidian_rag/server.py
+    env:
+      OBSIDIAN_VAULT: C:/Users/user/Documents/Hermes-2/digital-org/memory/vault
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: '1'
+    enabled: false
+    timeout: 120
+    connect_timeout: 60
+    tools:
+      resources: false
+      prompts: false
 image_gen:
   provider: nous
 

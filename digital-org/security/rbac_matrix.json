@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "description": "Mars AI OS — Identity → RBAC → ABAC matritsasi. Agent har tool chaqirishidan oldin shu matritsa + security_sandbox.py tekshiruvidan o'tadi.",
+  "identity": {
+    "method": "jwt",
+    "login": "POST /api/auth/login",
+    "refresh": "POST /api/auth/refresh",
+    "whoami": "GET /api/auth/me",
+    "rules": [
+      "har agent o'z tokeni bilan ishlaydi, boshqa agent tokenini ishlatmaydi",
+      "token diskka yozilmaydi, logga chiqmaydi (faqat redacted)",
+      "401 → 1 marta refresh; yana 401 → odamga eskalatsiya"
+    ]
+  },
+  "abac": {
+    "dimensions": ["branch_id", "mentor_id", "student_id", "intern_id", "parent_id -> child_id", "period"],
+    "default": "deny",
+    "rules": [
+      "branch scoped rol faqat o'z branch_id resurslarini o'qiydi/yozadi",
+      "mentor faqat o'z mentor_id guruhlarini ko'radi",
+      "student faqat /students/me/* va o'z to'lovlarini ko'radi",
+      "parent faqat o'z parent_id → child_id bog'lanishidagi ma'lumotni ko'radi",
+      "intern faqat o'z topshiriq, davomat va Space profilini ko'radi",
+      "davr (period) ko'rsatilmagan hisobot chiqarilmaydi"
+    ]
+  },
+  "agents": {
+    "orchestrator": {
+      "level": 0,
+      "branch_scoped": false,
+      "read": ["/api/auth/me", "/api/health", "/api/assistant", "/api/chat"],
+      "write": [],
+      "deny": ["/api/finance/*", "/api/branch/*", "/api/mentor/*", "/api/parent/*"]
+    },
+    "ceo-strategist": {
+      "level": 1,
+      "branch_scoped": false,
+      "read": ["/api/branch", "/api/finance/owner/*", "/api/finance/overview", "/api/finance/reports/*", "/api/ai/analytics/*", "/api/branch/feature-analytics"],
+      "write": ["POST /api/branch/create (faqat inson tasdig'i bilan)"],
+      "deny": ["DELETE /*", "POST /api/finance/payments", "PATCH /api/finance/salaries/*/status"]
+    },
+    "academic-manager": {
+      "level": 2,
+      "branch_scoped": true,
+      "read": ["/api/branch/demand-stats", "/api/branch/waitlist", "/api/branch/workload-planning", "/api/branch/courses", "/api/branch/mentors", "/api/branch/directions", "/api/branch/curriculum-topic-analytics", "/api/ai/analytics/student-performance", "/api/branch/attendance-risks", "/api/branch/inactive-students", "/api/branch/feature-feedback"],
+      "write": ["POST /api/branch/directions", "PATCH /api/branch/curriculum-topic-review (tavsiya)", "POST /api/branch/attendance-risks/{id}/resolve", "POST/PATCH /api/branch/feature-feedback"],
+      "deny": ["POST /api/branch/groups", "POST /api/branch/payments", "/api/finance/*"]
+    },
+    "branch-manager": {
+      "level": 2,
+      "branch_scoped": true,
+      "read": ["/api/branch/me", "/api/branch/overview", "/api/branch/groups", "/api/branch/students", "/api/branch/waitlist", "/api/branch/noise-analytics", "/api/branch/substitutions", "/api/branch/admins", "/api/branch/staff-accounts", "/api/branch/parents", "/api/branch/transfers"],
+      "write": ["POST/PATCH /api/branch/groups", "PATCH /api/workspace/groups/{id}/schedule", "POST/PATCH/DELETE /api/branch/students", "POST /api/branch/groups/{id}/students", "POST /api/branch/waitlist/{id}/enroll", "POST /api/branch/students/{id}/transfer", "POST /api/branch/substitutions", "PATCH /api/branch/rooms/{id}/acoustics", "POST/PATCH /api/branch/staff-accounts"],
+      "deny": ["/api/finance/*", "POST /api/branch/payments", "POST /api/branch/expenses"]
+    },
+    "finance-payroll": {
+      "level": 2,
+      "branch_scoped": true,
+      "read": ["/api/finance/*", "/api/branch/payments", "/api/branch/expenses", "/api/branch/debtors", "/api/branch/status-requests", "/api/ai/analytics/debtors-summary"],
+      "write": ["POST/PATCH /api/finance/payments", "POST/PATCH /api/branch/payments", "POST/PATCH /api/branch/expenses", "POST /api/branch/debtors"],
+      "approval_required": ["POST /api/finance/salaries", "PATCH /api/finance/salaries/{id}/status (paid)", "POST/PATCH expenses > 1000000 UZS", "har qanday DELETE / void"],
+      "deny": ["POST /api/payments (eski, bloklangan)", "POST/PATCH /api/branch/groups"]
+    },
+    "auditor-security": {
+      "level": 2,
+      "branch_scoped": false,
+      "read": ["/api/branch/audit-logs", "/api/branch/attendance", "/api/branch/attendance-confirmations", "/api/workspace/*", "/api/intern/audit-logs", "/api/health", "/api/ai/analytics/attendance-summary"],
+      "write": ["POST /api/branch/attendance/{id}/resolve (reason majburiy)"],
+      "deny": ["/api/finance/*", "DELETE /api/branch/audit-logs", "POST /api/mentor/*"]
+    },
+    "mentor-assistant": {
+      "level": 3,
+      "branch_scoped": true,
+      "abac": ["mentor_id"],
+      "read": ["/api/mentor/me", "/api/mentor/groups", "/api/mentor/lessons", "/api/mentor/attendance", "/api/mentor/homework", "/api/mentor/extra-lessons", "/api/mentor/earnings", "/api/mentor/notifications"],
+      "write": ["POST /api/mentor/lessons", "PATCH /api/mentor/lessons/{id}/reschedule", "POST /api/mentor/attendance", "POST /api/mentor/homework", "POST /api/mentor/code-compare", "POST /api/mentor/test-cases/run", "POST /api/mentor/substitutions/request"],
+      "approval_required": ["PATCH /api/mentor/homework/{id}/grade"],
+      "deny": ["/api/finance/*", "POST /api/branch/attendance/{id}/resolve", "/api/branch/students"]
+    },
+    "tutor-intern": {
+      "level": 3,
+      "branch_scoped": true,
+      "abac": ["intern_id", "student_id"],
+      "read": ["/api/tutor-bookings/tutors", "/api/tutor-bookings/my", "/api/tutor-bookings/workspace", "/api/intern/profile", "/api/intern/tasks", "/api/intern/grades", "/api/intern/attendance", "/api/intern/balance", "/api/intern/space", "/api/intern/leaderboard"],
+      "write": ["POST /api/tutor-bookings", "PATCH /api/tutor-bookings/{id}/status", "POST /api/intern/tasks/{id}/submit", "POST /api/intern/attendance/check-in", "POST /api/intern/attendance/check-out", "POST /api/intern/space/quests/{key}/claim"],
+      "deny": ["DELETE /api/tutor-bookings/{id} (darsga < 1 soat)", "/api/finance/*", "/api/branch/groups"]
+    },
+    "student-parent": {
+      "level": 3,
+      "branch_scoped": false,
+      "abac": ["me", "parent_id -> child_id"],
+      "read": ["/students/me/*", "/api/student-portal/*", "/api/student", "/api/payments (GET)", "/api/parent/me", "/api/parent/children/*", "/parents/{parentId}/children/*"],
+      "write": ["POST /students/me/attendance/{id}/respond", "POST /students/me/homework/{id}/submit", "POST /students/me/homework/{id}/resubmit", "PATCH /students/me/homework/{id}/submission", "POST /students/me/space/checkin", "POST /students/me/space/quests/{key}/claim", "POST /students/me/extra-lessons/{id}/book", "PATCH /students/me/notifications/{id}/read"],
+      "approval_required": ["DELETE /students/me/extra-lessons/{id}/book (1 soat qoidasi)"],
+      "deny": ["/api/finance/*", "/api/branch/*", "/api/mentor/*", "boshqa o'quvchi ID"]
+    }
+  },
+  "mcp_servers": {
+    "mcp-mars-auth": ["orchestrator", "ceo-strategist", "academic-manager", "branch-manager", "finance-payroll", "auditor-security", "mentor-assistant", "tutor-intern", "student-parent"],
+    "mcp-mars-branch": ["branch-manager", "academic-manager", "auditor-security"],
+    "mcp-mars-finance": ["finance-payroll", "ceo-strategist (read-only)"],
+    "mcp-mars-mentor": ["mentor-assistant", "tutor-intern"],
+    "mcp-mars-portal": ["student-parent"],
+    "mcp-mars-analytics": ["ceo-strategist", "academic-manager", "auditor-security"],
+    "mcp-obsidian-rag": ["orchestrator", "ceo-strategist", "academic-manager", "branch-manager", "finance-payroll", "auditor-security", "mentor-assistant", "tutor-intern", "student-parent"]
+  }
+}
