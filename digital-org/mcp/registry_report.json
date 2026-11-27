@@ -1,0 +1,1011 @@
+{
+  "spec": {
+    "title": "MARS LMS — Complete Backend, Finance & AI API",
+    "version": "2.0.0",
+    "paths": 218,
+    "operations": 264
+  },
+  "registry": {
+    "servers": 7,
+    "operations": 188,
+    "verified": 188,
+    "missing": 0
+  },
+  "servers": [
+    {
+      "server": "mcp-mars-auth",
+      "ops": 5,
+      "verified": 5,
+      "missing": [],
+      "entries": [
+        {
+          "method": "GET",
+          "path": "/api/auth/me",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/health",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/login",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/logout",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/refresh",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "server": "mcp-mars-branch",
+      "ops": 50,
+      "verified": 50,
+      "missing": [],
+      "entries": [
+        {
+          "method": "DELETE",
+          "path": "/api/branch/admins/{}",
+          "verified": true
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/branch/groups/{}",
+          "verified": true
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/branch/students/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/admins",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/attendance",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/attendance-confirmations",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/audit-logs",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/groups",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/groups/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/me",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/noise-analytics",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/overview",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/parents",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/reports/groups",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/staff-accounts",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/students",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/students/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/students/{}/transferred-summary",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/students/{}/transfers",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/substitutions",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/transfers",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/waitlist",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/workspace/me",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/workspace/overview",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/workspace/sections/logs/export",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/workspace/sections/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/admins/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/groups/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/noise-incidents/{}/resolve",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/parents/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/rooms/{}/acoustics",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/staff-accounts/{}/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/students/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/waitlist/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/workspace/groups/{}/schedule",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/admins",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/attendance/{}/resolve",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/groups",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/groups/{}/students",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/groups/{}/students/{}/freeze",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/groups/{}/students/{}/remove",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/noise-incidents",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/parents",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/staff-accounts",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/students",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/students/{}/transfer",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/substitutions",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/substitutions/{}/cancel",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/waitlist",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/waitlist/{}/enroll",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "server": "mcp-mars-finance",
+      "ops": 33,
+      "verified": 33,
+      "missing": [],
+      "entries": [
+        {
+          "method": "DELETE",
+          "path": "/api/branch/expenses/{}",
+          "verified": true
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/branch/payments/{}",
+          "verified": true
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/finance/payments/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/debtors",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/expenses",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/payments",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/payments/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/payments/{}/receipt",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/status-requests",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/students/{}/payments",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/debtors",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/expenses",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/overview",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/owner/mentor-earnings",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/payments",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/payments/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/salaries",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/salaries/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/staff",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/expenses/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/branch/payments/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/finance/payments/{}/status",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/finance/salaries/{}/status",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/debtors",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/expenses",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/expenses/{}/void",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/payments",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/payments/{}/void",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/branch/students/{}/freeze-current",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/finance/expenses",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/finance/payments",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/finance/salaries",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/finance/staff",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "server": "mcp-mars-mentor",
+      "ops": 43,
+      "verified": 43,
+      "missing": [],
+      "entries": [
+        {
+          "method": "DELETE",
+          "path": "/api/tutor-bookings/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/intern/attendance",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/intern/grades",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/intern/profile",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/intern/space",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/intern/tasks",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/intern/tasks/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/intern/tasks/{}/status",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/attendance",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/earnings",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/extra-lessons",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/groups",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/groups/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/homework",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/homework/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/inactive-students",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/lessons",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/me",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/notifications",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/mentor/substitutions",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/tutor-bookings/my",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/tutor-bookings/tutors",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/tutor-bookings/workspace",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/attendance",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/attendance/group/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/mentor/homework/{}",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/mentor/homework/{}/grade",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/mentor/lessons/{}/reschedule",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/tutor-bookings/{}/status",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/intern/attendance/check-in",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/intern/attendance/check-out",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/intern/tasks/{}/submit",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/attendance",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/code-compare",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/extra-lessons",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/extra-lessons/{}/cancel",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/homework",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/lessons",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/substitutions/request",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/mentor/test-cases/run",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/tutor-bookings",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/workspace/lessons",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/attendance/create",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "server": "mcp-mars-portal",
+      "ops": 43,
+      "verified": 43,
+      "missing": [],
+      "entries": [
+        {
+          "method": "DELETE",
+          "path": "/students/me/extra-lessons/{}/book",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/parent/children/{}/summary",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/parent/me",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/payments",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/rating",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/student",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/student-portal/billing",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/student-portal/me",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/student-portal/payments",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/teams",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/parents/{}",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/parents/{}/children",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/parents/{}/notifications",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/attendance",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/extra-lessons",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/grades",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/group",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/homework",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/lessons/{}/diagnostic",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/notifications",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/payments",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/progress",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/schedule",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/students/me/space",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/parents/{}/notifications/{}/read",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/students/me",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/students/me/homework/{}/submission",
+          "verified": true
+        },
+        {
+          "method": "PATCH",
+          "path": "/students/me/notifications/{}/read",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/student-portal/login",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/api/teams",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/parents/create",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/parents/login",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/parents/{}/children",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/students/me/attendance/{}/respond",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/students/me/extra-lessons/{}/book",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/students/me/homework/{}/resubmit",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/students/me/homework/{}/submit",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/students/me/lessons/{}/diagnostic/submit",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/students/me/space/checkin",
+          "verified": true
+        },
+        {
+          "method": "POST",
+          "path": "/students/me/space/quests/{}/claim",
+          "verified": true
+        },
+        {
+          "method": "PUT",
+          "path": "/api/student",
+          "verified": true
+        },
+        {
+          "method": "PUT",
+          "path": "/students/me/space/theme",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "server": "mcp-mars-analytics",
+      "ops": 14,
+      "verified": 14,
+      "missing": [],
+      "entries": [
+        {
+          "method": "GET",
+          "path": "/api/ai/analytics/attendance-summary",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/ai/analytics/branch-overview",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/ai/analytics/debtors-summary",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/ai/analytics/finance-summary",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/ai/analytics/student-performance",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/curriculum-topic-analytics",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/demand-stats",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/feature-analytics",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/branch/workload-planning",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/owner/mentor-earnings",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/owner/monthly-fees",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/owner/summary",
+          "verified": true
+        },
+        {
+          "method": "GET",
+          "path": "/api/finance/reports/branches",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "server": "mcp-obsidian-rag",
+      "ops": 0,
+      "verified": 0,
+      "missing": [],
+      "entries": []
+    }
+  ]
+}

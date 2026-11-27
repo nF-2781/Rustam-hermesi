@@ -38,14 +38,19 @@ digital-org/
 │   └── 08-student-parent/
 ├── mcp/
 │   ├── README.md                 # 6 + 1 modulli MCP server rejasi va mavjud server bilan bog'lanish
-│   └── servers.json              # mashina o'qiydigan registr: server → endpointlar → agentlar
+│   ├── servers.json              # mashina o'qiydigan registr: server → endpointlar → agentlar
+│   ├── verify_registry.py        # registrni jonli Swagger bilan solishtiradi
+│   └── registry_report.json      # oxirgi tekshiruv: 188/188 operation topildi
 ├── skills/
 │   └── README.md                 # 7 skill katalogi (trigger, qadam, tool, to'xtash sharti)
 ├── security/
 │   ├── security_sandbox.py       # ishlaydigan hard guardrail (2-qavat himoya)
+│   ├── audit_log.py              # Identity + observability: JSONL harakat jurnali
 │   ├── rbac_matrix.json          # Identity → RBAC → ABAC matritsasi
 │   ├── a2a_schema.json           # A2A xabar konverti (JSON Schema)
-│   └── tests/test_security_sandbox.py
+│   └── tests/                    # guardrail + audit testlari
+├── state/
+│   └── task_store.py             # A2A vazifa holati (SQLite holat mashinasi, TTL, tarix)
 ├── memory/
 │   ├── README.md                 # 2 qatlamli xotira, chunking, hybrid RAG
 │   └── vault/                    # Obsidian vault skeleti (00_system … 06_self_improve)
@@ -70,7 +75,12 @@ va qoidalarni bitta fayldan o'qiydi (xuddi `agents/install.sh` kabi).
 # 1. Xavfsizlik devorlari (haqiqiy pytest, tarmoqsiz)
 ./mcp-servers/mars_lms/.venv/Scripts/python.exe -m pytest digital-org/security/tests -q
 
-# 2. Guardrail'ni qo'lda sinash (JSON stdin → qaror)
+# 2. Registr ↔ API spec (to'qilgan endpoint yo'qligini isbotlaydi)
+./mcp-servers/mars_lms/.venv/Scripts/python.exe digital-org/mcp/verify_registry.py \
+  --swagger https://mars-backend-six.vercel.app/swagger.json \
+  --report digital-org/mcp/registry_report.json
+
+# 3. Guardrail'ni qo'lda sinash (JSON stdin → qaror)
 echo '{"agent":"finance-payroll","method":"POST","path":"/api/finance/salaries","args":{"amount":4500000}}' \
   | python digital-org/security/security_sandbox.py
 
@@ -93,8 +103,11 @@ python -c "import json;[json.load(open(f,encoding='utf-8')) for f in ['digital-o
 | Bo'lak | Holat |
 |---|---|
 | Agent yo'riqnomalari (9 × 3 fayl) | ✅ yozilgan |
-| `security_sandbox.py` + 17 test | ✅ ishlaydi (pytest) |
+| `security_sandbox.py` + `audit_log.py` + 23 test | ✅ ishlaydi (pytest) |
+| State — `task_store.py` (SQLite holat mashinasi) | ✅ 15 test |
 | RBAC/ABAC matritsasi, A2A sxemasi | ✅ yozilgan |
+| API registr ↔ Swagger | ✅ **188/188 operation**, 0 to'qilgan |
+| Yakuniy topshiriq hujjati | ✅ `docs/yb-3110/5-aios-topshiriq.md` |
 | `mcp-mars-finance` | ✅ kod: 13 tool, 19 test, guardrail 428/403 bilan |
 | `mcp-obsidian-rag` | ✅ kod: 4 tool + BM25/hashed-vector indeksator, 16 test |
 | Qolgan 5 MCP domen (`auth`, `branch`, `mentor`, `portal`, `analytics`) | 📋 registr (`mcp/servers.json`) — keyingi bosqich |
